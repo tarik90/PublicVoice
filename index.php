@@ -14,18 +14,34 @@
     <div id="box">
       <script >
         var screen_style = document.getElementById("box");
-        screen_style.style.width = (screen.width -19) + "px";
+        screen_style.style.maxWidth = (screen.width -17) + "px";
         screen_style.style.height = (screen.height - 111) + "px";
-        screen_style.style.backgroundColor = "black";
+        screen_style.style.backgroundColor = "gray";
+        screen_style.style.overflowX = "auto";
+        screen_style.style.overflowY = "auto"; 
       </script>
-      dfgdfg
-      <!--
-      <div id="head">
-        cdfsdfsdfsd
-      </div>
-      
-      <div id="midpage">
 
+      <div id="head">
+        <script >
+          
+          var head_style = document.getElementById("head");
+          head_style.style.maxWidth = (screen.width -18) + "px";
+          head_style.style.height = (screen.height - 630) + "px";
+          head_style.style.backgroundColor = "red";
+          head_style.style.display = "block";
+          
+        </script>
+        <p>sdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldf</p>
+      </div>
+    
+      <div id="midpage">
+        <script >
+          var mid_page = document.getElementById("midpage");
+          mid_page.style.width = (screen.width -18) + "px";
+          mid_page.style.height = (screen.height - 400) + "px";
+          mid_page.style.backgroundColor = "green";
+        </script>
+<!--
         <div id="subject">
           hgjghjghj
         </div>
@@ -37,9 +53,9 @@
         <div id="news">
           ghjghjghj
         </div>
-
+-->
       </div>
-    -->
+
     </div>
 
 

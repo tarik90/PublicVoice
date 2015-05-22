@@ -4,21 +4,26 @@ body{
 	max-height: 100%;
 }
 
-
+#box{
+	color: white;
+	z-index: -1;
+	word-wrap: break-word;
+}
 
 #head{
-	width: 100%;
-	min-height: 200px;
-	background-color: red;
+	word-wrap: inherit;
 }
 
 #midpage{
-	width: 100%;
-	max-height: 80%;
-	min-height: 600px;
-	background-color: green;
-	display: inline;
+	word-wrap: inherit;
 }
+
+
+
+
+
+
+
 
 #subject{
 	position: absolute;
