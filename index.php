@@ -7,8 +7,9 @@
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="index.css">
       <script type="text/javascript" src="index.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   </head>
   <body>
     <div id="box">
@@ -26,8 +27,8 @@
           var head_style = document.getElementById("head");
           head_style.style.maxWidth = (screen.width -18) + "px";
           head_style.style.height = (screen.height - 630) + "px";
-          head_style.style.backgroundColor = "red";
-          head_style.style.display = "block";
+          head_style.style.backgroundColor = "#335C33";
+
         </script>
 
         <div id="website_logo">
@@ -40,6 +41,8 @@
               <div class="navbar-header">
                 <a class="navbar-brand" href="#"> <span id="public">Public</span>
                                                   <span id="voice">Voice</span></a>
+                                             
+
               </div>
               <div>
                 <ul class="nav navbar-nav">
