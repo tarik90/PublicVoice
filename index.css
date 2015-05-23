@@ -4,6 +4,8 @@ body{
 	max-height: 100%;
 }
 
+
+
 #box{
 	color: white;
 	z-index: -1;
@@ -18,8 +20,36 @@ body{
 	word-wrap: inherit;
 }
 
+#navigation{
+	margin-top: 5%;
 
+}
 
+#navigation span + span {
+    
+}
+
+#public{
+	color: green;
+}
+
+#voice{
+	color: red;
+}
+
+#home{
+	font-weight: bold;
+	transition-property: color;
+    transition-duration: 1s;
+}
+
+#home:hover{
+	color: green;
+}
+
+li + li{
+	margin-left: 50px;
+}
 
 
 

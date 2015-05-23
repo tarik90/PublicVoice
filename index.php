@@ -23,14 +23,40 @@
 
       <div id="head">
         <script >
-          
           var head_style = document.getElementById("head");
           head_style.style.maxWidth = (screen.width -18) + "px";
           head_style.style.height = (screen.height - 630) + "px";
           head_style.style.backgroundColor = "red";
           head_style.style.display = "block";
-          
         </script>
+
+        <div id="website_logo">
+          <span>Public Voice</span>
+        </div>
+
+        <div id="navigation">
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#"> <span id="public">Public</span>
+                                                  <span id="voice">Voice</span></a>
+              </div>
+              <div>
+                <ul class="nav navbar-nav">
+                  <li class="active"><a id="home" href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
         <p>sdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldf</p>
       </div>
     
