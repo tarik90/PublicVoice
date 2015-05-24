@@ -13,20 +13,16 @@ body{
 }
 
 #head{
-	word-wrap: inherit;
-}
-
-#midpage{
+	position: relative;
 	word-wrap: inherit;
 }
 
 #navigation{
-	margin-top: 5%;
+	position: absolute;
+	margin-top: 85.5px;
 
-}
+    z-index: 1000;
 
-#navigation span + span {
-    
 }
 
 #public{
@@ -51,23 +47,28 @@ li + li{
 	margin-left: 50px;
 }
 
+#midpage{
+	word-wrap: inherit;
+    overflow: hidden;
+    z-index: -1;
+}
 
-
-
-
-#subject{
-	position: absolute;
-	width: 10%;
-	height: 100%;
-	min-height: 400px;
-	background-color: blue;
+#subjects{
+	position: relative;
+	word-wrap: break-word;
+	float: left;
+	overflow: hidden;
+	
 }
 
 #poll{
-	position: absolute ;
-	width: 70%;
-	height: 100%;
-	min-height: 700px;
-	background-color: black;
+	position: relative;
+	word-wrap: break-word;
+	float: left;
+}
 
+#news{
+	position: relative;
+	word-wrap: break-word;
+	float: left;
 }
