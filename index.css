@@ -53,6 +53,10 @@ li + li{
     z-index: -1;
 }
 
+#midpage div + div {
+	margin-left: 70px;
+}
+
 #subjects{
 	position: relative;
 	word-wrap: break-word;

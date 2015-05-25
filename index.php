@@ -134,7 +134,7 @@
         <div id="news">
           <script >
           var news_bos = document.getElementById("news");
-          news_bos.style.width = (screen.width -950) + "px";
+          news_bos.style.width = (screen.width -1090) + "px";
           news_bos.style.height = (screen.height - 350) + "px";
           news_bos.style.backgroundColor = "black";
         </script>
