@@ -20,9 +20,7 @@ body{
 #navigation{
 	position: absolute;
 	margin-top: 85.5px;
-
     z-index: 1000;
-
 }
 
 #public{
@@ -53,26 +51,193 @@ li + li{
     z-index: -1;
 }
 
-#midpage div + div {
-	margin-left: 70px;
-}
 
 #subjects{
-	position: relative;
 	word-wrap: break-word;
 	float: left;
-	overflow: hidden;
-	
+    border: 1px solid black;
+}
+
+#subjects:hover{
+	border-right: 5px solid black;
+}
+
+
+#one{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#one:hover{
+	width: 195px;
+	color: green;
+}
+
+#two{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#two:hover{
+	width: 195px;
+	color: green;
+}
+
+#three{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#three:hover{
+	width: 195px;
+	color: green;
+}
+
+#four{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#four:hover{
+	width: 195px;
+	color: green;
+}
+
+#five{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#five:hover{
+	width: 195px;
+	color: green;
+}
+
+#six{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#six:hover{
+	width: 195px;
+	color: green;
+}
+
+#seven{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#seven:hover{
+	width: 195px;
+	color: green;
+}
+
+#eight{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#eight:hover{
+	width: 195px;
+	color: green;
+}
+
+#nine{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#nine:hover{
+	width: 195px;
+	color: green;
+}
+
+#ten{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#ten:hover{
+	width: 195px;
+	color: green;
+}
+
+#eleven{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#eleven:hover{
+	width: 195px;
+	color: green;
+}
+
+#twelve{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#twelve:hover{
+	width: 195px;
+	color: green;
+}
+
+#thirteen{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#thirteen:hover{
+	width: 195px;
+	color: green;
+}
+
+#fourteen{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#fourteen:hover{
+	width: 195px;
+	color: green;
+}
+
+#fifteen{
+	width: 150px;
+	font-weight: bold;
+	transition-property: color;
+    transition: width;
+
+}#fifteen:hover{
+	width: 195px;
+	color: green;
 }
 
 #poll{
-	position: relative;
 	word-wrap: break-word;
 	float: left;
 }
 
+#poll:hover{
+	border: 5px solid black;
+}
+
 #news{
-	position: relative;
 	word-wrap: break-word;
 	float: left;
 }

@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="box">
-      <script >
+      <script>
         var screen_style = document.getElementById("box");
         screen_style.style.maxWidth = (screen.width -17) + "px";
         screen_style.style.height = (screen.height - 111) + "px";
@@ -24,7 +24,7 @@
       </script>
 
       <div id="head">
-        <script >
+        <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
           head_style.style.height = (screen.height - 630) + "px";
@@ -33,7 +33,7 @@
         </script>
 
         <div id="navigation">
-          <script >
+          <script>
             var naviga_tion = document.getElementById("navigation");
             naviga_tion.style.width = (screen.width -18) + "px";
           </script>
@@ -103,7 +103,7 @@
       </div>
     
       <div id="midpage">
-        <script >
+        <script>
           var mid_page = document.getElementById("midpage");
           mid_page.style.width = (screen.width -18) + "px";
           mid_page.style.height = (screen.height - 350) + "px";
@@ -111,32 +111,187 @@
         </script>
 
         <div id="subjects">
-          <script >
+          <script>
           var sub_jects = document.getElementById("subjects");
-          sub_jects.style.width = (screen.width -1200) + "px";
+          sub_jects.style.width = (screen.width -1150) + "px";
           sub_jects.style.height = (screen.height - 350) + "px";
           sub_jects.style.backgroundColor = "blue";
+          sub_jects.style.transition = "all 1s";
         </script>
+
+          <div id="one">
+            <script >
+              var on_e = document.getElementById("one");
+              // on_e.style.width = (screen.width -1200) + "px";
+              on_e.style.height = (screen.height - 740) + "px";
+              on_e.style.backgroundColor = "red";
+               on_e.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="two">
+            <script>
+              var tw_o = document.getElementById("two");
+              // tw_o.style.width = (screen.width -1200) + "px";
+              tw_o.style.height = (screen.height - 740) + "px";
+              tw_o.style.backgroundColor = "black";
+              tw_o.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="three">
+            <script>
+              var thr_ee = document.getElementById("three");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "red";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="four">
+            <script>
+              var thr_ee = document.getElementById("four");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "black";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="five">
+            <script>
+              var thr_ee = document.getElementById("five");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "red";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="six">
+            <script >
+              var on_e = document.getElementById("six");
+              // on_e.style.width = (screen.width -1200) + "px";
+              on_e.style.height = (screen.height - 740) + "px";
+              on_e.style.backgroundColor = "black";
+              on_e.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="seven">
+            <script>
+              var tw_o = document.getElementById("seven");
+              // tw_o.style.width = (screen.width -1200) + "px";
+              tw_o.style.height = (screen.height - 740) + "px";
+              tw_o.style.backgroundColor = "red";
+              tw_o.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="eight">
+            <script>
+              var thr_ee = document.getElementById("eight");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "black";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="nine">
+            <script>
+              var tw_o = document.getElementById("nine");
+              // tw_o.style.width = (screen.width -1200) + "px";
+              tw_o.style.height = (screen.height - 740) + "px";
+              tw_o.style.backgroundColor = "red";
+              tw_o.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="ten">
+            <script>
+              var thr_ee = document.getElementById("ten");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "black";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="eleven">
+            <script>
+              var tw_o = document.getElementById("eleven");
+              // tw_o.style.width = (screen.width -1200) + "px";
+              tw_o.style.height = (screen.height - 740) + "px";
+              tw_o.style.backgroundColor = "red";
+              tw_o.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="twelve">
+            <script>
+              var thr_ee = document.getElementById("twelve");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "black";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="thirteen">
+            <script>
+              var thr_ee = document.getElementById("thirteen");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "red";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="fourteen">
+            <script>
+              var tw_o = document.getElementById("fourteen");
+              // tw_o.style.width = (screen.width -1200) + "px";
+              tw_o.style.height = (screen.height - 740) + "px";
+              tw_o.style.backgroundColor = "black";
+              tw_o.style.transition = "all 1s";
+            </script>
+          </div>
+
+          <div id="fifteen">
+            <script>
+              var thr_ee = document.getElementById("fifteen");
+              // thr_ee.style.width = (screen.width -1200) + "px";
+              thr_ee.style.height = (screen.height - 740) + "px";
+              thr_ee.style.backgroundColor = "red";
+              thr_ee.style.transition = "all 1s";
+            </script>
+          </div>
+
+
 
         </div>
   
         <div id="poll">
-          <script >
+          <script>
           var poll_box = document.getElementById("poll");
+          var sub_jects = document.getElementById("subjects");
           poll_box.style.width = (screen.width -600) + "px";
           poll_box.style.height = (screen.height - 350) + "px";
           poll_box.style.backgroundColor = "yellow";
+          poll_box.style.transition = "all 1s";
         </script>
                   <p>sdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldf</p>
 
         </div>
 
         <div id="news">
-          <script >
-          var news_bos = document.getElementById("news");
-          news_bos.style.width = (screen.width -1090) + "px";
-          news_bos.style.height = (screen.height - 350) + "px";
-          news_bos.style.backgroundColor = "black";
+          <script>
+          var news_box = document.getElementById("news");
+          news_box.style.width = (screen.width -1090) + "px";
+          news_box.style.height = (screen.height - 350) + "px";
+          news_box.style.backgroundColor = "black";
         </script>
                   <p>sdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldfsdfsdlfsdflkjsdlfkjsldf</p>
 
