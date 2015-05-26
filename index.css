@@ -2,6 +2,9 @@ body{
 	margin: 0;
 	width: 100%;
 	max-height: 100%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	font-weight: 800;
 }
 
 
@@ -19,20 +22,23 @@ body{
 
 #navigation{
 	position: absolute;
-	margin-top: 85.5px;
+	margin-top: 115.5px;
     z-index: 1000;
 }
 
 #public{
 	color: green;
+	font-size: 25px;
 }
 
 #voice{
 	color: red;
+	font-size: 25px;
 }
 
 #home{
 	font-weight: bold;
+	letter-spacing: 1px;
 	transition-property: color;
     transition-duration: 1s;
 }
@@ -51,11 +57,14 @@ li + li{
     z-index: -1;
 }
 
-
 #subjects{
 	word-wrap: break-word;
 	float: left;
     border: 1px solid black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: center;
+	vertical-align: middle;
 }
 
 #subjects:hover{
@@ -64,180 +73,239 @@ li + li{
 
 
 #one{
-	width: 150px;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
+	border: 1px solid;
 
 }#one:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #two{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#two:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #three{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#three:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #four{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#four:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #five{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#five:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #six{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#six:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #seven{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#seven:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #eight{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#eight:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #nine{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#nine:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #ten{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#ten:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #eleven{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#eleven:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #twelve{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#twelve:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #thirteen{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#thirteen:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #fourteen{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#fourteen:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #fifteen{
-	width: 150px;
+	border: 1px solid;
+	width: 250px;
 	font-weight: bold;
-	transition-property: color;
-    transition: width;
 
 }#fifteen:hover{
-	width: 195px;
+	width: 290px;
 	color: green;
 }
 
 #poll{
 	word-wrap: break-word;
 	float: left;
+	transition-duration: 1s;
+	border: 5px solid;
 }
 
 #poll:hover{
-	border: 5px solid black;
+	border: 5px solid green;
 }
 
 #news{
 	word-wrap: break-word;
 	float: left;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 60px;
 }
+
+#newsHead{
+	font-size: 30px;
+	letter-spacing: 2px;
+	border: 1px solid;
+}
+
+#cnn{
+	height: 30px;
+	border: 1px solid;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+	transition-duration: 1s;
+}
+#cnn:hover{
+	height: 250px;
+	color: green;
+	text-decoration: underline;
+
+}
+
+#bbc{
+	height: 30px;
+	border: 1px solid;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	transition-duration: 1s;
+	overflow: hidden;
+}
+#bbc:hover{
+	height: 250px;
+	color: green;
+	text-decoration: underline;
+}
+
+#rt{
+	height: 30px;
+	border: 1px solid;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	transition-duration: 1s;
+	overflow: hidden;
+}
+#rt:hover{
+	height: 250px;
+	color: green;
+	text-decoration: underline;
+}
+
+#forbes{
+	height: 30px;
+	border: 1px solid;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	transition-duration: 1s;
+	overflow: hidden;
+}
+#forbes:hover{
+	height: 250px;
+	color: green;
+	text-decoration: underline;
+}
+
+
