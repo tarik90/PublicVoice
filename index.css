@@ -60,7 +60,6 @@ li + li{
 #subjects{
 	word-wrap: break-word;
 	float: left;
-    border: 1px solid black;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     text-align: center;
@@ -257,7 +256,7 @@ li + li{
 	transition-duration: 1s;
 }
 #cnn:hover{
-	height: 250px;
+	height: 258.5px;
 	color: green;
 	text-decoration: underline;
 
@@ -273,7 +272,7 @@ li + li{
 	overflow: hidden;
 }
 #bbc:hover{
-	height: 250px;
+	height: 258.5px;
 	color: green;
 	text-decoration: underline;
 }
@@ -288,7 +287,7 @@ li + li{
 	overflow: hidden;
 }
 #rt:hover{
-	height: 250px;
+	height: 258.5px;
 	color: green;
 	text-decoration: underline;
 }
@@ -303,9 +302,47 @@ li + li{
 	overflow: hidden;
 }
 #forbes:hover{
-	height: 250px;
+	height: 258.5px;
 	color: green;
 	text-decoration: underline;
+}
+
+#foot{
+	font-family: 'Oswald', sans-serif;
+	color: #B2C2B2;
+    font-size: 14px;
+    text-align: center;
+	vertical-align: middle;
+	letter-spacing: 1px;
+}
+
+#copyrights{
+	transition-duration: 1s;
+	font-weight: bold;
+	}#copyrights:hover{
+	color:green;
+}
+
+/* This gets Google to fall into place */
+.social {
+	font-size: 1px;
+	float: right;
+}
+ 
+/* This gets Facebook to fall into place */
+.social iframe {
+	vertical-align: middle;
+}
+ 
+/* Set an optional width for your button wrappers */
+.social span {
+	display: inline-block;
+	width: 130px;
+}
+ 
+/* Adjust the widths individually if you like */
+.social .google {
+	width: 75px;
 }
 
 

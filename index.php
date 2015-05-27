@@ -14,6 +14,16 @@
 
   </head>
   <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
     <div id="box">
       <script>
         var screen_style = document.getElementById("box");
@@ -80,15 +90,15 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a id="home" href="#">HOME</a></li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About US <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Page 1-1</a></li>
                       <li><a href="#">Page 1-2</a></li>
                       <li><a href="#">Page 1-3</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Page 2</a></li>
-                  <li><a href="#">Page 3</a></li>
+                  <li><a href="#">Contact US</a></li>
+                  <li><a href="#">Donate</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -108,7 +118,6 @@
           var mid_page = document.getElementById("midpage");
           mid_page.style.width = (screen.width -18) + "px";
           mid_page.style.height = (screen.height - 350) + "px";
-          mid_page.style.backgroundColor = "green";
         </script>
 
         <div id="subjects">
@@ -116,7 +125,6 @@
           var sub_jects = document.getElementById("subjects");
           sub_jects.style.width = (screen.width -1060) + "px";
           sub_jects.style.height = (screen.height - 350) + "px";
-          sub_jects.style.backgroundColor = "blue";
           sub_jects.style.transition = "all 1s";
         </script>
 
@@ -321,7 +329,6 @@
             var news_box = document.getElementById("news");
             news_box.style.width = (screen.width -1090) + "px";
             news_box.style.height = (screen.height - 350) + "px";
-            news_box.style.backgroundColor = "#303030";
           </script>
 
           <div id="newsHead">
@@ -373,13 +380,55 @@
               news_forbes.style.lineHeight = news_forbes.style.height;
             </script>
             FORBES
+            <div>
+              skldfjkdlsjfklsdjklfjsdklfjkldjfkljsldkj
+            </div>
           </div>
 
         </div>
 
--->
       </div>
 
+      <div id="foot">
+        <script>
+          var footer = document.getElementById("foot");
+          footer.style.width = (screen.width -18) + "px";
+          footer.style.height = (screen.height - 697) + "px";
+          footer.style.backgroundColor = "#303030";
+          footer.style.lineHeight = footer.style.height;
+        </script>
+        Copyrights <font id="copyrights">©</font>2015 Public Voice. All Rights Reserved 
+
+        <div class="social">
+          <span class="twitter">
+            <a href="https://twitter.com/PublicVoice" class="twitter-follow-button" data-show-count="false">Follow @PublicVoice</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </span>
+          <span class="Facebook">
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/TexasBSA?fref=ts&amp;show_faces=false&amp;layout=button_count" scrolling="no" frameborder="0" style="height: 21px; width: 100px" allowTransparency="true"></iframe>
+          </span>
+        </div>
+       <!-- 
+        <div id="facebook">
+          <script type="text/javascript">
+            var face_book = getElementById("facebook");
+            face_book.style.lineHeight = face_book.style.height;
+          </script>
+        <div id="twitter">
+          <a href="https://twitter.com/PublicVoice" class="twitter-follow-button" data-show-count="false">Follow @PublicVoice</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+              if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+              fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            </script>
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
+            data-layout="button_count" data-action="like" data-show-faces="true" data-share="false">
+          </div>
+        </div>
+
+
+      </div>
+-->
     </div>
 
 
