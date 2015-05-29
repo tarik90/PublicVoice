@@ -1,0 +1,78 @@
+#navigationSide{
+	word-wrap: break-word;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 60px;
+	margin-top: 3.5%;
+	/*border: 1px solid;*/
+	transition-duration: 1s;
+}#navigationSide:hover{
+	/*border: 1px solid green;*/
+}
+
+#addapost{
+	font-size: 25px;
+	letter-spacing: 1px;
+	border: 1px solid;
+	transition-duration: 1s;
+	color: white;
+}#addapost:hover{
+	border: 1px solid green;
+}
+
+#home_side{
+	margin-top: 2%;
+	font-size: 25px;
+	letter-spacing: 1px;
+	border: 1px solid;
+	transition-duration: 1s;
+	margin-top: 23%;
+	color: white;
+}
+#home_side:hover{
+	border: 1px solid green;
+}
+
+#aboutUs{
+	font-size: 25px;
+	letter-spacing: 1px;
+	border: 1px solid;
+	transition-duration: 1s;
+	margin-top: 0.5px;
+	color: white;
+}
+#aboutUs:hover{
+	border: 1px solid green;
+}
+
+#donate{
+	font-size: 25px;
+	letter-spacing: 1px;
+	border: 1px solid;
+	transition-duration: 1s;
+	margin-top: 0.5px;
+	color: white;
+}
+#donate:hover{
+	border: 1px solid green;
+}
+
+#peopleOnline{
+	font-size: 25px;
+	letter-spacing: 1px;
+	border: 1px solid;
+	transition-duration: 1s;
+	margin-top: 23%;
+	color: white;
+}
+#peopleOnline:hover{
+	border: 1px solid green;
+}
+
+a:hover{
+	text-decoration: none;
+}a, a:active, a:focus {
+	text-decoration: none;
+	outline: none;
+}

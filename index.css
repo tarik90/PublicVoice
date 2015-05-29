@@ -22,7 +22,7 @@ body{
 
 #navigation{
 	position: absolute;
-	margin-top: 8.5%;
+	margin-top: 8.6%;
     z-index: 1000;
 }
 
@@ -67,9 +67,14 @@ li + li{
 }
 
 #subjects:hover{
-	border-right: 5px solid black;
 }
 
+a:hover{
+	text-decoration: none;
+}a, a:active, a:focus {
+	text-decoration: none;
+	outline: none;
+}
 
 #one{
 	width: 250px;
@@ -165,6 +170,7 @@ li + li{
 	border: 1px solid;
 	width: 250px;
 	font-weight: bold;
+	color: white;
 
 }#ten:hover{
 	width: 290px;
@@ -225,11 +231,12 @@ li + li{
 	word-wrap: break-word;
 	float: left;
 	transition-duration: 1s;
-	border: 5px solid;
+	border: 1px solid;
+	overflow: auto;
 }
 
 #poll:hover{
-	border: 5px solid green;
+	border: 1px solid green;
 }
 
 #news{
@@ -238,6 +245,10 @@ li + li{
 	text-align: center;
 	vertical-align: middle;
 	margin-left: 60px;
+	border: 1px solid;
+	transition-duration: 1s;
+}#news:hover{
+	border: 1px solid green;
 }
 
 #newsHead{
@@ -343,6 +354,10 @@ li + li{
 /* Adjust the widths individually if you like */
 .social .google {
 	width: 75px;
+}
+
+#user_counter{
+	font-color:white;
 }
 
 
