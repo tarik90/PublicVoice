@@ -5,7 +5,7 @@
 	vertical-align: middle;
 	margin-left: 60px;
 	margin-top: 3.5%;
-	/*border: 1px solid;*/
+	/*border: 1px solid black;*/
 	transition-duration: 1s;
 }#navigationSide:hover{
 	/*border: 1px solid green;*/
@@ -14,60 +14,59 @@
 #addapost{
 	font-size: 25px;
 	letter-spacing: 1px;
-	border: 1px solid;
+	border: 1px solid black;
 	transition-duration: 1s;
 	color: white;
 }#addapost:hover{
-	border: 1px solid green;
+	border: 1px solid white;
 }
 
 #home_side{
 	margin-top: 2%;
 	font-size: 25px;
 	letter-spacing: 1px;
-	border: 1px solid;
+	border: 1px solid black;
 	transition-duration: 1s;
 	margin-top: 23%;
 	color: white;
 }
 #home_side:hover{
-	border: 1px solid green;
+	border: 1px solid white;
 }
 
 #aboutUs{
 	font-size: 25px;
 	letter-spacing: 1px;
-	border: 1px solid;
+	border: 1px solid black;
 	transition-duration: 1s;
 	margin-top: 0.5px;
 	color: white;
 }
 #aboutUs:hover{
-	border: 1px solid green;
+	border: 1px solid white;
 }
 
 #donate{
 	font-size: 25px;
 	letter-spacing: 1px;
-	border: 1px solid;
+	border: 1px solid black;
 	transition-duration: 1s;
-	margin-top: 0.5px;
 	color: white;
 }
 #donate:hover{
-	border: 1px solid green;
+	border: 1px solid white;
 }
 
 #peopleOnline{
 	font-size: 25px;
 	letter-spacing: 1px;
-	border: 1px solid;
+	border: 1px solid black;
 	transition-duration: 1s;
 	margin-top: 23%;
 	color: white;
 }
 #peopleOnline:hover{
-	border: 1px solid green;
+	border: 1px solid white;
 }
 
 a:hover{
