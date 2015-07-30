@@ -15,10 +15,10 @@
 	}
 
 	$menu_name = "customer";
-	$position = 5;
+	$position = 1;
 	$visible  = 1;
 
-	$query1 = "INSERT INTO subjects (";
+	$query1 = "INSERT INTO subject (";
 	$query1 .= " menu_name, position, visible";
 	$query1 .= ") VALUES (";
 	$query1 .= " '{$menu_name}', '{$position}', '{$visible}' ";
@@ -33,11 +33,20 @@
 	}
 
 
+	/*HOW TO DELETE FROM DATABASE
+	$query2 = "DELETE FROM subject ";
+	$query2 .= "WHERE id = '{$id}' ";
+	$query2 .= "LIMIT 1"; 
+	*/
+ 
+ 
+
+
 
 
 	//perform database query
 	$query = "SELECT * ";
-	$query .= "FROM subjects ";
+	$query .= "FROM subject ";
 	$query .= "WHERE visible = 1 ";
 	$query .= "ORDER BY position ASC";
 	$result = mysqli_query($connection,$query);
