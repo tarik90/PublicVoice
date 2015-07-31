@@ -325,7 +325,7 @@
           </div>
           </a>
 
-          <a href="tech.php">
+          <a href="subject.php?id=weirdones">
           <div id="fifteen">
             <script>
               var thr_ee = document.getElementById("fifteen");

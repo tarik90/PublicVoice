@@ -1,7 +1,64 @@
+<?php
+  $title = $_GET["id"];
+
+  switch ($title) {
+    case 'techEngineering':
+      $title = "TECH & ENGINEERING";
+      break;
+    case 'food':
+      $title = "FOOD";
+      break;  
+    case 'politics':
+      $title = "POLITICS";
+      break;  
+    case 'auto':
+      $title = "AUTO";
+      break;  
+    case 'religion':
+      $title = "RELIGION";
+      break;  
+    case 'social':
+      $title = "SOCIAL";
+      break;
+    case 'musicEntertainment':
+      $title = "MUSIC & ENTERTAINMENT";
+      break;
+    case 'environmentNature':
+      $title = "ENVIRONMENT & NATURE";
+      break;
+    case 'sports':
+      $title = "SPORTS";
+      break;
+    case 'personal':
+      $title = "PERSONAL";
+      break;
+    case 'fashion':
+      $title = "FASHION";
+      break;
+    case 'healthBeauty':
+      $title = "HEALTH & BEAUTY";
+      break;
+    case 'weirdones':
+      $title = "WEIRD ONE'S";
+      break;
+     case 'education':
+      $title = "EDUCATION";
+      break;
+    case 'beauty':
+      $title = "BEAUTY";
+      break;
+    default:
+      # code...
+      $title = "NO TITLE IS SET FOR THIS PAGE";
+      break;
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>PV - TECH & ENGINEERING</title>
+      <title>PV - <?php echo $title; ?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -261,7 +318,7 @@
           </div>
           </a>
 
-          <a href="tech.php">
+          <a href="subject.php?id=weirdones">
           <div id="fifteen">
             <script>
               var thr_ee = document.getElementById("fifteen");
