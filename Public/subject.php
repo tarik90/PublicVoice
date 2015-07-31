@@ -1,70 +1,22 @@
 <?php
+  
+  include("../include/function.php");
   $title = $_GET["id"];
 
-  switch ($title) {
-    case 'techEngineering':
-      $title = "TECH & ENGINEERING";
-      break;
-    case 'food':
-      $title = "FOOD";
-      break;  
-    case 'politics':
-      $title = "POLITICS";
-      break;  
-    case 'auto':
-      $title = "AUTO";
-      break;  
-    case 'religion':
-      $title = "RELIGION";
-      break;  
-    case 'social':
-      $title = "SOCIAL";
-      break;
-    case 'musicEntertainment':
-      $title = "MUSIC & ENTERTAINMENT";
-      break;
-    case 'environmentNature':
-      $title = "ENVIRONMENT & NATURE";
-      break;
-    case 'sports':
-      $title = "SPORTS";
-      break;
-    case 'personal':
-      $title = "PERSONAL";
-      break;
-    case 'fashion':
-      $title = "FASHION";
-      break;
-    case 'healthBeauty':
-      $title = "HEALTH & BEAUTY";
-      break;
-    case 'weirdones':
-      $title = "WEIRD ONE'S";
-      break;
-     case 'education':
-      $title = "EDUCATION";
-      break;
-    case 'beauty':
-      $title = "BEAUTY";
-      break;
-    default:
-      # code...
-      $title = "NO TITLE IS SET FOR THIS PAGE";
-      break;
-  }
-?>
+  $pagetitle = setPageTitle($title);
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>PV - <?php echo $title; ?></title>
+      <title>PV - <?php echo $pagetitle; ?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="index.css">
-      <link rel="stylesheet" type="text/css" href="tech.css">
+      <link rel="stylesheet" type="text/css" href="subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
