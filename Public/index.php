@@ -129,7 +129,7 @@
           sub_jects.style.transition = "all 1s";
         </script>
 
-          <a href="subject.php?id=food">
+          <a href="subject.php?tag=food">
           <div id="one">
             <script >
               var on_e = document.getElementById("one");
@@ -143,7 +143,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=politics">
+          <a href="subject.php?tag=politics">
           <div id="two">
             <script>
               var tw_o = document.getElementById("two");
@@ -157,7 +157,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=religion">
+          <a href="subject.php?tag=religion">
           <div id="three">
             <script>
               var thr_ee = document.getElementById("three");
@@ -171,7 +171,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=auto">
+          <a href="subject.php?tag=auto">
           <div id="four">
             <script>
               var thr_ee = document.getElementById("four");
@@ -185,7 +185,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=education">
+          <a href="subject.php?tag=education">
           <div id="five">
             <script>
               var thr_ee = document.getElementById("five");
@@ -199,7 +199,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=social">
+          <a href="subject.php?tag=social">
           <div id="six">
             <script >
               var on_e = document.getElementById("six");
@@ -213,7 +213,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=healthBeauty">
+          <a href="subject.php?tag=healthBeauty">
           <div id="seven">
             <script>
               var tw_o = document.getElementById("seven");
@@ -227,7 +227,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=musicEntertainment">
+          <a href="subject.php?tag=musicEntertainment">
           <div id="eight">
             <script>
               var thr_ee = document.getElementById("eight");
@@ -241,7 +241,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=environmentNature">
+          <a href="subject.php?tag=environmentNature">
           <div id="nine">
             <script>
               var tw_o = document.getElementById("nine");
@@ -255,7 +255,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=techEngineering">
+          <a href="subject.php?tag=techEngineering">
           <div id="ten">
             <script>
               var thr_ee = document.getElementById("ten");
@@ -269,7 +269,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=beauty">
+          <a href="subject.php?tag=beauty">
           <div id="eleven">
             <script>
               var tw_o = document.getElementById("eleven");
@@ -283,7 +283,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=sports">
+          <a href="subject.php?tag=sports">
           <div id="twelve">
             <script>
               var thr_ee = document.getElementById("twelve");
@@ -297,7 +297,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=personal">
+          <a href="subject.php?tag=personal">
           <div id="thirteen">
             <script>
               var thr_ee = document.getElementById("thirteen");
@@ -311,7 +311,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=fashion">
+          <a href="subject.php?tag=fashion">
           <div id="fourteen">
             <script>
               var tw_o = document.getElementById("fourteen");
@@ -325,7 +325,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=weirdones">
+          <a href="subject.php?tag=weirdones">
           <div id="fifteen">
             <script>
               var thr_ee = document.getElementById("fifteen");

@@ -1,9 +1,45 @@
 <?php
   
   include("../include/function.php");
-  $title = $_GET["id"];
+  $title = $_GET["tag"];
 
   $pagetitle = setPageTitle($title);
+
+  session_start();
+
+//create database connection
+  $dbhost = "localhost";
+  $dbuser = "pv_cms";
+  $dbpass = "secret";
+  $dbname = "public_voice";
+  $connection1 = mysqli_connect($dbhost, $dbuser, $dbpass,
+          $dbname);
+
+  if(mysqli_connect_errno()){
+    die("Database connection1 failed: " . 
+      mysqli_connect_error() . " (" .
+        mysqli_connect_errno() .")"
+    );
+  }
+
+  //get number of record exist in the table
+  $query1 = "SELECT COUNT(*) as total FROM {$title}";
+  $result1 = mysqli_query($connection1,$query1);
+  
+  if(!$result1){
+    die("Database query count failed" . mysqli_error($connection1));
+  }
+  else{
+    $data = mysqli_fetch_assoc($result1);
+    $id = 0;
+    $id = $data["total"];
+  }
+
+  // global $connection1;
+  // $id = mysqli_insert_id($connection1);
+  // echo $id;
+  //echo $id. "<br/>";
+
 
 ?>
 
@@ -38,7 +74,7 @@
       <script>
         var screen_style = document.getElementById("box");
         screen_style.style.maxWidth = (screen.width -17) + "px";
-        screen_style.style.height = (screen.height - 121) + "px";
+        //screen_style.style.height = (screen.height - 121) + "px";
         screen_style.style.backgroundColor = "#222222";
         screen_style.style.overflowX = "auto";
         screen_style.style.overflowY = "auto"; 
@@ -63,7 +99,7 @@
         <script>
           var mid_page = document.getElementById("midpage");
           mid_page.style.width = (screen.width -18) + "px";
-          mid_page.style.height = (screen.height - 310) + "px";
+          //mid_page.style.height = (screen.height - 310) + "px";
         </script>
 
         <div id="subjects">
@@ -74,7 +110,7 @@
           sub_jects.style.transition = "all 1s";
         </script>
 
-          <a href="subject.php?id=food">
+          <a href="subject.php?tag=food">
           <div id="one">
             <script >
               var on_e = document.getElementById("one");
@@ -88,7 +124,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=politics">
+          <a href="subject.php?tag=politics">
           <div id="two">
             <script>
               var tw_o = document.getElementById("two");
@@ -102,7 +138,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=religion">
+          <a href="subject.php?tag=religion">
           <div id="three">
             <script>
               var thr_ee = document.getElementById("three");
@@ -116,7 +152,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=auto">
+          <a href="subject.php?tag=auto">
           <div id="four">
             <script>
               var thr_ee = document.getElementById("four");
@@ -130,7 +166,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=education">
+          <a href="subject.php?tag=education">
           <div id="five">
             <script>
               var thr_ee = document.getElementById("five");
@@ -144,7 +180,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=social">
+          <a href="subject.php?tag=social">
           <div id="six">
             <script >
               var on_e = document.getElementById("six");
@@ -158,7 +194,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=healthBeauty">
+          <a href="subject.php?tag=healthBeauty">
           <div id="seven">
             <script>
               var tw_o = document.getElementById("seven");
@@ -172,7 +208,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=musicEntertainment">
+          <a href="subject.php?tag=musicEntertainment">
           <div id="eight">
             <script>
               var thr_ee = document.getElementById("eight");
@@ -186,7 +222,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=environmentNature">
+          <a href="subject.php?tag=environmentNature">
           <div id="nine">
             <script>
               var tw_o = document.getElementById("nine");
@@ -200,7 +236,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=techEngineering">
+          <a href="subject.php?tag=techEngineering">
           <div id="ten">
             <script>
               var thr_ee = document.getElementById("ten");
@@ -214,7 +250,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=beauty">
+          <a href="subject.php?tag=beauty">
           <div id="eleven">
             <script>
               var tw_o = document.getElementById("eleven");
@@ -228,7 +264,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=sports">
+          <a href="subject.php?tag=sports">
           <div id="twelve">
             <script>
               var thr_ee = document.getElementById("twelve");
@@ -242,7 +278,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=personal">
+          <a href="subject.php?tag=personal">
           <div id="thirteen">
             <script>
               var thr_ee = document.getElementById("thirteen");
@@ -256,7 +292,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=fashion">
+          <a href="subject.php?tag=fashion">
           <div id="fourteen">
             <script>
               var tw_o = document.getElementById("fourteen");
@@ -270,7 +306,7 @@
           </div>
           </a>
 
-          <a href="subject.php?id=weirdones">
+          <a href="subject.php?tag=weirdones">
           <div id="fifteen">
             <script>
               var thr_ee = document.getElementById("fifteen");
@@ -295,23 +331,46 @@
           poll_box.style.height = (screen.height - 100) + "px";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
+          poll_box.style.zIndex = "1";
         </script>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
-        <p>sdklfjlsdkjfkldsjlkfjklsdjfkljsldkjfkl</p>
+      <?php
 
+      //printing all backward----------------------------------------new post on the top
+
+  global $id;
+  $counter = $id;
+  while ($counter != 0){
+  
+      //perform database query
+  $query2 = "SELECT * ";
+  $query2 .= "FROM {$title} ";
+  $query2 .= "WHERE id = {$counter}";
+  $result2 = mysqli_query($connection1,$query2);
+
+  if(!$result2){
+    die("Database query read failed" . mysqli_error($connection1));
+  }
+
+  //use returned data
+        while($table_name = mysqli_fetch_assoc($result2)){
+      ?>
+  <ul id="eachSubject">  
+      <li><a href="question.php?ques=<?php echo urlencode($table_name["post_description"]); ?>&tag=<?php echo urlencode($title); ?>&id=<?php echo urlencode($table_name["id"]); ?>">
+          <?php  echo $table_name["post_description"] . "<br />";  ?></a></li>
+      <li><?php  echo $table_name["option_1"] . "<br />";   ?></li>
+      <li><?php  echo $table_name["option_2"] . "<br />";   ?></li>
+      <li><?php  echo $table_name["option_3"] . "<br />";   ?></li>
+      <li><?php  echo $table_name["option_4"] . "<br />";   ?></li>
+      <hr width="95%">
+  </ul>
+
+  <?php
+    }
+
+    $counter--;
+
+  }
+  ?>
         </div>
 
         <div id="navigationSide">
@@ -381,7 +440,7 @@
         </div>
 
       </div>
-
+<!--
       <div id="foot">
         <script>
           var footer = document.getElementById("foot");
@@ -430,12 +489,19 @@
 
 
       </div>
--->
+--
     </div>
-
+-->
 
 
      
       
   </body>
+<?php
+      mysqli_free_result($result1);
+    mysqli_free_result($result2);
+  //closing conncetion
+    mysqli_close($connection1);
+
+?>
 </html>

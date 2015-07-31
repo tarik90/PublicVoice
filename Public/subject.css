@@ -75,3 +75,7 @@ a:hover{
 	text-decoration: none;
 	outline: none;
 }
+
+#eachSubject{
+	list-style: none;
+}
