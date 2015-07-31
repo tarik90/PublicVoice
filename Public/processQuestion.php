@@ -18,11 +18,12 @@ session_start();
 
 //Databse CRUD-inserting values
 	$post_description = "";
-	$question = $_POST["question"];
-	$table_tag = $_GET["tag"]
-	if($question == "" || NULL)
+	$question = mysqli_real_escape_string($connection1,$_POST["question"]);
+	$table_tag = mysqli_real_escape_string($connection1,$_GET["tag"]);
+
+	if($question === "" || $question === NULL)
 	{
-		echo "Please enter a question";
+		die("Please enter a question");
 	}
 	else
 	{
@@ -31,7 +32,7 @@ session_start();
 
 		for ($i=1; $i <5 ; $i++) 
 		{ 
-			$option[$i] = $_POST["option{$i}"];
+			$option[$i] = mysqli_real_escape_string($connection1,$_POST["option{$i}"]);
 			//$_SESSION["option{$i}"] = $option[$i];
 		}
 
@@ -78,7 +79,7 @@ session_start();
 		$op_vote[$j] = 0;
 	}
 
-	$query2 = "INSERT INTO tech (";
+	$query2 = "INSERT INTO {$table_tag} (";
 	$query2 .= " tech_id, op1_vote, op2_vote, op3_vote, op4_vote";
 	$query2 .= ") VALUES (";
 	$query2 .= " '{$tech_id}', '{$op_vote[1]}', '{$op_vote[2]}', '{$op_vote[3]}', '{$op_vote[4]}' ";
@@ -88,7 +89,7 @@ session_start();
 
 	if($val_2){
 		//echo "Success2 <br />";
-		header("Location: subject.php?id=". urlencode($table_tag));
+		header("Location: subject.php?tag=". urlencode($table_tag));
 	}else{
 		die("Database2 query failedddd" . mysqli_error($connection2));
 	}

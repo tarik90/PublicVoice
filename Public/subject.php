@@ -381,6 +381,7 @@
             navigation_Side.style.height = (screen.height - 350) + "px";
           </script>
 
+          <a href="addapost.php?tag=<?php echo urlencode($title); ?>">
           <div id="addapost">
             <script>
               var add_a_post = document.getElementById("addapost");
@@ -391,7 +392,8 @@
             </script>
             ADD NEW POLL
           </div>
-
+          </a>
+          
           <a href="index.php">
             <div id="home_side">
             <script>

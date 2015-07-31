@@ -29,6 +29,7 @@
 	transition-duration: 1s;
 	margin-top: 23%;
 	color: white;
+	text-decoration: none;
 }
 #home_side:hover{
 	border: 1px solid white;
