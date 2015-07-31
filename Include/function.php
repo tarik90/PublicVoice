@@ -9,37 +9,37 @@
 	function setPageTitle($title){
 		  switch ($title) {
 		    case 'techEngineering':
-		      $title = "TECH & ENGINEERING";
+		      $title = "TECH & ENGINEERING";//
 		      break;
 		    case 'food':
-		      $title = "FOOD";
+		      $title = "FOOD";//
 		      break;  
 		    case 'politics':
-		      $title = "POLITICS";
+		      $title = "POLITICS";//
 		      break;  
 		    case 'auto':
-		      $title = "AUTO";
+		      $title = "AUTO";//
 		      break;  
 		    case 'religion':
-		      $title = "RELIGION";
+		      $title = "RELIGION";//
 		      break;  
 		    case 'social':
-		      $title = "SOCIAL";
+		      $title = "SOCIAL";//
 		      break;
 		    case 'musicEntertainment':
-		      $title = "MUSIC & ENTERTAINMENT";
+		      $title = "MUSIC & ENTERTAINMENT";//
 		      break;
 		    case 'environmentNature':
-		      $title = "ENVIRONMENT & NATURE";
+		      $title = "ENVIRONMENT & NATURE";//
 		      break;
 		    case 'sports':
-		      $title = "SPORTS";
+		      $title = "SPORTS";//
 		      break;
 		    case 'personal':
-		      $title = "PERSONAL";
+		      $title = "PERSONAL";//
 		      break;
 		    case 'fashion':
-		      $title = "FASHION";
+		      $title = "FASHION";//
 		      break;
 		    case 'healthBeauty':
 		      $title = "HEALTH & BEAUTY";
@@ -50,15 +50,15 @@
 		     case 'education':
 		      $title = "EDUCATION";
 		      break;
-		    case 'beauty':
-		      $title = "BEAUTY";
+		    case 'world':
+		      $title = "WORLD";
 		      break;
 		    default:
 		      # code...
 		      $title = "NO TITLE IS SET FOR THIS PAGE";
 		      break;
 		  }
-		  
+
   		return $title;
 	}
 

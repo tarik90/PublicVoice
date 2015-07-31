@@ -269,7 +269,7 @@
           </div>
           </a>
 
-          <a href="subject.php?tag=beauty">
+          <a href="subject.php?tag=world">
           <div id="eleven">
             <script>
               var tw_o = document.getElementById("eleven");
@@ -279,7 +279,7 @@
               tw_o.style.lineHeight = tw_o.style.height;
               tw_o.style.transition = "all 1s";
             </script>
-            BEAUTY
+            WORLD
           </div>
           </a>
 
