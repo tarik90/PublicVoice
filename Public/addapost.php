@@ -319,7 +319,7 @@
             <input id="optionBox" type="text" name="option4" placeholder="Enter option">
             <br>
 
-            <h3><input type="submit" name="submit" value="submit"></h3>
+            <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
 
           </form>
         </div>

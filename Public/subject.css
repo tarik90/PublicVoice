@@ -84,6 +84,8 @@ a:hover{
 #formstyle{
 	color: black;
 	font-size: 15px;
+	margin: 0 auto;
+	width: 500px;
 }
 
 #questionBox{
@@ -91,5 +93,9 @@ a:hover{
 }
 
 #optionBox{
+	width: 300px;
+}
+
+#submitButton{
 	width: 200px;
 }
