@@ -80,3 +80,16 @@ a:hover{
 #eachSubject{
 	list-style: none;
 }
+
+#formstyle{
+	color: black;
+	font-size: 15px;
+}
+
+#questionBox{
+	width: 400px;
+}
+
+#optionBox{
+	width: 200px;
+}
