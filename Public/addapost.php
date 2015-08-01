@@ -2,13 +2,14 @@
   
   include("../include/function.php");
   $tag = $_GET["tag"];
+  $pagetitle = setPageTitle($tag);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>PV - <?php echo $pagetitle; ?></title>
+      <title>+? <?php echo $pagetitle; ?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
