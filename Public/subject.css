@@ -81,11 +81,15 @@ a:hover{
 	list-style: none;
 }
 
-#formstyle{
+#formBox{
 	color: black;
 	font-size: 15px;
+	width: 600px;
 	margin: 0 auto;
-	width: 500px;
+	margin-top: 45px;
+	margin-bottom: 45px;
+	border: 0px solid white;
+
 }
 
 #questionBox{
@@ -98,4 +102,12 @@ a:hover{
 
 #submitButton{
 	width: 200px;
+	text-transform: uppercase;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+#emailBox{
+	width: 200px;
+	float: right;
 }

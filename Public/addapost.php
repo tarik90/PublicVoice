@@ -299,19 +299,26 @@
           poll_box.style.marginTop = 25 + "px";
         </script>
 
-        <div id="formstyle">
-          <form action="processQuestion.php?tag=<?php echo urlencode($tag); ?>" method="post">
+        <div id="formBox">
+          <script>
+          var form_Box = document.getElementById("formBox");
+          form_Box.style.verticalAlign = "middle"
+          </script>
+            <form action="processQuestion.php?tag=<?php echo urlencode($tag); ?>" method="post">
       
-            <h3>Question:</h3>
+            
             <input id="questionBox" type="text" name="question" width="50" placeholder="Please write your question. Required" required>
-            <br>
-            <h4>Option:</h4>
+            <hr>
+            
             <br>
             <input id="optionBox" type="text" name="option1" placeholder="Enter option. Required" required>
             <br>
             <br>
             <input id="optionBox" type="text" name="option2" placeholder="Enter option. Required" required>
             <br>
+            
+            <input id="emailBox" type="email" name="email" placeholder="Enter your email" required>
+            
             <br>
             <input id="optionBox" type="text" name="option3" placeholder="Enter option">
             <br>
@@ -319,9 +326,11 @@
             <input id="optionBox" type="text" name="option4" placeholder="Enter option">
             <br>
 
+
             <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
 
           </form>
+
         </div>
           
 
@@ -452,11 +461,5 @@
      
       
   </body>
-<?php
-      mysqli_free_result($result1);
-    mysqli_free_result($result2);
-  //closing conncetion
-    mysqli_close($connection1);
 
-?>
 </html>
