@@ -35,6 +35,7 @@ session_start();
 
 			if($tech["answered"] == 1){
 				header("Location: voted.php?tag=$tag&id=$id&answered=1");
+				break;
 			}
 
 ?>

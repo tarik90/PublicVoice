@@ -75,6 +75,7 @@
         var screen_style = document.getElementById("box");
         screen_style.style.maxWidth = (screen.width -17) + "px";
         //screen_style.style.height = (screen.height - 121) + "px";
+        //screen_style.style.height = "auto";
         screen_style.style.backgroundColor = "#222222";
         screen_style.style.overflowX = "auto";
         screen_style.style.overflowY = "auto"; 
@@ -328,7 +329,8 @@
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -570) + "px";
-          poll_box.style.height = (screen.height - 100) + "px";
+          poll_box.style.height = (screen.height - 243) + "px";
+          //poll_box.style.height = "auto";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
           poll_box.style.zIndex = "1";
@@ -393,7 +395,7 @@
             ADD NEW POLL
           </div>
           </a>
-          
+
           <a href="index.php">
             <div id="home_side">
             <script>
