@@ -292,12 +292,12 @@
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -570) + "px";
-          poll_box.style.height = (screen.height - 350) + "px";
+          poll_box.style.height = (screen.height - 300) + "px";
           //poll_box.style.height = "auto";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
           poll_box.style.zIndex = "1";
-          poll_box.style.marginTop = 25 + "px";
+          //poll_box.style.marginTop = 25 + "px";
         </script>
 
         <div id="formBox">
@@ -307,24 +307,31 @@
           </script>
             <form action="processQuestion.php?tag=<?php echo urlencode($tag); ?>" method="post">
       
-            
-            <input id="questionBox" type="text" name="question" width="50" placeholder="Please write your question. Required" required>
+
+            <input id="questionBox" type="text" name="question" width="50" placeholder=" Please write your question. REQUIRED" required>
             <hr>
             
             <br>
-            <input id="optionBox" type="text" name="option1" placeholder="Enter option. Required" required>
+            <input id="optionBox" type="text" name="option1" placeholder=" Enter option. REQUIRED" required>
             <br>
             <br>
-            <input id="optionBox" type="text" name="option2" placeholder="Enter option. Required" required>
+            <input id="optionBox" type="text" name="option2" placeholder=" Enter option. REQUIRED" required>
             <br>
+            <?php
+
+              if(isset($_GET["emailsupport"]))
+              {
+                echo "<p style=\"font-size:15px\"id=\"emailBox\"># Please insert a valid email !</p>"."<br>";
+              }
+            ?>
+            <br>
+            <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required>
             
-            <input id="emailBox" type="email" name="email" placeholder="Enter your email" required>
-            
             <br>
-            <input id="optionBox" type="text" name="option3" placeholder="Enter option">
+            <input id="optionBox" type="text" name="option3" placeholder=" Enter option">
             <br>
             <br>
-            <input id="optionBox" type="text" name="option4" placeholder="Enter option">
+            <input id="optionBox" type="text" name="option4" placeholder=" Enter option">
             <br>
 
 
@@ -343,7 +350,7 @@
             navigation_Side.style.width = (screen.width -1180) + "px";
             navigation_Side.style.height = (screen.height - 350) + "px";
           </script>
-
+<!--
           <a href="index.php">
           <div id="addapost">
             <script>
@@ -356,7 +363,7 @@
             ADD NEW POLL
           </div>
           </a>
-
+-->
           <a href="index.php">
             <div id="home_side">
             <script>
@@ -391,7 +398,7 @@
             </script>
             DONATE
           </div>
-
+<!--
           <div id="peopleOnline">
             <script>
               var people_online = document.getElementById("peopleOnline");
@@ -400,9 +407,9 @@
               people_online.style.backgroundColor = "#335C33";
               people_online.style.lineHeight = people_online.style.height;
             </script>
-           1M PEOPLE
+           Re
           </div>
-
+-->
         </div>
 
       </div>
