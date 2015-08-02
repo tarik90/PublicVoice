@@ -8,35 +8,35 @@
   session_start();
 
 //create database connection
-  $dbhost = "localhost";
-  $dbuser = "pv_cms";
-  $dbpass = "secret";
-  $dbname = "public_voice";
-  $connection1 = mysqli_connect($dbhost, $dbuser, $dbpass,
-          $dbname);
+  $dbhost_read_post = "localhost";
+  $dbuser_read_post = "pv_cms";
+  $dbpass_read_post = "secret";
+  $dbname_read_post = "public_voice";
+  $connection_read = mysqli_connect($dbhost_read_post, $dbuser_read_post, $dbpass_read_post,
+          $dbname_read_post);
 
   if(mysqli_connect_errno()){
-    die("Database connection1 failed: " . 
+    die("Database connection_read failed: " . 
       mysqli_connect_error() . " (" .
         mysqli_connect_errno() .")"
     );
   }
 
   //get number of record exist in the table
-  $query1 = "SELECT COUNT(*) as total FROM {$title}";
-  $result1 = mysqli_query($connection1,$query1);
+  $query_total_postCount = "SELECT COUNT(*) as total FROM {$title}";
+  $result_total_postCount = mysqli_query($connection_read,$query_total_postCount);
   
-  if(!$result1){
-    die("Database query count failed" . mysqli_error($connection1));
+  if(!$result_total_postCount){
+    die("Database query count failed" . mysqli_error($connection_read));
   }
   else{
-    $data = mysqli_fetch_assoc($result1);
+    $data = mysqli_fetch_assoc($result_total_postCount);
     $id = 0;
     $id = $data["total"];
   }
 
-  // global $connection1;
-  // $id = mysqli_insert_id($connection1);
+  // global $connection_read;
+  // $id = mysqli_insert_id($connection_read);
   // echo $id;
   //echo $id. "<br/>";
 
@@ -345,17 +345,17 @@
   while ($counter != 0){
   
       //perform database query
-  $query2 = "SELECT * ";
-  $query2 .= "FROM {$title} ";
-  $query2 .= "WHERE id = {$counter}";
-  $result2 = mysqli_query($connection1,$query2);
+  $query_read_question = "SELECT * ";
+  $query_read_question .= "FROM {$title} ";
+  $query_read_question .= "WHERE id = {$counter}";
+  $result_read_question = mysqli_query($connection_read,$query_read_question);
 
-  if(!$result2){
-    die("Database query read failed" . mysqli_error($connection1));
+  if(!$result_read_question){
+    die("Database query read failed" . mysqli_error($connection_read));
   }
 
   //use returned data
-        while($table_name = mysqli_fetch_assoc($result2)){
+        while($table_name = mysqli_fetch_assoc($result_read_question)){
       ?>
   <ul id="eachSubject">  
       <li><a href="question.php?ques=<?php echo urlencode($table_name["post_description"]); ?>&tag=<?php echo urlencode($title); ?>&id=<?php echo urlencode($table_name["id"]); ?>">
@@ -502,11 +502,20 @@
      
       
   </body>
+  
 <?php
-      mysqli_free_result($result1);
-    mysqli_free_result($result2);
-  //closing conncetion
-    mysqli_close($connection1);
+
+
+  if(isset($result_total_postCount)){
+    mysqli_free_result($result_total_postCount);
+  }
+  if(isset($result_read_question)){
+    mysqli_free_result($result_read_question);
+  }
+  if(isset($connection_read)){
+    mysqli_close($connection_read);
+  }
+      
 
 ?>
 </html>
