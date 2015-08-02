@@ -24,8 +24,8 @@ session_start();
 
 	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
-	if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) ) {
-  			// || !preg_match($email_pattern, $email_inserted)
+	if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
+  			// 
   			header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
   			die();
 
@@ -33,7 +33,7 @@ session_start();
 
 	if($question === "" || $question === NULL)
 	{
-		header("Location: addapost.php?tag=". urlencode($table_tag));
+		header("Location: addapost.php?question=0&tag=". urlencode($table_tag));
   			die();
 	}
 	else
