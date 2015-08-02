@@ -40,7 +40,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>+? <?php echo $pagetitle; ?></title>
+      <title>QUESTION FROM <?php echo $pagetitle; ?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
