@@ -84,21 +84,24 @@ a:hover{
 
 #formBox{
 	color: black;
-	font-size: 15px;
+	font-size: 21px;
 	width: 600px;
 	margin: 0 auto;
 	margin-top: 45px;
 	margin-bottom: 45px;
 	border: 0px solid white;
+	font-weight: bold;
 
 }
 
 #questionBox{
-	width: 400px;
+	width: 500px;
+	font-size: 16px;
 }
 
 #optionBox{
 	width: 300px;
+	font-size: 16px;
 }
 
 #submitButton{
@@ -112,6 +115,30 @@ a:hover{
 }
 
 #emailBox{
-	width: 200px;
+	width: 225px;
 	float: right;
+	font-size: 16px;
+}
+
+#question{
+	font-size: 25px;
+	font-weight: bold;
+	border: 0px solid white;
+	word-spacing: 2px;
+}
+
+
+#optionB {
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    width:15px;
+    height:15px;
+    border:5px solid rgba(0,0,0,.4);
+    border-radius:50%;
+    box-shadow:inset 0 0 50px rgba(0,0,0,.2);
+
+}
+#optionB:checked {
+    background: green;                
 }
