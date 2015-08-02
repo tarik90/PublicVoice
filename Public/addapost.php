@@ -316,12 +316,11 @@
             <br>
             <br>
             <input id="optionBox" type="text" name="option2" placeholder=" Enter option. REQUIRED" required>
-            <br>
             <?php
 
               if(isset($_GET["emailsupport"]))
               {
-                echo "<p style=\"font-size:15px\"id=\"emailBox\"># Please insert a valid email !</p>"."<br>";
+                echo "<br>"."<p style=\"font-size:15px\"id=\"emailBox\"># Please insert a valid email !</p>"."<br>";
               }
             ?>
             <br>

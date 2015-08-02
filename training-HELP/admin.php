@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <title>ADMIN-Public Voice</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="index.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <h1>Welcome to Admin Area</h1>
+<?php
 
-    <h2>Admin Area</h2>
+  $email_inserted = "wewre#!@yoo.com";
 
-    
-    <ul>
-      <li><a href="">Manage content</a></li>
-      <li><a href="">Manage User</a></li>
-      <li><a href="">Logout</a></li>
-    </ul>
+  $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
-     
-      
-  </body>
-</html>
+  if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL)  || !preg_match($email_pattern, $email_inserted)) {
+        die("Invalid email format");
+    }
+  else{
+    echo "success";
+  }
+
+?>
