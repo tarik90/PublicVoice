@@ -48,7 +48,7 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 650) + "px";
+          head_style.style.height = (screen.height - 670) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
 
@@ -292,7 +292,7 @@
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -570) + "px";
-          poll_box.style.height = (screen.height - 300) + "px";
+          poll_box.style.height = (screen.height - 262) + "px";
           //poll_box.style.height = "auto";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
@@ -311,7 +311,6 @@
             <input id="questionBox" type="text" name="question" width="50" placeholder=" Please write your question. REQUIRED" required>
             <hr>
             
-            <br>
             <input id="optionBox" type="text" name="option1" placeholder=" Enter option. REQUIRED" required>
             <br>
             <br>
@@ -417,7 +416,7 @@
         <script>
           var footer = document.getElementById("foot");
           footer.style.width = (screen.width -18) + "px";
-          footer.style.height = (screen.height - 697) + "px";
+          footer.style.height = (screen.height - 715) + "px";
           footer.style.backgroundColor = "#303030";
           footer.style.lineHeight = footer.style.height;
         </script>

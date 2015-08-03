@@ -79,7 +79,7 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 650) + "px";
+          head_style.style.height = (screen.height - 670) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
 
@@ -323,7 +323,7 @@
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -570) + "px";
-          poll_box.style.height = (screen.height - 300) + "px";
+          poll_box.style.height = (screen.height - 280) + "px";
           //poll_box.style.height = "auto";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
@@ -346,7 +346,7 @@
       // }
 
 ?>
-          <form action="processQuestion.php?tag=<?php echo urlencode($tag); ?>" method="post">
+          <form action="processVote.php?tag=<?php echo urlencode($tag); ?>&id=<?php echo $id; ?>" method="post">
       
 
             
