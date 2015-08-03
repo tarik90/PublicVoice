@@ -1,11 +1,77 @@
 <?php
-  
+
+  session_start();
   include("../include/function.php");
   $tag = $_GET["tag"];
   $pagetitle = setPageTitle($tag);
 
-  session_start();
+  if(isset($_GET["voted"])){
 
+
+    $dbhost_vote = "localhost";
+    $dbuser_vote = "pv_cms";
+    $dbpass_vote = "secret";
+    $dbname_vote = "public_voice_option";
+    $connection_vote = mysqli_connect($dbhost_vote, $dbuser_vote, $dbpass_vote,
+            $dbname_vote);
+
+    if(mysqli_connect_errno()){
+      die("Database connection_vote failed: " . 
+        mysqli_connect_error() . " (" .
+          mysqli_connect_errno() .")"
+      );
+    }
+
+    global $tag;
+    $post_id = $_GET["postid"];
+
+
+    $query_read_vote = "SELECT * ";
+    $query_read_vote .= "FROM {$tag} ";
+    $query_read_vote .= "WHERE id = {$post_id}";
+    $result_read_vote = mysqli_query($connection_vote,$query_read_vote);
+
+    if(!$result_read_vote){
+      die("Database query read failed" . mysqli_error($connection_vote));
+    }
+
+    for ($j=1; $j<5 ; $j++) { 
+    # code...
+    $op_vote[$j] = 0;
+    }
+        
+    $optionNo = 1;
+    while($table_name = mysqli_fetch_assoc($result_read_vote) || $optionNo <5){
+
+      $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
+
+      echo $op_vote[$optionNo];
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    die("Redirection succesful");
+  }
+  
 //create database connection_read
   $dbhost_read = "localhost";
   $dbuser_read = "pv_cms";

@@ -131,6 +131,25 @@ session_start();
     );
   }
 
+  for ($j=1; $j<5 ; $j++) { 
+		# code...
+		$op[$j] = 0;
+	}
+
+  	$query_vote_percentage_upload = "INSERT INTO vote_in_percentage (";
+	$query_vote_percentage_upload .= " post_id, tag, op1, op2, op3, op4";
+	$query_vote_percentage_upload .= ") VALUES (";
+	$query_vote_percentage_upload .= " '{$post_id}', '{$table_tag}', '{$op[1]}', '{$op[2]}', '{$op[3]}', '{$op[4]}' ";
+	$query_vote_percentage_upload .= ")";
+
+	$success_vote_percentage_upload = mysqli_query($connection_email_upload,$query_vote_percentage_upload);
+
+	if($success_vote_percentage_upload){
+		//echo "Success2 <br />";
+		//header("Location: subject.php?tag=". urlencode($table_tag));
+	}else{
+		die("Database query_vote_percentage_upload  failedddd" . mysqli_error($connection_email_upload));
+	}
   /*$query_email_check = "SELECT * ";
   $query_email_check .= "FROM email ";
   $query_email_check .= "WHERE email_address = '{$email_inserted}'";
@@ -165,24 +184,19 @@ session_start();
       die("Database query_email_upload failedddd" . mysqli_error($connection_email_upload));
     }
 
- 
+ 	
       
 
   // $tech = mysqli_fetch_assoc($result1)
 
 
-
-
-
-
-
-
-
      //release return data
    // mysqli_free_result( $result_email_check);
   //closing conncetion
-    mysqli_close($connection_email);
-?>
+    if(isset($connection_email)){
+    	mysqli_close($connection_email);
+    }
+    
 ?>
 
 

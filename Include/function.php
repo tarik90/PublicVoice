@@ -62,5 +62,10 @@
   		return $title;
 	}
 
+	function voteInPercentage($num, $denom_1, $denom_2, $denom_3, $denom_4){
+
+		$percentage = round(100 * ($num / ($denom_1 + $denom_2 + $denom_3 + $denom_4)));
+		return $percentage;
+	}
 
 ?>
