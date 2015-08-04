@@ -2,76 +2,14 @@
 
   session_start();
   include("../include/function.php");
-  $tag = $_GET["tag"];
-  $pagetitle = setPageTitle($tag);
 
-  if(isset($_GET["voted"])){
-
-
-    $dbhost_vote = "localhost";
-    $dbuser_vote = "pv_cms";
-    $dbpass_vote = "secret";
-    $dbname_vote = "public_voice_option";
-    $connection_vote = mysqli_connect($dbhost_vote, $dbuser_vote, $dbpass_vote,
-            $dbname_vote);
-
-    if(mysqli_connect_errno()){
-      die("Database connection_vote failed: " . 
-        mysqli_connect_error() . " (" .
-          mysqli_connect_errno() .")"
-      );
-    }
-
-    global $tag;
-    $post_id = $_GET["postid"];
+  $post_id = $_GET["id"];
+  $table_tag = $_GET["tag"];
+  global $id;
+  global $post_id;
+  $pagetitle = setPageTitle($table_tag);
 
 
-    $query_read_vote = "SELECT * ";
-    $query_read_vote .= "FROM {$tag} ";
-    $query_read_vote .= "WHERE id = {$post_id}";
-    $result_read_vote = mysqli_query($connection_vote,$query_read_vote);
-
-    if(!$result_read_vote){
-      die("Database query read failed" . mysqli_error($connection_vote));
-    }
-
-    for ($j=1; $j<5 ; $j++) { 
-    # code...
-    $op_vote[$j] = 0;
-    }
-        
-    $optionNo = 1;
-    while($table_name = mysqli_fetch_assoc($result_read_vote) || $optionNo <5){
-
-      $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
-
-      echo $op_vote[$optionNo];
-      
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    die("Redirection succesful");
-  }
-  
 //create database connection_read
   $dbhost_read = "localhost";
   $dbuser_read = "pv_cms";
@@ -88,13 +26,11 @@
   }
 
   //perform database query1
-  $id = $_GET["id"];
-  $tag = $_GET["tag"];
-  global $id;
+
 
   $query_read_to_answer = "SELECT * ";
-  $query_read_to_answer .= "FROM {$tag} ";
-  $query_read_to_answer .= "WHERE id = {$id}";
+  $query_read_to_answer .= "FROM {$table_tag} ";
+  $query_read_to_answer .= "WHERE id = {$post_id}";
   $result_read_to_answer = mysqli_query($connection_read,$query_read_to_answer);
 
   if(!$result_read_to_answer){
@@ -412,7 +348,7 @@
       // }
 
 ?>
-          <form action="processVote.php?tag=<?php echo urlencode($tag); ?>&id=<?php echo $id; ?>" method="post">
+          <form action="processVote.php?tag=<?php echo urlencode($table_tag); ?>&id=<?php echo $post_id; ?>" method="post">
       
 
             

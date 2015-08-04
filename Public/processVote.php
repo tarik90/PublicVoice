@@ -43,7 +43,8 @@
   }
 
   if(mysqli_num_rows($result_email_vote_check)){
-    die ("You have already voted for this");
+    header("Location: voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
+    die ();
     //echo "You have already voted for this";
   }else{
     echo "new email found: " . $email_inserted."<br>";
@@ -86,7 +87,7 @@
       );
     }
 
-    global $tag;
+    global $table_tag;
 
     $query_read_vote = "SELECT * ";
     $query_read_vote .= "FROM {$table_tag} ";
@@ -112,7 +113,7 @@
     $optionNo = 1;
 
     // $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
-    // echo $op_vote[$optionNo]."<br>";
+    // echo "<br>this:".$op_vote[$optionNo]."<br>";
 
     while($optionNo <5){
 
@@ -175,12 +176,12 @@
     $op3 = voteInPercentage($op_vote[3], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
     $op4 = voteInPercentage($op_vote[4], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
 
-    echo "<br>".$op1."<br>";
-    echo $op2."<br>";
-    echo $op3."<br>";
-    echo $op4."<br>";
-    echo $table_tag."<br>";
-    echo $post_id."<br>";
+    // echo "<br>".$op1."<br>";
+    // echo $op2."<br>";
+    // echo $op3."<br>";
+    // echo $op4."<br>";
+    // echo $table_tag."<br>";
+    // echo $post_id."<br>";
 
     $query_vote_percentage_upload = "UPDATE vote_in_percentage ";
     $query_vote_percentage_upload .= "SET ";
@@ -195,8 +196,7 @@
     $success_vote_percentage_upload = mysqli_query($connection_email_vote,$query_vote_percentage_upload);
 
     if($success_vote_upload){
-      echo "Success222 <br />";
-      //header("Location: subject.php?tag=". urlencode($table_tag));
+      header("Location: voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
     }else{
       die("Database query_vote_percentage upload  failedddd" . mysqli_error($connection_email_vote));
     }
