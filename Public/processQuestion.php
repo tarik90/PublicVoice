@@ -18,9 +18,10 @@ session_start();
 
 //Databse CRUD-inserting values
 	$post_description = "";
-	$question = mysqli_real_escape_string($connection_post_upload,$_POST["question"]);
+	$email_inserted = mysqli_real_escape_string($connection_post_upload, htmlentities(strip_tags($_POST["email"])));
+	$question = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_POST["question"])));
 	$table_tag = mysqli_real_escape_string($connection_post_upload,$_GET["tag"]);
-	$email_inserted = mysqli_real_escape_string($connection_post_upload, $_POST["email"]);
+	
 
 	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
@@ -179,7 +180,7 @@ session_start();
 
     if($result_email_upload){
       //echo "Success2 <br />";
-      header("Location: subject.php?tag=". urlencode($table_tag));
+      header("Location: question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
     }else{
       die("Database query_email_upload failedddd" . mysqli_error($connection_email_upload));
     }

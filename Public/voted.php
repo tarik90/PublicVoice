@@ -48,7 +48,7 @@
       $op[$optionNo] = $table_name["op{$optionNo}"];
 
       if($op[$optionNo] == NULL || $op[$optionNo] == ""){
-        echo "op_in_percentage are null <br>";
+        //echo "op_in_percentage are null <br>";
       }
       $optionNo++;
     }
@@ -402,12 +402,16 @@
 
               $output .=  $table_name_question["option_$x"];
               $output .= "<br>";
+              $output .= "<span id=\"imageBox\">";
               $output .= "<img id=\"imageBar\"";
               $output .= "width=";
               $output .= 5 * $table_name["op$x"];
               $output .= " src=\"image$x.jpg\">";
+              $output .= "</span>";
               $output .= " " . $table_name["op$x"];
               $output .= "%";
+
+              
 
               $output .= "</div>";
 
@@ -543,12 +547,24 @@
 
     <?php
 
+      if(isset($result_read_question)){
+        mysqli_free_result($result_read_question);
+      }
+
+      if(isset($result_read_vote_in_percentage)){
+        mysqli_free_result($result_read_vote_in_percentage);
+      }
+
       if(isset($result_read_to_answer)){
         mysqli_free_result($result_read_to_answer);
       }
 
-       if(isset($connection_readr)){
-        mysqli_free_result($connection_readr);
+      if(isset($connection_vote)){
+        mysqli_free_result($connection_vote);
+      }
+
+      if(isset($connection_read)){
+        mysqli_free_result($connection_read);
       }
 
     ?>

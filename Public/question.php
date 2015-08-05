@@ -37,6 +37,8 @@
     die("Database query_read_to_answer failed" .  mysqli_error($connection_read));
   }
 
+   
+
 ?>
 
 <!DOCTYPE html>
@@ -339,7 +341,11 @@
           form_Box.style.verticalAlign = "middle"
           </script>
 <?php
-          $option_count = 1;
+
+    if(!mysqli_num_rows($result_read_to_answer)){
+      echo "Invalid Request !!<br> Requested poll doesn't exist.";
+    }
+    $option_count = 1;
     while($table_name = mysqli_fetch_assoc($result_read_to_answer)){
 
       // if($table_name["answered"] == 1){

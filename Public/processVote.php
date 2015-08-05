@@ -23,8 +23,8 @@
 
     $table_tag = mysqli_real_escape_string($connection_email_vote,$_GET["tag"]);
     $post_id = mysqli_real_escape_string($connection_email_vote,$_GET["id"]);
-    $email_inserted = mysqli_real_escape_string($connection_email_vote,$_POST["email"]);
-    $option_value = mysqli_real_escape_string($connection_email_vote,$_POST["option"]);
+    $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
+    $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
 
   $query_email_vote_check = "SELECT * ";
   $query_email_vote_check .= "FROM voted ";
@@ -165,7 +165,7 @@
     $success_vote_upload = mysqli_query($connection_vote,$query_vote_upload);
 
     if($success_vote_upload){
-      echo "Success2 <br />";
+      //echo "Success2 <br />";
       //header("Location: subject.php?tag=". urlencode($table_tag));
     }else{
       die("Database query_vote_upload  failedddd" . mysqli_error($connection_vote));
