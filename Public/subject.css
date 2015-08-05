@@ -127,6 +127,24 @@ a:hover{
 	word-spacing: 2px;
 }
 
+#imageBar{
+	height: 25px;
+}
+
+#warningMessage{
+	color: white;
+	font-size: 18px;
+	width: 500px;
+	margin: 0 auto;
+	margin-left: 135px;
+	margin-right: 135px;
+	border: 0px solid white;
+	font-weight: bold;
+}
+
+#percentageBox{
+	line-height: 150%;
+}
 
 #optionB{
 	transform: scale(2, 2); 
