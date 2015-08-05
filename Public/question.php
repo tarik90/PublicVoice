@@ -355,8 +355,6 @@
 
 ?>
           <form action="processVote.php?tag=<?php echo urlencode($table_tag); ?>&id=<?php echo $post_id; ?>" method="post">
-      
-
             
           <h3 id="question"><?php echo $table_name["post_description"]."<br/>" ?></h3>
           <hr>
@@ -376,17 +374,6 @@
 
           ?>
             
-
-  <!--
-    // if (($option[$i] != "") || ($option[$i] != NULL)) 
-    // {
-    //  $_SESSION["option{$i}"] = $option[$i];
-    //  // echo $option[$i]."<br />";
-    //  echo "<input type=\"radio\" name=\"option\" value={$i}>{$option[$i]}"."<br />";
-    // }
-
--->
-
             <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
 
           </form>
