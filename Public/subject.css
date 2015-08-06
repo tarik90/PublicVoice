@@ -78,10 +78,6 @@ a:hover{
 	outline: none;
 }
 
-#eachSubject{
-	list-style: none;
-}
-
 #formBox{
 	color: black;
 	font-size: 21px;
@@ -118,6 +114,7 @@ a:hover{
 	width: 225px;
 	float: right;
 	font-size: 16px;
+	line-height: 120%;
 }
 
 #question{
@@ -170,6 +167,42 @@ a:hover{
     background: green;                
 }
 
+#eachSubject{
+	border: 0px solid white;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#eachSubject a:hover{
+	color: #66FF66;
+}
+
+#imageBoxSubject{
+	
+	display: inline-block;
+	height: 15px;
+	width: 500px;
+	background-color: #202020;
+	overflow: hidden;
+	border: 0px solid black;
+	transition-duration: 1s;
+
+}#imageBoxSubject:hover{
+	border: 1px solid white;
+}
+
+#imageBarSubject{
+	height: auto;
+	z-index: -1;
+}
+
+#percentageBoxSubject{
+	line-height: 130%;
+}
+
+
 -moz-appearance:none;
     -webkit-appearance:none;
     appearance:none;
@@ -178,4 +211,3 @@ a:hover{
     border:5px solid rgba(0,0,0,.4);
     border-radius:50%;
     box-shadow:inset 0 0 50px rgba(0,0,0,.2);
-

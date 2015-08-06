@@ -416,6 +416,7 @@
               $output .= "</div>";
 
               echo  $output;
+
             }
 
           ?>
@@ -560,11 +561,11 @@
       }
 
       if(isset($connection_vote)){
-        mysqli_free_result($connection_vote);
+        mysqli_close($connection_vote);
       }
 
       if(isset($connection_read)){
-        mysqli_free_result($connection_read);
+        mysqli_close($connection_read);
       }
 
     ?>

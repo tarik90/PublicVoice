@@ -319,10 +319,10 @@
 
               if(isset($_GET["emailsupport"]))
               {
-                echo "<br>"."<p style=\"font-size:15px\"id=\"emailBox\"># Please insert a valid email !</p>"."<br>";
+                echo "<div id=\"emailBox\"><p style=\"font-size:15px\"># Please insert a valid email !</p>"."</div>"."<br>";
               }
             ?>
-            <br>
+            
             <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required>
             
             <br>

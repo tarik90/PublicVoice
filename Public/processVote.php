@@ -1,10 +1,7 @@
 <?php
+
+  session_start();
   include("../include/function.php");
-  print_r($_POST);
-  echo "<hr>";
-  print_r($_GET);
-
-
 
 //create database connection
   $dbhost_email_vote = "localhost";
@@ -21,10 +18,19 @@
     );
   }
 
-    $table_tag = mysqli_real_escape_string($connection_email_vote,$_GET["tag"]);
-    $post_id = mysqli_real_escape_string($connection_email_vote,$_GET["id"]);
-    $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
-    $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
+  $table_tag = mysqli_real_escape_string($connection_email_vote,$_GET["tag"]);
+  $post_id = mysqli_real_escape_string($connection_email_vote,$_GET["id"]);
+  
+  $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
+  $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
+
+  if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
+        // 
+      header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+        die();
+  }
+  
+  $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
 
   $query_email_vote_check = "SELECT * ";
   $query_email_vote_check .= "FROM voted ";
@@ -111,10 +117,6 @@
     $table_name = mysqli_fetch_assoc($result_read_vote);
 
     $optionNo = 1;
-
-    // $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
-    // echo "<br>this:".$op_vote[$optionNo]."<br>";
-
     while($optionNo <5){
 
       $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
@@ -125,7 +127,6 @@
       $optionNo++;
       
     }
-
 
     switch ($option_value) {
       case 1:

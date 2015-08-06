@@ -7,6 +7,9 @@
   $table_tag = $_GET["tag"];
   global $id;
   global $post_id;
+
+  // echo $post_id;
+  // echo $table_tag;
   $pagetitle = setPageTitle($table_tag);
 
 
@@ -358,6 +361,13 @@
             
           <h3 id="question"><?php echo $table_name["post_description"]."<br/>" ?></h3>
           <hr>
+           <?php
+
+              if(isset($_GET["emailsupport"]))
+              {
+                echo "<div id=\"emailBox\"><p style=\"font-size:15px\"># Please insert a valid email !</p>"."</div>"."<br>";
+              }
+            ?>
           <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required> 
           <input id="optionB" type="radio" name="option" value="1"><?php echo str_repeat('&nbsp;', 5) . $table_name["option_1"] ."<br />"; ?>
           <br>

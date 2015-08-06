@@ -68,4 +68,14 @@
 		return $percentage;
 	}
 
+	function checkEmail($email_inserted,$table_tag,$post_id){
+	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
+
+	if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
+  			// 
+  		header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+  			die();
+	}
+}
+
 ?>
