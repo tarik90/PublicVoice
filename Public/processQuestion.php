@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+  include("../include/function.php");
 //create database connection
 	$dbhost_post_upload = "localhost";
 	$dbuser_post_upload = "pv_cms";

@@ -80,10 +80,11 @@
 
 
     echo "new email found: " . $email_inserted."<br>";
+    $encrypted_email_to_upload = encryt_email($email_inserted);
     $query_email_vote_upload = "INSERT INTO voted (";
     $query_email_vote_upload .= " email_address, tag, post_id, voted_option ";
     $query_email_vote_upload .= ") VALUES (";
-    $query_email_vote_upload .= " '{$email_inserted}', '{$table_tag}', '{$post_id}', '{$option_value}' ";
+    $query_email_vote_upload .= " '{$encrypted_email_to_upload}', '{$table_tag}', '{$post_id}', '{$option_value}' ";
     $query_email_vote_upload .= ")";
       
     $result_email_vote_upload = mysqli_query($connection_email_vote,$query_email_vote_upload);
