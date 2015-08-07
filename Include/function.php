@@ -69,13 +69,43 @@
 	}
 
 	function checkEmail($email_inserted,$table_tag,$post_id){
-	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
+		$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
 
-	if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
-  			// 
-  		header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
-  			die();
+		if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
+	  			// 
+	  		header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+	  			die();
+		}
 	}
-}
+
+	function random_salt($salt_length){
+
+		//returns 32 character
+		$random_string = md5(uniqid(mt_rand(), true));
+
+		//valid character for salt using base64_encode 
+		//modify to be valid base64 encoding
+		$base64_random_string = str_replace('+', '.',(base64_encode($random_string)));
+		//modify to be valid base64 encoding
+
+		//cut salt length based on $salt_length parameter
+		$random_salt = substr($base64_random_string, 0, $salt_length);
+
+		return $random_salt;
+
+	}
+
+	function encryt_email($email_inserted){
+
+		$hash_format = "$2y$10$";
+		$salt_length = 25;
+		$salt = random_salt($salt_length);
+		$format_and_salt = $hash_format.$salt;
+		//echo strlen($format_and_salt)."<br>";
+		$hash = crypt($email_inserted,$format_and_salt);
+
+		return $hash;
+	}
+
 
 ?>

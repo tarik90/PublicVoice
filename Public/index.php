@@ -91,7 +91,7 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a id="home" href="#">HOME</a></li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About us <span class="caret"></span></a>
                     <!--
                     <ul class="dropdown-menu">
                       <li><a href="#">Page 1-1</a></li>
@@ -100,7 +100,7 @@
                     </ul>
                   -->
                   </li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Contact us</a></li>
                   <!--
                   <li><a href="#">Report a problem</a></li>
                 -->
@@ -389,10 +389,10 @@
 
                 #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
                   Coast Guard seizes $181 million in cocaine on sub</a>
-                  <br>
+                  <hr>
                 #<a href="http://edition.cnn.com/2015/08/07/asia/afghanistan-truck-bomb/index.html"> 
                   Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
-                  <br>
+                  <hr>
                 #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
                   Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
                 
@@ -411,10 +411,10 @@
 
                 #<a href="http://www.bbc.com/news/world-us-canada-33814280">
                   Defiant Donald Trump dominates US Republican TV debate</a>
-                  <br>
+                  <hr>
                 #<a href="http://www.bbc.com/news/world-asia-33815049"> 
                   North Korea's new time zone to break from 'imperialism'</a>
-                  <br>
+                  <hr>
                 #<a href="http://www.bbc.com/news/world-asia-33814737">
                   Afghanistan blast: At least eight dead in Kabul suicide attack</a>
                 
@@ -433,10 +433,10 @@
 
                 #<a href="http://www.rt.com/news/311699-turkey-usa-drones-isis/">
                   US says Assad is ‘root of all evil’ after first drone strikes launch from Turkey</a>
-                  <br>
+                  <hr>
                 #<a href="http://www.rt.com/usa/311803-tesla-hacked-cyber-experts/"> 
                   Researchers hack & remotely control Tesla Model S, inform manufacturer to fix bugs</a>
-                  <br>
+                  <hr>
                 #<a href="http://www.rt.com/usa/311804-us-submarines-welding-problems/">
                   Three newest US subs ‘impacted’ by unauthorized weld repairs</a>
                 
@@ -455,10 +455,10 @@
 
                 #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
                   Coast Guard seizes $181 million in cocaine on sub</a>
-                  <br>
+                  <hr>
                 #<a href="http://edition.cnn.com/2015/08/07/asia/afghanistan-truck-bomb/index.html"> 
                   Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
-                  <br>
+                  <hr>
                 #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
                   Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
                 

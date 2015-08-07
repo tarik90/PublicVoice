@@ -27,16 +27,22 @@
   if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
         // 
       header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
-        die();
+      die();
   }
   
   $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
 
-  $query_email_vote_check = "SELECT * ";
+  // $query_email_vote_check = "SELECT * ";
+  // $query_email_vote_check .= "FROM voted ";
+  // $query_email_vote_check .= "WHERE ";
+  // $query_email_vote_check .= "email_address = '{$email_inserted}' ";
+  // $query_email_vote_check .= "AND ";
+  // $query_email_vote_check .= "tag = '{$table_tag}' ";
+  // $query_email_vote_check .= "AND ";
+  // $query_email_vote_check .= "post_id = '{$post_id}'";
+  $query_email_vote_check = "SELECT email_address ";
   $query_email_vote_check .= "FROM voted ";
   $query_email_vote_check .= "WHERE ";
-  $query_email_vote_check .= "email_address = '{$email_inserted}' ";
-  $query_email_vote_check .= "AND ";
   $query_email_vote_check .= "tag = '{$table_tag}' ";
   $query_email_vote_check .= "AND ";
   $query_email_vote_check .= "post_id = '{$post_id}'";
@@ -48,13 +54,32 @@
     ;
   }
 
-  if(mysqli_num_rows($result_email_vote_check)){
-    header("Location: voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
-    die ();
-    //echo "You have already voted for this";
-  }else{
-    echo "new email found: " . $email_inserted."<br>";
+  $row = mysqli_fetch_array($result_email_vote_check, MYSQLI_NUM);
 
+    $email_address_output = array();
+    while($row = mysqli_fetch_assoc($result_email_vote_check))
+    {
+        $email_address_output[] = $row;
+    }
+    foreach ($email_address_output as $row) 
+        { 
+            foreach ($row as $existing_email)
+            {
+                echo $existing_email."<br>";
+                $encrypted_email = crypt($email_inserted, $existing_email);
+                if($encrypted_email === $existing_email)
+                {
+                   header("Location: voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
+                   die ();
+                }
+            }
+        }
+// echo "count row".count($row)."<br>";
+// for($m=0;$m<count($row);$m++){
+//   echo $row[$m]."<br>";
+
+
+    echo "new email found: " . $email_inserted."<br>";
     $query_email_vote_upload = "INSERT INTO voted (";
     $query_email_vote_upload .= " email_address, tag, post_id, voted_option ";
     $query_email_vote_upload .= ") VALUES (";
@@ -76,7 +101,6 @@
   
   // if(!$result_total_postCount){
   //   die("Database query count failed" . mysqli_error($connection_read));
-  } 
 
 
     $dbhost_vote = "localhost";

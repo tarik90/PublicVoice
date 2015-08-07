@@ -20,7 +20,8 @@ session_start();
 	$post_description = "";
 	$email_inserted = mysqli_real_escape_string($connection_post_upload, htmlentities(strip_tags($_POST["email"])));
 	$question = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_POST["question"])));
-	$table_tag = mysqli_real_escape_string($connection_post_upload,$_GET["tag"]);
+	$table_tag = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_GET["tag"])));
+	
 	
 
 	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
@@ -170,10 +171,11 @@ session_start();
     global $post_id;
     global $table_tag;
 
+    $encrypted_email = encryt_email($email_inserted);
     $query_email_upload = "INSERT INTO email (";
     $query_email_upload .= " email_address, tag, post_id ";
     $query_email_upload .= ") VALUES (";
-    $query_email_upload .= " '{$email_inserted}', '{$table_tag}', '{$post_id}' ";
+    $query_email_upload .= " '{$encrypted_email}', '{$table_tag}', '{$post_id}' ";
     $query_email_upload .= ")";
       
     $result_email_upload = mysqli_query($connection_email_upload,$query_email_upload);
