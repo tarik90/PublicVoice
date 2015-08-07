@@ -375,11 +375,11 @@
           <br>
           <?php
             if($table_name["option_3"] != "" || $table_name["option_3"] != NULL){
-              echo "<input id=\"optionB\" type=\"radio\" name=\"option\" value=\"3\">" . str_repeat('&nbsp;', 5) . $table_name["option_3"] . "\"<br /><br>";
+              echo "<input id=\"optionB\" type=\"radio\" name=\"option\" value=\"3\">".str_repeat('&nbsp;', 5).$table_name["option_3"]."<br><br>";
             }
 
             if($table_name["option_4"] != "" || $table_name["option_4"] != NULL){
-              echo "<input id=\"optionB\" type=\"radio\" name=\"option\" value=\"4\">" . str_repeat('&nbsp;', 5) . $table_name["option_4"] . "\"<br />";
+              echo "<input id=\"optionB\" type=\"radio\" name=\"option\" value=\"4\">".str_repeat('&nbsp;', 5).$table_name["option_4"]."<br>";
             }
 
           ?>

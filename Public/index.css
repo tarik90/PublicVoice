@@ -22,7 +22,7 @@ body{
 
 #navigation{
 	position: absolute;
-	margin-top: 8.6%;
+	margin-top: 8.5%;
     z-index: 1000;
 }
 
@@ -263,39 +263,50 @@ a:hover{
 	text-align: center;
 	vertical-align: middle;
 	margin-left: 60px;
-	border: 1px solid;
+	border: 0px solid;
 	transition-duration: 1s;
 }#news:hover{
-	border: 1px solid green;
+	border: 0px solid white;
 }
 
 #newsHead{
 	font-size: 30px;
 	letter-spacing: 2px;
-	border: 1px solid;
+	border: 1px solid white;
+}
+
+#newsRead{
+	text-align: justify;
+	font-size: 15px;
+}
+#newsRead a:hover{
+	color: #66FF66;
+	text-decoration: none;
+}
+#newsRead a{
+	text-decoration: none;
 }
 
 #cnn{
 	height: 30px;
-	border: 1px solid;
+	border: 1px solid white;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	overflow: hidden;
 	transition-duration: 1s;
 }
+
 #cnn:hover{
 	height: 258.5px;
 	color: green;
-	text-decoration: underline;
-
+	
 }
 
 #bbc{
 	height: 30px;
-	border: 1px solid;
+	border: 1px solid white;
 	font-weight: bold;
-	text-align: center;
 	vertical-align: middle;
 	transition-duration: 1s;
 	overflow: hidden;
@@ -303,12 +314,11 @@ a:hover{
 #bbc:hover{
 	height: 258.5px;
 	color: green;
-	text-decoration: underline;
 }
 
 #rt{
 	height: 30px;
-	border: 1px solid;
+	border: 1px solid white;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
@@ -318,12 +328,11 @@ a:hover{
 #rt:hover{
 	height: 258.5px;
 	color: green;
-	text-decoration: underline;
 }
 
 #forbes{
 	height: 30px;
-	border: 1px solid;
+	border: 1px solid white;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
@@ -333,7 +342,6 @@ a:hover{
 #forbes:hover{
 	height: 258.5px;
 	color: green;
-	text-decoration: underline;
 }
 
 #foot{

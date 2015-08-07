@@ -92,18 +92,24 @@
                   <li class="active"><a id="home" href="#">HOME</a></li>
                   <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us <span class="caret"></span></a>
+                    <!--
                     <ul class="dropdown-menu">
                       <li><a href="#">Page 1-1</a></li>
                       <li><a href="#">Page 1-2</a></li>
                       <li><a href="#">Page 1-3</a></li>
                     </ul>
+                  -->
                   </li>
-                  <li><a href="#">Donate</a></li>
                   <li><a href="#">Contact Us</a></li>
+                  <!--
+                  <li><a href="#">Report a problem</a></li>
+                -->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <!--
                   <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                -->
+                  <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Report a problem</a></li>
                 </ul>
               </div>
             </div>
@@ -378,7 +384,19 @@
               news_cnn.style.backgroundColor = "#202020";
               news_cnn.style.lineHeight = news_cnn.style.height;
             </script>
-            CNN
+            <span><u>CNN</u></span>
+            <div id="newsRead">
+
+                #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
+                  Coast Guard seizes $181 million in cocaine on sub</a>
+                  <br>
+                #<a href="http://edition.cnn.com/2015/08/07/asia/afghanistan-truck-bomb/index.html"> 
+                  Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
+                  <br>
+                #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
+                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
+                
+            </div>
           </div>
 
           <div id="bbc">
@@ -388,7 +406,19 @@
               news_bbc.style.backgroundColor = "#303030";
               news_bbc.style.lineHeight = news_bbc.style.height;
             </script>
-            BBC
+            <span><u>BBC</u></span>
+            <div id="newsRead">
+
+                #<a href="http://www.bbc.com/news/world-us-canada-33814280">
+                  Defiant Donald Trump dominates US Republican TV debate</a>
+                  <br>
+                #<a href="http://www.bbc.com/news/world-asia-33815049"> 
+                  North Korea's new time zone to break from 'imperialism'</a>
+                  <br>
+                #<a href="http://www.bbc.com/news/world-asia-33814737">
+                  Afghanistan blast: At least eight dead in Kabul suicide attack</a>
+                
+            </div>
           </div>
 
           <div id="rt">
@@ -398,7 +428,19 @@
               news_rt.style.backgroundColor = "#202020";
               news_rt.style.lineHeight = news_rt.style.height;
             </script>
-            RT
+            <span><u>RT.COM</u></span>
+            <div id="newsRead">
+
+                #<a href="http://www.rt.com/news/311699-turkey-usa-drones-isis/">
+                  US says Assad is ‘root of all evil’ after first drone strikes launch from Turkey</a>
+                  <br>
+                #<a href="http://www.rt.com/usa/311803-tesla-hacked-cyber-experts/"> 
+                  Researchers hack & remotely control Tesla Model S, inform manufacturer to fix bugs</a>
+                  <br>
+                #<a href="http://www.rt.com/usa/311804-us-submarines-welding-problems/">
+                  Three newest US subs ‘impacted’ by unauthorized weld repairs</a>
+                
+            </div>
           </div>
 
           <div id="forbes">
@@ -408,9 +450,20 @@
               news_forbes.style.backgroundColor = "#303030";
               news_forbes.style.lineHeight = news_forbes.style.height;
             </script>
-            FORBES
+            <span><u>FORBES</u></span>
+            <div id="newsRead">
+
+                #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
+                  Coast Guard seizes $181 million in cocaine on sub</a>
+                  <br>
+                #<a href="http://edition.cnn.com/2015/08/07/asia/afghanistan-truck-bomb/index.html"> 
+                  Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
+                  <br>
+                #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
+                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
+                
+            </div>
             <div>
-              skldfjkdlsjfklsdjklfjsdklfjkldjfkljsldkj
             </div>
           </div>
 

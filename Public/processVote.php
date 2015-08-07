@@ -109,10 +109,10 @@
     $op_vote[$j] = 0;
     }
 
-    // echo $table_tag."<br>";
-    // echo $post_id."<br>";
-    // echo $email_inserted."<br>";
-    // echo $option_value."<br>";
+    echo $table_tag."<br>";
+    echo $post_id."<br>";
+    echo $email_inserted."<br>";
+    echo $option_value."<br>";
         
     $table_name = mysqli_fetch_assoc($result_read_vote);
 
@@ -131,6 +131,7 @@
     switch ($option_value) {
       case 1:
         $op_vote[1] = $op_vote[1] + 1;
+        echo $op_vote[1]."<br>";
         $query_vote_upload = "UPDATE {$table_tag} ";
         $query_vote_upload .= "SET ";
         $query_vote_upload .= "op1_vote = '{$op_vote[1]}' "; 
@@ -138,6 +139,7 @@
         break;
       case 2:
         $op_vote[2] = $op_vote[2] + 1;
+        echo $op_vote[2]."<br>";
         $query_vote_upload = "UPDATE {$table_tag} ";
         $query_vote_upload .= "SET ";
         $query_vote_upload .= "op2_vote = '{$op_vote[2]}' ";
@@ -145,6 +147,7 @@
             break;
       case 3:
         $op_vote[3] = $op_vote[3] + 1;
+        echo $op_vote[3]."<br>";
         $query_vote_upload = "UPDATE {$table_tag} ";
         $query_vote_upload .= "SET ";
         $query_vote_upload .= "op3_vote = '{$op_vote[3]}' ";
@@ -152,6 +155,7 @@
         break;
       case 4:
         $op_vote[4] = $op_vote[4] + 1;
+        echo $op_vote[4]."<br>";
         $query_vote_upload = "UPDATE {$table_tag} ";
         $query_vote_upload .= "SET ";
         $query_vote_upload .= "op4_vote = '{$op_vote[4]}' ";
@@ -177,12 +181,12 @@
     $op3 = voteInPercentage($op_vote[3], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
     $op4 = voteInPercentage($op_vote[4], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
 
-    // echo "<br>".$op1."<br>";
-    // echo $op2."<br>";
-    // echo $op3."<br>";
-    // echo $op4."<br>";
-    // echo $table_tag."<br>";
-    // echo $post_id."<br>";
+    echo "<br>".$op1."<br>";
+    echo $op2."<br>";
+    echo $op3."<br>";
+    echo $op4."<br>";
+    echo $table_tag."<br>";
+    echo $post_id."<br>";
 
     $query_vote_percentage_upload = "UPDATE vote_in_percentage ";
     $query_vote_percentage_upload .= "SET ";
