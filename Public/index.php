@@ -38,12 +38,12 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 600) + "px";
+          head_style.style.height = (screen.height - 580) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
 
         </script>
-
+        <div><img width="320" height="135" src="websiteLogo.jpg"></div>
         <div id="navigation">
           <script>
             var naviga_tion = document.getElementById("navigation");
@@ -91,7 +91,7 @@
                 <ul class="nav navbar-nav">
                   <li class="active"><a id="home" href="#">HOME</a></li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">About us <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="aboutUs.php">About us <span class="caret"></span></a>
                     <!--
                     <ul class="dropdown-menu">
                       <li><a href="#">Page 1-1</a></li>
@@ -100,7 +100,7 @@
                     </ul>
                   -->
                   </li>
-                  <li><a href="#">Contact us</a></li>
+                  <li><a href="contactUs.php">Contact us</a></li>
                   <!--
                   <li><a href="#">Report a problem</a></li>
                 -->
@@ -475,7 +475,7 @@
         <script>
           var footer = document.getElementById("foot");
           footer.style.width = (screen.width -18) + "px";
-          footer.style.height = (screen.height - 697) + "px";
+          footer.style.height = (screen.height - 717) + "px";
           footer.style.backgroundColor = "#303030";
           footer.style.lineHeight = footer.style.height;
         </script>

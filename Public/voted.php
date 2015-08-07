@@ -133,7 +133,7 @@
           head_style.style.backgroundColor = "#303030";
 
         </script>
-
+        <img src="websiteLogo.jpg">
         
 
 
@@ -477,7 +477,7 @@
               don_ate.style.backgroundColor = "#335C33";
               don_ate.style.lineHeight = don_ate.style.height;
             </script>
-            DONATE
+            CONTACT US
           </div>
 <!--
           <div id="peopleOnline">
