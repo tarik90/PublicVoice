@@ -32,14 +32,6 @@
   
   $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
 
-  // $query_email_vote_check = "SELECT * ";
-  // $query_email_vote_check .= "FROM voted ";
-  // $query_email_vote_check .= "WHERE ";
-  // $query_email_vote_check .= "email_address = '{$email_inserted}' ";
-  // $query_email_vote_check .= "AND ";
-  // $query_email_vote_check .= "tag = '{$table_tag}' ";
-  // $query_email_vote_check .= "AND ";
-  // $query_email_vote_check .= "post_id = '{$post_id}'";
   $query_email_vote_check = "SELECT email_address ";
   $query_email_vote_check .= "FROM voted ";
   $query_email_vote_check .= "WHERE ";
@@ -57,29 +49,22 @@
   $row = mysqli_fetch_array($result_email_vote_check, MYSQLI_NUM);
 
     $email_address_output = array();
-    while($row = mysqli_fetch_assoc($result_email_vote_check))
-    {
+    while($row = mysqli_fetch_assoc($result_email_vote_check)){
+    
         $email_address_output[] = $row;
     }
-    foreach ($email_address_output as $row) 
-        { 
-            foreach ($row as $existing_email)
-            {
+    foreach ($email_address_output as $row){
+            foreach ($row as $existing_email){
                 echo $existing_email."<br>";
                 $encrypted_email = crypt($email_inserted, $existing_email);
-                if($encrypted_email === $existing_email)
-                {
+                if($encrypted_email === $existing_email){
                    header("Location: voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
                    die ();
                 }
             }
         }
-// echo "count row".count($row)."<br>";
-// for($m=0;$m<count($row);$m++){
-//   echo $row[$m]."<br>";
 
-
-    echo "new email found: " . $email_inserted."<br>";
+    //echo "new email found: " . $email_inserted."<br>";
     $encrypted_email_to_upload = encryt_email($email_inserted);
     $query_email_vote_upload = "INSERT INTO voted (";
     $query_email_vote_upload .= " email_address, tag, post_id, voted_option ";
@@ -95,14 +80,6 @@
     }else{
       die("Database query_email_vote_upload failedddd" . mysqli_error($connection_email_vote));
     }
-
-  //get number of record exist in the table
-  // $query_total_postCount = "SELECT COUNT(*) as total FROM {$title}";
-  // $result_total_postCount = mysqli_query($connection_read,$query_total_postCount);
-  
-  // if(!$result_total_postCount){
-  //   die("Database query count failed" . mysqli_error($connection_read));
-
 
     $dbhost_vote = "localhost";
     $dbuser_vote = "pv_cms";
@@ -130,8 +107,7 @@
     }
 
     for ($j=1; $j<5 ; $j++) { 
-    # code...
-    $op_vote[$j] = 0;
+      $op_vote[$j] = 0;
     }
 
     echo $table_tag."<br>";
@@ -206,12 +182,12 @@
     $op3 = voteInPercentage($op_vote[3], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
     $op4 = voteInPercentage($op_vote[4], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
 
-    echo "<br>".$op1."<br>";
-    echo $op2."<br>";
-    echo $op3."<br>";
-    echo $op4."<br>";
-    echo $table_tag."<br>";
-    echo $post_id."<br>";
+    // echo "<br>".$op1."<br>";
+    // echo $op2."<br>";
+    // echo $op3."<br>";
+    // echo $op4."<br>";
+    // echo $table_tag."<br>";
+    // echo $post_id."<br>";
 
     $query_vote_percentage_upload = "UPDATE vote_in_percentage ";
     $query_vote_percentage_upload .= "SET ";
