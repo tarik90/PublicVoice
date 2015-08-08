@@ -522,7 +522,7 @@
             CONTACT US
           </div>
           </a>
-
+<!--
           <div id="peopleOnline">
             <script>
               var people_online = document.getElementById("peopleOnline");
@@ -533,7 +533,7 @@
             </script>
            1M PEOPLE
           </div>
-
+-->
         </div>
 
       </div>

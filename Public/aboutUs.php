@@ -85,10 +85,8 @@
         	<p>5. Valid email address is required to add/vote in a question.</p>
         	<P></P>
 
-        	<h4><i>NOTE: YOU CANNOT VOTE IN A SAME QUESTION TWICE.<br>YOUR EMAIL IS BEING ENCRYPTED BEFORE SAVING INTO DATABSE.
+        	<h4><i>NOTE: YOU CAN <u>NOT</u> VOTE IN A SAME QUESTION TWICE.<br>YOUR EMAIL IS BEING <u>ENCRYPTED</u> BEFORE SAVING INTO DATABSE.
         	 AND WE DO NOT SHARE OR USE IT FOR LATER.</i><h4>
-        	 
-
         </div>
         
         </div>
