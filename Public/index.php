@@ -90,8 +90,7 @@
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                   <li class="active"><a id="home" href="#">HOME</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="aboutUs.php">About us <span class="caret"></span></a>
+                  <li><a href="aboutUs.php">About us</a>
                     <!--
                     <ul class="dropdown-menu">
                       <li><a href="#">Page 1-1</a></li>

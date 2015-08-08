@@ -47,14 +47,14 @@
 	border: 1px solid white;
 }
 
-#donate{
+#contactUs{
 	font-size: 25px;
 	letter-spacing: 1px;
 	border: 1px solid black;
 	transition-duration: 1s;
 	color: white;
 }
-#donate:hover{
+#contactUs:hover{
 	border: 1px solid white;
 }
 

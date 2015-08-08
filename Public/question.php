@@ -431,6 +431,7 @@
           </div>
           </a>
 
+          <a href="aboutUs.php">
           <div id="aboutUs">
             <script>
               var about_us = document.getElementById("aboutUs");
@@ -441,18 +442,21 @@
             </script>
             ABOUT US
           </div>
+          </a>
 
-          <div id="donate">
+          <a href="contactUs.php">
+          <div id="contactUs">
             <script>
-              var don_ate = document.getElementById("donate");
-              don_ate.style.width = (screen.width -1200) + "px";
-              don_ate.style.height = (screen.height - 710) + "px";
-              don_ate.style.backgroundColor = "#335C33";
-              don_ate.style.lineHeight = don_ate.style.height;
+              var contact_us = document.getElementById("contactUs");
+              contact_us.style.width = (screen.width -1200) + "px";
+              contact_us.style.height = (screen.height - 710) + "px";
+              contact_us.style.backgroundColor = "#335C33";
+              contact_us.style.lineHeight = contact_us.style.height;
             </script>
             CONTACT US
           </div>
-<!--
+          </a>
+          <!--
           <div id="peopleOnline">
             <script>
               var people_online = document.getElementById("peopleOnline");

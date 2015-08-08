@@ -251,6 +251,7 @@ a:hover{
 	overflow: auto;
 	margin-left: 55px;
 	font-size: 17px;
+	color: black;
 }
 
 #poll:hover{

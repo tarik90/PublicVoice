@@ -153,20 +153,7 @@ session_start();
 	}else{
 		die("Database query_vote_percentage_upload  failedddd" . mysqli_error($connection_email_upload));
 	}
-  /*$query_email_check = "SELECT * ";
-  $query_email_check .= "FROM email ";
-  $query_email_check .= "WHERE email_address = '{$email_inserted}'";
-  $result_email_check = mysqli_query($connection_email,$query_email_check);
 
-  if(!$result_email_check){
-    die("Database_email_check query failed" . mysqli_error($connection_email));
-    ;
-  }
-
-  if(mysqli_num_rows($result_email_check)){
-    echo "This email is already being used";
-  }else{*/
-    //echo "new email found";
 
     global $email_inserted;
     global $post_id;
