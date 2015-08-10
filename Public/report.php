@@ -1,95 +1,80 @@
- <?php
-    
-    session_start();
-    include("../include/function.php");
+<?php
+  session_start();
 
-    $dbhost_vote = "localhost";
-    $dbuser_vote = "pv_cms";
-    $dbpass_vote = "secret";
-    $dbname_vote = "public_voice_email";
-    $connection_vote = mysqli_connect($dbhost_vote, $dbuser_vote, $dbpass_vote,
-            $dbname_vote);
+  include("../include/function.php");
+
+
+//create database connection -------------------------------------------------------
+  $dbhost_report = "localhost";
+  $dbuser_report = "pv_cms";
+  $dbpass_report = "secret";
+  $dbname_report = "public_voice_report";
+  $connection_report = mysqli_connect($dbhost_report, $dbuser_report, $dbpass_report,
+            $dbname_report);
 
     if(mysqli_connect_errno()){
-      die("Database connection_vote failed: " . 
+      die("Database connection_report failed: " . 
         mysqli_connect_error() . " (" .
           mysqli_connect_errno() .")"
       );
     }
 
-    $table_tag = mysqli_real_escape_string($connection_vote,$_GET["tag"]);
-    $pagetitle = setPageTitle($table_tag);
-    $post_id = mysqli_real_escape_string($connection_vote,$_GET["id"]);
-    $vote = mysqli_real_escape_string($connection_vote,$_GET["vote"]);
-    global $vote;
+   //how many people have same peoblem
+   if(isset($_POST["problem"]) && isset($_GET["id"])){
 
-    $query_read_vote_in_percentage = "SELECT * ";
-    $query_read_vote_in_percentage .= "FROM vote_in_percentage ";
-    $query_read_vote_in_percentage .= "WHERE ";
-    $query_read_vote_in_percentage .= "post_id = {$post_id} ";
-    $query_read_vote_in_percentage .= "AND ";
-    $query_read_vote_in_percentage .= "tag = '{$table_tag}'";
-    $result_read_vote_in_percentage = mysqli_query($connection_vote,$query_read_vote_in_percentage);
+	  $problemVote = $_POST["problem"];
+	  $id = $_GET["id"];
 
-    if(!$result_read_vote_in_percentage){
-      die("Database query_read_vote_in_percentage failed" . mysqli_error($connection_vote));
-    }
 
-    for ($j=1; $j<5 ; $j++) { 
-    # code...
-    $op[$j] = 0;
-    }
+	  $query_read_report = "SELECT people ";
+	  $query_read_report .= "FROM reports ";
+	  $query_read_report .= "WHERE id = '{$id}'";
+	  $result_read_report = mysqli_query($connection_report,$query_read_report);
+
+	  if(!$result_read_report){
+	    die("Database query read failed" . mysqli_error($connection_report));
+  }
+
+  //update the number of people have same problem
+  $table_name = mysqli_fetch_assoc($result_read_report);
+
+  	$problem = $table_name["people"];
+    $problem = $problem + $problemVote;
+
+    $query_vote_upload = "UPDATE reports ";
+    $query_vote_upload .= "SET ";
+    $query_vote_upload .= "people = '{$problem}' ";
+    $query_vote_upload .= "WHERE id = '{$id}'";
     
-    $table_name = mysqli_fetch_assoc($result_read_vote_in_percentage);
+    $result_vote_upload = mysqli_query($connection_report,$query_vote_upload);
 
-    $optionNo = 1;
-    while($optionNo <5){
-
-      $op[$optionNo] = $table_name["op{$optionNo}"];
-
-      if($op[$optionNo] == NULL || $op[$optionNo] == ""){
-        //echo "op_in_percentage are null <br>";
-      }
-      $optionNo++;
+    if($result_vote_upload){
+      // echo "vote for problem Successfuly uploaded<br />";
+      // header("Location: report.php");
+      //die();
+    }else{
+      die("Database query_vote_upload failedddd" . mysqli_error($connection_report));
     }
+}
+  //get number of record exist in the table
+  $query_total_postCount = "SELECT COUNT(*) as total FROM reports";
+  $result_total_postCount = mysqli_query($connection_report,$query_total_postCount);
+  
+  if(!$result_total_postCount){
+    die("Database query count failed" . mysqli_error($connection_report));
+  }
+  else{
+    $data = mysqli_fetch_assoc($result_total_postCount);
+    $id = 0;
+    $id = $data["total"];
+  }
 
-    $dbhost_read_post = "localhost";
-    $dbuser_read_post = "pv_cms";
-    $dbpass_read_post = "secret";
-    $dbname_read_post = "public_voice";
-    $connection_read = mysqli_connect($dbhost_read_post, $dbuser_read_post, $dbpass_read_post,
-            $dbname_read_post);
+?>
 
-    if(mysqli_connect_errno()){
-      die("Database connection_read failed: " . 
-        mysqli_connect_error() . " (" .
-          mysqli_connect_errno() .")"
-      );
-    }
-
-    $query_read_question = "SELECT * ";
-    $query_read_question .= "FROM {$table_tag} ";
-    $query_read_question .= "WHERE id = {$post_id}";
-    $result_read_question = mysqli_query($connection_read,$query_read_question);
-
-    if(!$result_read_question){
-      die("Database query_read_question failed" . mysqli_error($connection_read));
-    }
-
-    $table_name_question = mysqli_fetch_assoc($result_read_question);
-
-    for ($i=1; $i<5 ; $i++) { 
-      # code...
-      $option_des[$i] = $table_name_question["option_{$i}"];
-    }
-
-  ?>
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>QUESTION FROM <?php echo $pagetitle; ?></title>
+      <title>PV - REPORT</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -128,14 +113,11 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 670) + "px";
+          head_style.style.height = (screen.height - 650) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
 
         </script>
-
-        
-
 
       </div>
     
@@ -372,67 +354,63 @@
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -570) + "px";
-          poll_box.style.height = (screen.height - 280) + "px";
+          poll_box.style.height = (screen.height - 243) + "px";
           //poll_box.style.height = "auto";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
           poll_box.style.zIndex = "1";
-          //poll_box.style.marginTop = 25 + "px";
         </script>
+  <?php
 
-        <div id="formBox">
-          <script>
-          var form_Box = document.getElementById("formBox");
-          form_Box.style.verticalAlign = "middle"
-          </script>
-            
-          <h3 id="question"><?php echo $table_name_question["post_description"]."<br/>" ?></h3>
-          <hr>
-          <?php
+  //printing all backward----------------------------------------new post on the top
 
-          if($vote == 0){
-            echo "<div id=\"warningMessage\">You have already VOTED for this poll !!<br></div>";
-          }
-          if($vote == 1){
-            echo "<div id=\"warningMessage\">Your VOTE was SUCCESFULLY Added !!<br></div>";
-          }
-              for($x=1; $x<5; $x++){
+  global $id;
+  $counter = $id;
 
-              $output = "<div id=\"percentageBox\">";
+  while ($counter != 0){
+  
+  //perform database query
+  $query_read_report = "SELECT * ";
+  $query_read_report .= "FROM reports ";
+  $query_read_report .= "WHERE id = {$counter}";
+  $result_read_report = mysqli_query($connection_report,$query_read_report);
 
-              $output .=  $table_name_question["option_$x"];
-              $output .= "<br>";
-              $output .= "<span id=\"imageBox\">";
-              $output .= "<img id=\"imageBar\"";
-              $output .= "width=";
-              $output .= 5 * $table_name["op$x"];
-              $output .= " src=\"image$x.jpg\">";
-              $output .= "</span>";
-              $output .= " " . $table_name["op$x"];
-              $output .= "%";
+  if(!$result_read_report){
+    die("Database query read failed" . mysqli_error($connection_report));
+  }
 
-              
+  $table_name = mysqli_fetch_assoc($result_read_report);
 
-              $output .= "</div>";
 
-              echo  $output;
+        
+      ?>
+  <form action="report.php?id=<?php echo $counter; ?>" method="post">
+  	<div id="eachSubject">  
+      <h4><?php  echo $table_name["report"] . "<br />";  ?></a></h4>
 
-            }
+      <div><?php if($table_name["people"] === "1"){ echo 1 . " person ";}else {echo $table_name["people"] . " people ";} ?> have this problem </div>
+      <div><button id="problemButton" name="problem" type="submit" value="1">I have this problem too</button></div>
+    <hr>
+  </div>
+  </form>
 
-          ?>
+  <?php
+    
 
+    $counter--;
+
+  }
+  ?>
         </div>
-          
 
-        </div>
         <div id="navigationSide">
           <script>
             var navigation_Side = document.getElementById("navigationSide");
             navigation_Side.style.width = (screen.width -1180) + "px";
             navigation_Side.style.height = (screen.height - 350) + "px";
           </script>
-<!--
-          <a href="index.php">
+
+          <a href="addareport.php">
           <div id="addapost">
             <script>
               var add_a_post = document.getElementById("addapost");
@@ -441,10 +419,10 @@
               add_a_post.style.backgroundColor = "#335C33";
               add_a_post.style.lineHeight = add_a_post.style.height;
             </script>
-            ADD NEW POLL
+            WRITE A REPORT
           </div>
           </a>
--->
+
           <a href="index.php">
             <div id="home_side">
             <script>
@@ -470,7 +448,7 @@
             ABOUT US
           </div>
           </a>
-
+<!--
           <a href="report.php"> 
           <div id="report_a_problem">
             <script>
@@ -492,13 +470,13 @@
               people_online.style.backgroundColor = "#335C33";
               people_online.style.lineHeight = people_online.style.height;
             </script>
-           Re
+           1M PEOPLE
           </div>
 -->
         </div>
 
       </div>
-
+<!--
       <div id="foot">
         <script>
           var footer = document.getElementById("foot");
@@ -547,35 +525,28 @@
 
 
       </div>
--->
+--
     </div>
+-->
 
-    <?php
-
-      if(isset($result_read_question)){
-        mysqli_free_result($result_read_question);
-      }
-
-      if(isset($result_read_vote_in_percentage)){
-        mysqli_free_result($result_read_vote_in_percentage);
-      }
-
-      if(isset($result_read_to_answer)){
-        mysqli_free_result($result_read_to_answer);
-      }
-
-      if(isset($connection_vote)){
-        mysqli_close($connection_vote);
-      }
-
-      if(isset($connection_read)){
-        mysqli_close($connection_read);
-      }
-
-    ?>
 
      
       
   </body>
+  
+<?php
 
+
+  if(isset($result_total_postCount)){
+    mysqli_free_result($result_total_postCount);
+  }
+  if(isset($result_read_report)){
+    mysqli_free_result($result_read_report);
+  }
+  if(isset($connection_report)){
+    mysqli_close($connection_report);
+  }
+      
+
+?>
 </html>

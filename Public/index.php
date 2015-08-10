@@ -99,8 +99,9 @@
                     </ul>
                   -->
                   </li>
-                  <li><a href="contactUs.php">Contact us</a></li>
                   <!--
+                  <li><a href="contactUs.php">Contact us</a></li>
+
                   <li><a href="#">Report a problem</a></li>
                 -->
                 </ul>
@@ -108,7 +109,7 @@
                   <!--
                   <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 -->
-                  <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Report a problem</a></li>
+                  <li><a href="report.php"><span class="glyphicon glyphicon-info-sign"></span> Report a problem</a></li>
                 </ul>
               </div>
             </div>

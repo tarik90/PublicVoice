@@ -23,16 +23,21 @@ session_start();
 	$question = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_POST["question"])));
 	$table_tag = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_GET["tag"])));
 	
-	
 
-	$email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
-
-	if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
-  			// 
-  			header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
+	if (checkEmailValidity($email_inserted) === false) {
+        // 
+      header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
   			die();
+	}
 
-		}
+	// $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
+
+	// if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
+ //  			// 
+ //  			header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
+ //  			die();
+
+	// 	}
 
 	if($question === "" || $question === NULL)
 	{

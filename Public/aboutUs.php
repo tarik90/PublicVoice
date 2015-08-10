@@ -40,7 +40,7 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 550) + "px";
+          head_style.style.height = (screen.height - 560) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
 
@@ -54,22 +54,22 @@
         <script>
           var mid_page = document.getElementById("midpage");
           mid_page.style.width = (screen.width -18) + "px";
-          mid_page.style.height = (screen.height - 394) + "px";
+          mid_page.style.height = (screen.height - 384) + "px";
         </script>
   
         <div id="poll">
           <script>
           var poll_box = document.getElementById("poll");
-          poll_box.style.width = (screen.width -660) + "px";
-          poll_box.style.height = (screen.height - 394) + "px";
+          poll_box.style.width = (screen.width -550) + "px";
+          poll_box.style.height = (screen.height - 384) + "px";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
         </script>
         <div id="aboutUsContent">
        	<script>
           var aboutUsContent = document.getElementById("aboutUsContent");
-          aboutUsContent.style.width = (screen.width -715) + "px";
-          aboutUsContent.style.height = (screen.height - 430) + "px";
+          aboutUsContent.style.width = (screen.width -605) + "px";
+          aboutUsContent.style.height = (screen.height - 420) + "px";
           aboutUsContent.style.backgroundColor = "#565656";
           aboutUsContent.style.transition = "all 1s";
         </script>
@@ -84,8 +84,8 @@
         	<p>4. It will show on the subject page of every topic.</p>
         	<p>5. Valid email address is required to add/vote in a question.</p>
         	<P></P>
-
-        	<h4><i>NOTE: YOU CAN <u>NOT</u> VOTE IN A SAME QUESTION TWICE.<br>YOUR EMAIL IS BEING <u>ENCRYPTED</u> BEFORE SAVING INTO DATABSE.
+          <br>
+        	<h4><b>NOTE:</b> <i>YOU CAN <u>NOT</u> VOTE IN A SAME QUESTION TWICE.<br>YOUR EMAIL IS BEING <u>ENCRYPTED</u> BEFORE SAVING INTO DATABSE.
         	 AND WE DO NOT SHARE OR USE IT FOR LATER.</i><h4>
         </div>
         
@@ -117,7 +117,7 @@
             HOME
           </div>
           </a>
-
+<!--
          <a href="">
           <div id="contactUsAbout">
             <script>
@@ -130,7 +130,8 @@
             CONTACT US
           </div>
 		 </a>
-          <a href="">
+    -->
+          <a href="report.php">
            <div id="report">
             <script>
               var report = document.getElementById("report");

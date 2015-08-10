@@ -444,16 +444,16 @@
           </div>
           </a>
 
-          <a href="contactUs.php">
-          <div id="contactUs">
+          <a href="report.php"> 
+          <div id="report_a_problem">
             <script>
-              var contact_us = document.getElementById("contactUs");
-              contact_us.style.width = (screen.width -1200) + "px";
-              contact_us.style.height = (screen.height - 710) + "px";
-              contact_us.style.backgroundColor = "#335C33";
-              contact_us.style.lineHeight = contact_us.style.height;
+              var report_a_problem = document.getElementById("report_a_problem");
+              report_a_problem.style.width = (screen.width -1200) + "px";
+              //report_a_problem.style.height = (screen.height - 600) + "px";
+              report_a_problem.style.backgroundColor = "#335C33";
+              report_a_problem.style.lineHeight = report_a_problem.style.height;
             </script>
-            CONTACT US
+            REPORT A PROBLEM
           </div>
           </a>
           <!--

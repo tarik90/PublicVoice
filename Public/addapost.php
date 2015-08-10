@@ -1,8 +1,8 @@
 <?php
   
   include("../include/function.php");
-  $tag = $_GET["tag"];
-  $pagetitle = setPageTitle($tag);
+  $table_tag = $_GET["tag"];
+  $pagetitle = setPageTitle($table_tag);
 
 ?>
 
@@ -305,7 +305,7 @@
           var form_Box = document.getElementById("formBox");
           form_Box.style.verticalAlign = "middle"
           </script>
-            <form action="processQuestion.php?tag=<?php echo urlencode($tag); ?>" method="post">
+            <form action="processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">
       
 
             <input id="questionBox" type="text" name="question" width="50" placeholder=" Please write your question. REQUIRED" required>
@@ -376,6 +376,7 @@
           </div>
           </a>
 
+          <a href="aboutUs.php">
           <div id="aboutUs">
             <script>
               var about_us = document.getElementById("aboutUs");
@@ -386,17 +387,20 @@
             </script>
             ABOUT US
           </div>
+          </a>
 
-          <div id="donate">
+          <a href="report.php"> 
+          <div id="report_a_problem">
             <script>
-              var don_ate = document.getElementById("donate");
-              don_ate.style.width = (screen.width -1200) + "px";
-              don_ate.style.height = (screen.height - 710) + "px";
-              don_ate.style.backgroundColor = "#335C33";
-              don_ate.style.lineHeight = don_ate.style.height;
+              var report_a_problem = document.getElementById("report_a_problem");
+              report_a_problem.style.width = (screen.width -1200) + "px";
+              //report_a_problem.style.height = (screen.height - 600) + "px";
+              report_a_problem.style.backgroundColor = "#335C33";
+              report_a_problem.style.lineHeight = report_a_problem.style.height;
             </script>
-            DONATE
+            REPORT A PROBLEM
           </div>
+          </a>
 <!--
           <div id="peopleOnline">
             <script>
