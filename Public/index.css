@@ -388,3 +388,12 @@ a:hover{
 }
 
 
+#indexPercentageBox{
+	line-height: 150%;
+}
+
+#showBox{
+	border: 1px solid white;
+	font-size: 20px;
+	margin: 13px 13px 13px 13px;
+}

@@ -356,7 +356,15 @@
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
         </script>
-
+        <div id="showBox">
+          <script>
+          var show_box = document.getElementById("showBox");
+          show_box.style.width = (screen.width -690) + "px";
+          show_box.style.height = (screen.height - 380) + "px";
+        </script>
+          <?php  include("../include/showPoll.php"); ?>
+        </div>
+            
         </div>
 
         <div id="news">
