@@ -15,22 +15,53 @@
       );
     }
 
+    $dbhost_read_post = "localhost";
+    $dbuser_read_post = "pv_cms";
+    $dbpass_read_post = "secret";
+    $dbname_read_post = "public_voice";
+    $connection_read = mysqli_connect($dbhost_read_post, $dbuser_read_post, $dbpass_read_post,
+            $dbname_read_post);
+
+    if(mysqli_connect_errno()){
+      die("Database connection_read failed: " . 
+        mysqli_connect_error() . " (" .
+          mysqli_connect_errno() .")"
+      );
+    }
     // $table_tag = mysqli_real_escape_string($connection_vote,$_GET["tag"]);
     // $pagetitle = setPageTitle($table_tag);
     // $post_id = mysqli_real_escape_string($connection_vote,$_GET["id"]);
     // $vote = mysqli_real_escape_string($connection_vote,$_GET["vote"]);
 
-    $table_tag = "food";
-    $pagetitle = setPageTitle($table_tag);
-    $post_id = 1;
-    global $vote;
+	$table_tag_array = array("world","education","weirdones","healthBeauty","fashion","personal","sports","environmentNature","social",
+								"religion","auto","politics","food","techEngineering");
+	$random_keys = array_rand($table_tag_array);
+    $random_table_tag = $table_tag_array[$random_keys];
+
+    $pagetitle = setPageTitle($random_table_tag);
+  //get number of record exist in the table
+	  $query_total_postCount = "SELECT COUNT(*) as total FROM {$random_table_tag}";
+	  $result_total_postCount = mysqli_query($connection_read,$query_total_postCount);
+	  
+	  if(!$result_total_postCount){
+	    die("Database query count failed" . mysqli_error($connection_read));
+	  }
+	  else{
+	    $data = mysqli_fetch_assoc($result_total_postCount);
+	    $id = 0;
+	    $id = $data["total"];
+	  }
+
+	  global $id;
+    $post_id = mt_rand(0,$id);
+    
 
     $query_read_vote_in_percentage = "SELECT * ";
     $query_read_vote_in_percentage .= "FROM vote_in_percentage ";
     $query_read_vote_in_percentage .= "WHERE ";
     $query_read_vote_in_percentage .= "post_id = {$post_id} ";
     $query_read_vote_in_percentage .= "AND ";
-    $query_read_vote_in_percentage .= "tag = '{$table_tag}'";
+    $query_read_vote_in_percentage .= "tag = '{$random_table_tag}'";
     $result_read_vote_in_percentage = mysqli_query($connection_vote,$query_read_vote_in_percentage);
 
     if(!$result_read_vote_in_percentage){
@@ -55,22 +86,10 @@
       $optionNo++;
     }
 
-    $dbhost_read_post = "localhost";
-    $dbuser_read_post = "pv_cms";
-    $dbpass_read_post = "secret";
-    $dbname_read_post = "public_voice";
-    $connection_read = mysqli_connect($dbhost_read_post, $dbuser_read_post, $dbpass_read_post,
-            $dbname_read_post);
-
-    if(mysqli_connect_errno()){
-      die("Database connection_read failed: " . 
-        mysqli_connect_error() . " (" .
-          mysqli_connect_errno() .")"
-      );
-    }
+   
 
     $query_read_question = "SELECT * ";
-    $query_read_question .= "FROM {$table_tag} ";
+    $query_read_question .= "FROM {$random_table_tag} ";
     $query_read_question .= "WHERE id = {$post_id}";
     $result_read_question = mysqli_query($connection_read,$query_read_question);
 
@@ -89,22 +108,27 @@
 
             
           echo $table_name_question["post_description"]."<br/>";
+          $outsideDiv = "<div id=\"indexPercentageBox\">";
+            echo $outsideDiv;
          
               for($x=1; $x<5; $x++){
 
-              $output = "<div id=\"indexPercentageBox\">";
+              // $output = "<div id=\"indexPercentageBox\">";
 
-              $output .= "<span id=\"imageBox\">";
-              $output .= "<img id=\"imageBar\"";
+              $output = "<div>";
+              $output .= "<img ";
               $output .= "height=20 width=10";
               // $output .= 5 * $table_name["op$x"];
               $output .= " src=\"image$x.jpg\">";
+              // $output .= "</div>";
+              // $output .= "<div>";
               $output .=  " " . $table_name_question["option_$x"];
               $output .= ": ";
               $output .= " " . $table_name["op$x"];
               $output .= "%";
-              $output .= "</span>";
+              $output .= "</div>";
 
+              // $output .= 
               // $output .= 
               // $output .=
               // $output .=
@@ -119,15 +143,77 @@
               // $output .=
               // $output .=
               // $output .=
-              // $output .=
-              
-
-              
-
-              $output .= "</div>";
+              // $output .= "</div>";
 
               echo  $output;
 
             }
+            $outsideDiv = "</div>";
+            echo $outsideDiv;
+
+            $outsideDivBar = "<div id=\"barPercentageBox\">";
+            $outsideDivBar .= "<span>";
+            $outsideDivBar .= "<img height=\"200\"";
+            $outsideDivBar .= "src=\"scale.jpg\" ";
+            $outsideDivBar .= ">";
+            $outsideDivBar .= "</span>";
+            echo $outsideDivBar;
+         
+              for($x=1; $x<5; $x++){
+
+              // $output = "<div id=\"indexPercentageBox\">";
+              
+              $output = "<span>";
+              $output .= "<img ";
+              $output .= "width=100 ";
+              $output .= "height=";
+              $output .= 1.89 * $table_name["op$x"];
+              $output .= " src=\"image$x.jpg\">";
+              
+              // $output .= "</span>";
+              // $output .= "<h4 id=\"percent\">" .$table_name["op$x"];
+              // $output .= "%" . "</h4>";
+
+              // $output .= 
+              // $output .= 
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .=
+              // $output .= "</div>";
+
+              echo  $output;
+
+            }
+            $outsideDivBar = "</div>";
+            echo $outsideDivBar;
+
+
+
+
+    if(isset($result_read_question)){
+    	mysqli_free_result($result_read_question);
+    }
+
+    if(isset($result_total_postCount)){
+    	mysqli_free_result($result_total_postCount);
+    }
+
+    if(isset($connecton_vote)){
+    	mysqli_close($connection_vote);
+    }
+
+    if(isset($connection_read)){
+    	mysqli_close($connection_read);
+    }
 
           ?>

@@ -1,10 +1,6 @@
 <?php
-session_start();
-include("../include/function.php");
+    $a=array("red","green","blue","yellow","brown");
+	$random_keys=array_rand($a);
+	echo $a[$random_keys]."<br>";
 
-
-$email = "tarik@live.com";
-
-$encrypted_email = encryt_email($email);
-echo $encrypted_email;
 ?>

@@ -390,10 +390,33 @@ a:hover{
 
 #indexPercentageBox{
 	line-height: 150%;
+	border: 0px solid white;
+	display: block;
+
 }
 
 #showBox{
-	border: 1px solid white;
+	border: 0px solid white;
 	font-size: 20px;
 	margin: 13px 13px 13px 13px;
+}
+
+#barPercentageBox{
+	position: absolute;
+	border: 0px solid white;
+	vertical-align: bottom;
+    display: table-cell;
+
+    background-repeat: no-repeat;
+
+   
+    margin: 20px 120px;
+	
+}
+
+
+
+#barPercentageBox img{
+	vertical-align: bottom;
+	border:1px solid #202020;
 }
