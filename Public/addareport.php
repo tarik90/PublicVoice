@@ -383,7 +383,7 @@
               report_a_problem.style.backgroundColor = "#335C33";
               report_a_problem.style.lineHeight = report_a_problem.style.height;
             </script>
-            CONTACT US
+            REPORTS
           </div>
           </a>
 <!--
