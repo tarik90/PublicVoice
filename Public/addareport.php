@@ -1,8 +1,6 @@
 <?php
   
   include("../include/function.php");
-  // $table_tag = $_GET["tag"];
-  // $pagetitle = setPageTitle($table_tag);
 
 ?>
 
@@ -14,8 +12,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="index.css">
-      <link rel="stylesheet" type="text/css" href="subject.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
@@ -304,7 +302,7 @@
           <script>
           var form_Box = document.getElementById("formBox");
           </script>
-            <form action="processReport.php" method="post">
+            <form action="../include/processFiles/processReport.php" method="post">
       
             <h4>Any Problem/Suggestion? Write us.</h4>
             <hr>

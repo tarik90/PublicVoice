@@ -28,10 +28,6 @@
           mysqli_connect_errno() .")"
       );
     }
-    // $table_tag = mysqli_real_escape_string($connection_vote,$_GET["tag"]);
-    // $pagetitle = setPageTitle($table_tag);
-    // $post_id = mysqli_real_escape_string($connection_vote,$_GET["id"]);
-    // $vote = mysqli_real_escape_string($connection_vote,$_GET["vote"]);
 
 	$table_tag_array = array("world","education","weirdones","healthBeauty","fashion","personal","sports","environmentNature","social",
 								"religion","auto","politics","food","techEngineering");
@@ -52,10 +48,9 @@
 	    $id = $data["total"];
 	  }
 
-	  global $id;
+	global $id;
     $post_id = mt_rand(0,$id);
     
-
     $query_read_vote_in_percentage = "SELECT * ";
     $query_read_vote_in_percentage .= "FROM vote_in_percentage ";
     $query_read_vote_in_percentage .= "WHERE ";
@@ -86,8 +81,6 @@
       $optionNo++;
     }
 
-   
-
     $query_read_question = "SELECT * ";
     $query_read_question .= "FROM {$random_table_tag} ";
     $query_read_question .= "WHERE id = {$post_id}";
@@ -104,22 +97,17 @@
       $option_des[$i] = $table_name_question["option_{$i}"];
     }
 
-
-
-            
           echo $table_name_question["post_description"]."<br/>";
           $outsideDiv = "<div id=\"indexPercentageBox\">";
-            echo $outsideDiv;
+          echo $outsideDiv;
          
               for($x=1; $x<5; $x++){
-
               // $output = "<div id=\"indexPercentageBox\">";
-
               $output = "<div>";
               $output .= "<img ";
-              $output .= "height=20 width=10";
+              $output .= "height=\"20\" width=\"10\"";
               // $output .= 5 * $table_name["op$x"];
-              $output .= " src=\"image$x.jpg\">";
+              $output .= " src=\"..\images\image$x.jpg\">";
               // $output .= "</div>";
               // $output .= "<div>";
               $output .=  " " . $table_name_question["option_$x"];
@@ -127,24 +115,6 @@
               $output .= " " . $table_name["op$x"];
               $output .= "%";
               $output .= "</div>";
-
-              // $output .= 
-              // $output .= 
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .= "</div>";
-
               echo  $output;
 
             }
@@ -154,51 +124,25 @@
             $outsideDivBar = "<div id=\"barPercentageBox\">";
             $outsideDivBar .= "<span>";
             $outsideDivBar .= "<img height=\"200\"";
-            $outsideDivBar .= "src=\"scale.jpg\" ";
+            $outsideDivBar .= "src=\"..\images\scale.jpg\" ";
             $outsideDivBar .= ">";
             $outsideDivBar .= "</span>";
             echo $outsideDivBar;
          
               for($x=1; $x<5; $x++){
-
-              // $output = "<div id=\"indexPercentageBox\">";
               
               $output = "<span>";
               $output .= "<img ";
               $output .= "width=100 ";
               $output .= "height=";
               $output .= 1.89 * $table_name["op$x"];
-              $output .= " src=\"image$x.jpg\">";
-              
-              // $output .= "</span>";
-              // $output .= "<h4 id=\"percent\">" .$table_name["op$x"];
-              // $output .= "%" . "</h4>";
-
-              // $output .= 
-              // $output .= 
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .=
-              // $output .= "</div>";
+              $output .= " src=\"..\images\image$x.jpg\">";
 
               echo  $output;
 
             }
             $outsideDivBar = "</div>";
             echo $outsideDivBar;
-
-
-
 
     if(isset($result_read_question)){
     	mysqli_free_result($result_read_question);
@@ -216,4 +160,4 @@
     	mysqli_close($connection_read);
     }
 
-          ?>
+?>

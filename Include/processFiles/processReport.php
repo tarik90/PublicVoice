@@ -1,6 +1,6 @@
 <?php
 
- include("../include/function.php");
+ include("../../include/function.php");
 
 //create database connection
   $dbhost_report = "localhost";
@@ -23,7 +23,7 @@
 
   if (checkEmailValidity($email_inserted) === false) {
         // 
-      header("Location: addareport.php?emailsupport=0");
+      header("Location: ../../public/addareport.php?emailsupport=0");
       die();
   }
 
@@ -38,7 +38,7 @@ $query_report_upload .= ")";
 
     if($result_report_upload){
       echo "report from this email Successfuly uploaded<br />";
-      header("Location: report.php");
+      header("Location: ../../../public/report.php");
     }else{
       die("Database query_report_upload failedddd" . mysqli_error($connection_report));
     }

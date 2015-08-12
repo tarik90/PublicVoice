@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="index.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
@@ -71,7 +71,7 @@
           head_style.style.backgroundColor = "#303030";
 
         </script>
-        <div><img width="320" height="135" src="websiteLogo.jpg"></div>
+        <div><img width="320" height="135" src="../images/websiteLogo.jpg"></div>
         <div id="navigation">
           <script>
             var naviga_tion = document.getElementById("navigation");

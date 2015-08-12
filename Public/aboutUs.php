@@ -6,9 +6,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="index.css">
-      <link rel="stylesheet" type="text/css" href="subject.css">
-      <link rel="stylesheet" type="text/css" href="aboutUs.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/aboutUs.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>

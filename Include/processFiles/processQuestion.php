@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-  include("../include/function.php");
+  include("../../include/function.php");
 //create database connection
 	$dbhost_post_upload = "localhost";
 	$dbuser_post_upload = "pv_cms";
@@ -26,33 +26,22 @@ session_start();
 
 	if (checkEmailValidity($email_inserted) === false) {
         // 
-      header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
+      header("Location: ../../public/addapost.php?emailsupport=0&tag=". urlencode($table_tag));
   			die();
 	}
 
-	// $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
-
-	// if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
- //  			// 
- //  			header("Location: addapost.php?emailsupport=0&tag=". urlencode($table_tag));
- //  			die();
-
-	// 	}
-
 	if($question === "" || $question === NULL)
 	{
-		header("Location: addapost.php?question=0&tag=". urlencode($table_tag));
+		header("Location: ../../public/addapost.php?question=0&tag=". urlencode($table_tag));
   			die();
 	}
 	else
 	{
 		$post_description = $question;
-		//$_SESSION["question"] = $question;
 
 		for ($i=1; $i <5 ; $i++) 
 		{ 
 			$option[$i] = mysqli_real_escape_string($connection_post_upload,$_POST["option{$i}"]);
-			//$_SESSION["option{$i}"] = $option[$i];
 		}
 
 		$query_post_upload = "INSERT INTO {$table_tag} (";
@@ -69,13 +58,10 @@ session_start();
 		}else{
 			die("Database query_post_upload failedddd" . mysqli_error($connection_post_upload));
 		}
-
 	}
 
 	$post_id = mysqli_insert_id($connection_post_upload);
 ?>
-
-
 
 <?php
 ////////////////////////////////////////2ND Database//////////////////////////////////////////////
@@ -118,12 +104,6 @@ session_start();
 <?php
 ////////////////////////////////////////3RD Database//////////////////////////////////////////////
 
-  //global $email_inserted;
-  // $pieces = preg_split('/@/', $email_inserted);
-  // $database_table_name = $pieces[0];
-
- 
-
 //create database connection
   $dbhost_email_upload = "localhost";
   $dbuser_email_upload = "pv_cms";
@@ -159,7 +139,6 @@ session_start();
 		die("Database query_vote_percentage_upload  failedddd" . mysqli_error($connection_email_upload));
 	}
 
-
     global $email_inserted;
     global $post_id;
     global $table_tag;
@@ -175,20 +154,11 @@ session_start();
 
     if($result_email_upload){
       //echo "Success2 <br />";
-      header("Location: question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
+      header("Location: ../../public/question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
     }else{
       die("Database query_email_upload failedddd" . mysqli_error($connection_email_upload));
     }
 
- 	
-      
-
-  // $tech = mysqli_fetch_assoc($result1)
-
-
-     //release return data
-   // mysqli_free_result( $result_email_check);
-  //closing conncetion
     if(isset($connection_email)){
     	mysqli_close($connection_email);
     }

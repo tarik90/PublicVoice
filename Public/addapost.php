@@ -14,8 +14,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="index.css">
-      <link rel="stylesheet" type="text/css" href="subject.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
@@ -305,9 +305,8 @@
           var form_Box = document.getElementById("formBox");
           form_Box.style.verticalAlign = "middle"
           </script>
-            <form action="processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">
+            <form action="../include/processFiles/processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">
       
-
             <input id="questionBox" type="text" name="question" width="50" placeholder=" Please write your question. REQUIRED" required>
             <hr>
             
@@ -316,8 +315,8 @@
             <br>
             <input id="optionBox" type="text" name="option2" placeholder=" Enter option. REQUIRED" required>
             <br>
-            <?php
 
+            <?php
               if(isset($_GET["emailsupport"]))
               {
                 echo "<div id=\"emailBox\"><p style=\"font-size:15px\"># Please insert a valid email !</p>"."</div>"."<br>";
@@ -325,15 +324,12 @@
             ?>
             
             <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required>
-            
             <br>
             <input id="optionBox" type="text" name="option3" placeholder=" Enter option">
             <br>
             <br>
             <input id="optionBox" type="text" name="option4" placeholder=" Enter option">
             <br>
-
-
             <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
 
           </form>

@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  include("../include/function.php");
+  include("../../include/function.php");
 
 //create database connection
   $dbhost_email_vote = "localhost";
@@ -24,7 +24,7 @@
   $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
   if (checkEmailValidity($email_inserted) === false) {
         //
-      header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+      header("Location: ../../public/question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
       die();
   }
 
@@ -65,7 +65,7 @@
                 echo $existing_email."<br>";
                 $encrypted_email = crypt($email_inserted, $existing_email);
                 if($encrypted_email === $existing_email){
-                   header("Location: voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
+                   header("Location: ../../public/voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
                    die ();
                 }
             }
@@ -209,7 +209,7 @@
     $success_vote_percentage_upload = mysqli_query($connection_email_vote,$query_vote_percentage_upload);
 
     if($success_vote_upload){
-      header("Location: voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
+      header("Location: ../../public/voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
     }else{
       die("Database query_vote_percentage upload  failedddd" . mysqli_error($connection_email_vote));
     }
