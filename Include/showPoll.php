@@ -31,7 +31,7 @@
 
 	$table_tag_array = array("world","education","weirdones","healthBeauty","fashion","personal","sports","environmentNature","social",
 								"religion","auto","politics","food","techEngineering");
-	$random_keys = array_rand($table_tag_array);
+	  $random_keys = array_rand($table_tag_array);
     $random_table_tag = $table_tag_array[$random_keys];
 
     $pagetitle = setPageTitle($random_table_tag);
@@ -96,27 +96,30 @@
       # code...
       $option_des[$i] = $table_name_question["option_{$i}"];
     }
+          $question = "<a style=\"color:#66FF66\"";
+          $question .= "href=";
+          $question .= "question.php?tag=" . urlencode($random_table_tag) . "&id=" . $post_id;
+          $question .= " >";
+          $question .= $table_name_question["post_description"];
+          $question .= "</a>";
+          $question .="<br/>";
+          echo $question;
 
-          echo $table_name_question["post_description"]."<br/>";
           $outsideDiv = "<div id=\"indexPercentageBox\">";
           echo $outsideDiv;
          
               for($x=1; $x<5; $x++){
-              // $output = "<div id=\"indexPercentageBox\">";
+
               $output = "<div>";
               $output .= "<img ";
               $output .= "height=\"20\" width=\"10\"";
-              // $output .= 5 * $table_name["op$x"];
               $output .= " src=\"..\images\image$x.jpg\">";
-              // $output .= "</div>";
-              // $output .= "<div>";
               $output .=  " " . $table_name_question["option_$x"];
               $output .= ": ";
               $output .= " " . $table_name["op$x"];
               $output .= "%";
               $output .= "</div>";
               echo  $output;
-
             }
             $outsideDiv = "</div>";
             echo $outsideDiv;
@@ -139,7 +142,6 @@
               $output .= " src=\"..\images\image$x.jpg\">";
 
               echo  $output;
-
             }
             $outsideDivBar = "</div>";
             echo $outsideDivBar;
