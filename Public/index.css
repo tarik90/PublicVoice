@@ -401,17 +401,6 @@ a:hover{
 	margin: 13px 13px 13px 13px;
 }
 
-#showBox a{
-	color: black;
-	text-decoration: none;
-}
-
-#showBox a:hover{
-	color: #66FF66;
-	text-decoration: none;
-}
-
-
 #barPercentageBox{
 	position: absolute;
 	border: 0px solid white;
