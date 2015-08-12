@@ -46,10 +46,13 @@
 	    $data = mysqli_fetch_assoc($result_total_postCount);
 	    $id = 0;
 	    $id = $data["total"];
+      if($id == NULL || $id == 0){
+        $id = 1;
+      }
 	  }
 
 	global $id;
-    $post_id = mt_rand(0,$id);
+    $post_id = mt_rand(1,$id);
     
     $query_read_vote_in_percentage = "SELECT * ";
     $query_read_vote_in_percentage .= "FROM vote_in_percentage ";

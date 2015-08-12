@@ -258,16 +258,6 @@ a:hover{
 	border: 1px solid white;
 }
 
-#modified{
-	color: black;
-	text-decoration: none;
-}
-
-#modified:hover{
-	color: white;
-	text-decoration: none;
-}
-
 #news{
 	word-wrap: break-word;
 	float: left;
