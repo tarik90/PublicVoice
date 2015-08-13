@@ -28,9 +28,7 @@
           head_style.style.height = (screen.height - 650) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
-
         </script>
-
       </div>
     
       <div id="midpage">
@@ -257,9 +255,6 @@
             WEIRD ONE'S 
           </div>
           </a>
-
-
-
         </div>
   
         <div id="poll">

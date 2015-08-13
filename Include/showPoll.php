@@ -67,7 +67,6 @@
     }
 
     for ($j=1; $j<5 ; $j++) { 
-    # code...
     $op[$j] = 0;
     }
     
@@ -152,15 +151,12 @@
     if(isset($result_read_question)){
     	mysqli_free_result($result_read_question);
     }
-
     if(isset($result_total_postCount)){
     	mysqli_free_result($result_total_postCount);
     }
-
     if(isset($connecton_vote)){
     	mysqli_close($connection_vote);
     }
-
     if(isset($connection_read)){
     	mysqli_close($connection_read);
     }

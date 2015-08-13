@@ -27,7 +27,6 @@
             </script>
             <span><u>CNN</u></span>
             <div id="newsRead">
-
                 #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
                   Coast Guard seizes $181 million in cocaine on sub</a>
                   <hr>
@@ -35,8 +34,7 @@
                   Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
                   <hr>
                 #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
-                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
-                
+                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>  
             </div>
           </div>
 
@@ -49,7 +47,6 @@
             </script>
             <span><u>BBC</u></span>
             <div id="newsRead">
-
                 #<a href="http://www.bbc.com/news/world-us-canada-33814280">
                   Defiant Donald Trump dominates US Republican TV debate</a>
                   <hr>
@@ -57,8 +54,7 @@
                   North Korea's new time zone to break from 'imperialism'</a>
                   <hr>
                 #<a href="http://www.bbc.com/news/world-asia-33814737">
-                  Afghanistan blast: At least eight dead in Kabul suicide attack</a>
-                
+                  Afghanistan blast: At least eight dead in Kabul suicide attack</a>                
             </div>
           </div>
 
@@ -71,7 +67,6 @@
             </script>
             <span><u>RT.COM</u></span>
             <div id="newsRead">
-
                 #<a href="http://www.rt.com/news/311699-turkey-usa-drones-isis/">
                   US says Assad is ‘root of all evil’ after first drone strikes launch from Turkey</a>
                   <hr>
@@ -79,8 +74,7 @@
                   Researchers hack & remotely control Tesla Model S, inform manufacturer to fix bugs</a>
                   <hr>
                 #<a href="http://www.rt.com/usa/311804-us-submarines-welding-problems/">
-                  Three newest US subs ‘impacted’ by unauthorized weld repairs</a>
-                
+                  Three newest US subs ‘impacted’ by unauthorized weld repairs</a>     
             </div>
           </div>
 
@@ -93,7 +87,6 @@
             </script>
             <span><u>FORBES</u></span>
             <div id="newsRead">
-
                 #<a href="http://edition.cnn.com/2015/08/06/us/12000-pounds-of-cocaine-seized/index.html">
                   Coast Guard seizes $181 million in cocaine on sub</a>
                   <hr>
@@ -101,8 +94,7 @@
                   Truck bomb kills 8 in Afghanistan; hundreds wounded</a>
                   <hr>
                 #<a href="http://edition.cnn.com/2015/08/06/middleeast/saudi-arabia-mosque-attack/index.html">
-                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>
-                
+                  Saudi mosque blast: 13 dead; ISIS claims responsibility</a>                
             </div>
             <div>
             </div>

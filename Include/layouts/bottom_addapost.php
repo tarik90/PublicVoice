@@ -4,8 +4,7 @@
           </form>
 
         </div>
-          
-
+        
         </div>
 
         <div id="navigationSide">

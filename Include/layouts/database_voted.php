@@ -1,5 +1,4 @@
-<?php
-    
+<?php 
     session_start();
     include("../include/function.php");
 
@@ -35,20 +34,17 @@
       die("Database query_read_vote_in_percentage failed" . mysqli_error($connection_vote));
     }
 
-    for ($j=1; $j<5 ; $j++) { 
-    # code...
+    for ($j=1; $j<5 ; $j++) { .
     $op[$j] = 0;
     }
     
     $table_name = mysqli_fetch_assoc($result_read_vote_in_percentage);
-
     $optionNo = 1;
     while($optionNo <5){
 
       $op[$optionNo] = $table_name["op{$optionNo}"];
 
       if($op[$optionNo] == NULL || $op[$optionNo] == ""){
-        //echo "op_in_percentage are null <br>";
       }
       $optionNo++;
     }
@@ -77,10 +73,7 @@
     }
 
     $table_name_question = mysqli_fetch_assoc($result_read_question);
-
     for ($i=1; $i<5 ; $i++) { 
-      # code...
       $option_des[$i] = $table_name_question["option_{$i}"];
     }
-
   ?>

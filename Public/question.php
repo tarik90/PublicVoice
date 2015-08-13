@@ -1,7 +1,5 @@
-<?php
-  
-  include("../include/layouts/database_question.php");
-  
+<?php 
+  include("../include/layouts/database_question.php"); 
 ?> 
 
 <!DOCTYPE html>
@@ -17,14 +15,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
-
-
   </head>
 
 <?php
-  
   include("../include/layouts/top_question.php");
-  
 ?> 
         <div id="formBox">
           <script>
@@ -32,25 +26,16 @@
           form_Box.style.verticalAlign = "middle"
           </script>
 <?php
-
     if(!mysqli_num_rows($result_read_to_answer)){
       echo "Invalid Request !!<br> Requested poll doesn't exist.";
     }
     $option_count = 1;
     while($table_name = mysqli_fetch_assoc($result_read_to_answer)){
-
-      // if($table_name["answered"] == 1){
-      //  header("Location: table_named.php?tag=$tag&id=$id&answered=1");
-      //  break;
-      // }
-
 ?>
           
-           <?php
-
-              include("../include/layouts/middle_question.php");
-
-            ?>
+<?php
+  include("../include/layouts/middle_question.php");
+?>
           <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required> 
           <input id="optionB" type="radio" name="option" value="1"><?php echo str_repeat('&nbsp;', 5) . $table_name["option_1"] ."<br />"; ?>
           <br>
@@ -67,17 +52,13 @@
 
           ?>
             
-            <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
+            <h3><input id="submitButton" type="submit" name="submit" value="VOTE"></h3>
 
           </form>
-<?php
-    
+<?php   
   }
-
 ?>
 
-<?php
-  
-  include("../include/layouts/bottom_question.php");
-  
+<?php 
+  include("../include/layouts/bottom_question.php"); 
 ?> 

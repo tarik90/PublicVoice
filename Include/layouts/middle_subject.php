@@ -34,12 +34,10 @@
   }
 
     for ($j=1; $j<5 ; $j++) { 
-    # code...
     $op[$j] = 0;
     }
     
     $table_name_in_percentage = mysqli_fetch_assoc($result_read_vote_in_percentage);
-
     $optionNo_2 = 1;
     while($optionNo_2 <5){
 
@@ -50,20 +48,11 @@
       }
       $optionNo_2++;
     }
-
-  //use returned data
         
-      ?>
+?>
   <div id="eachSubject">  
       <h4><?php echo "Question: "; ?><a href="question.php?ques=<?php echo urlencode($table_name["post_description"]); ?>&tag=<?php echo urlencode($table_tag); ?>&id=<?php echo urlencode($table_name["id"]); ?>">
           <?php  echo $table_name["post_description"] . "<br />";  ?></a></h4>
-          <!--
-      <?php  echo $table_name["option_1"] . "<br />";   ?>
-      <?php  echo $table_name["option_2"] . "<br />";   ?>
-      <?php  echo $table_name["option_3"] . "<br />";   ?>
-      <?php  echo $table_name["option_4"] . "<br />";   ?>
-      -->
-
 <?php
       for($x=1; $x<5; $x++){
         
@@ -79,8 +68,6 @@
               $output .= "</span>";
               $output .= " " . $table_name_in_percentage["op$x"];
               $output .= "%";
-
-              
 
               $output .= "</div>";
 

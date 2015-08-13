@@ -25,8 +25,6 @@
          }, 7000);
 
       </script>
-
-
   </head>
   <body>
     <!--
@@ -129,11 +127,8 @@
                 </ul>
               </div>
             </div>
-          </nav>
-        
+          </nav>    
         </div>
-
-
       </div>
     
       <div id="midpage">

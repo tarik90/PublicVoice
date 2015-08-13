@@ -17,16 +17,11 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
-
-
   </head>
   
 <?php
-  
   include("../include/layouts/top_voted.php");
-  
 ?> 
-
         <div id="formBox">
           <script>
           var form_Box = document.getElementById("formBox");
@@ -35,19 +30,11 @@
             
           <h3 id="question"><?php echo $table_name_question["post_description"]."<br/>" ?></h3>
           <hr>
-<?php
-  
+<?php 
   include("../include/layouts/middle_voted.php");
-  
 ?> 
-
         </div>
-          
-
         </div>
-
 <?php
-  
   include("../include/layouts/bottom_voted.php");
-  
 ?> 

@@ -1,7 +1,5 @@
 <?php
-  
   include("../include/layouts/database_report.php");
-  
 ?>  
 
 <!DOCTYPE html>
@@ -21,10 +19,8 @@
 
   </head>
 
-  <?php
-  
-  include("../include/layouts/top_report.php");
-  
+<?php
+  include("../include/layouts/top_report.php"); 
 ?> 
   
 <?php
@@ -33,15 +29,11 @@
 
   global $id;
   $counter = $id;
-
   while ($counter != 0){
-
 ?>
 
 <?php
-  
   include("../include/layouts/middle_report.php");
-  
 ?> 
   	<div id="eachSubject">  
       <h4><?php  echo $table_name["report"] . "<br />";  ?></a></h4>
@@ -53,15 +45,10 @@
   </form>
 
 <?php
-    
-
     $counter--;
-
   }
 ?>
 
 <?php
-  
   include("../include/layouts/bottom_report.php");
-  
 ?> 

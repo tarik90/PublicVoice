@@ -20,13 +20,10 @@
               $output .= "</span>";
               $output .= " " . $table_name["op$x"];
               $output .= "%";
-
-              
-
+            
               $output .= "</div>";
 
               echo  $output;
-
             }
 
-          ?>
+?>

@@ -2,7 +2,6 @@
 
         </div>
           
-
         </div>
 
         <div id="navigationSide">

@@ -2,7 +2,6 @@
 
  include("../../include/function.php");
 
-//create database connection
   $dbhost_report = "localhost";
   $dbuser_report = "pv_cms";
   $dbpass_report = "secret";
@@ -20,7 +19,6 @@
   $report = mysqli_real_escape_string($connection_report,htmlentities(strip_tags($_POST["report"])));  
   $email_inserted = mysqli_real_escape_string($connection_report,htmlentities(strip_tags($_POST["email"])));
   $people = 1;
-
   if (checkEmailValidity($email_inserted) === false) {
         // 
       header("Location: ../../public/addareport.php?emailsupport=0");

@@ -3,7 +3,6 @@
   session_start();
   include("../../include/function.php");
 
-//create database connection
   $dbhost_email_vote = "localhost";
   $dbuser_email_vote = "pv_cms";
   $dbpass_email_vote = "secret";
@@ -28,17 +27,7 @@
       die();
   }
 
-
-  // $email_pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/";
-
-  // if (!filter_var($email_inserted, FILTER_VALIDATE_EMAIL) || !preg_match($email_pattern, $email_inserted)) {
-  //       // 
-  //     header("Location: question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
-  //     die();
-  // }
-  
   $option_value = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["option"])));
-
   $query_email_vote_check = "SELECT email_address ";
   $query_email_vote_check .= "FROM voted ";
   $query_email_vote_check .= "WHERE ";
@@ -47,14 +36,12 @@
   $query_email_vote_check .= "post_id = '{$post_id}'";
 
   $result_email_vote_check = mysqli_query($connection_email_vote,$query_email_vote_check);
-
   if(!$result_email_vote_check){
     die("Database_email_vote_check query failed" . mysqli_error($connection_email_vote));
     ;
   }
 
   $row = mysqli_fetch_array($result_email_vote_check, MYSQLI_NUM);
-
     $email_address_output = array();
     while($row = mysqli_fetch_assoc($result_email_vote_check)){
     
@@ -71,7 +58,6 @@
             }
         }
 
-    //echo "new email found: " . $email_inserted."<br>";
     $encrypted_email_to_upload = encryt_email($email_inserted);
     $query_email_vote_upload = "INSERT INTO voted (";
     $query_email_vote_upload .= " email_address, tag, post_id, voted_option ";
@@ -80,7 +66,6 @@
     $query_email_vote_upload .= ")";
       
     $result_email_vote_upload = mysqli_query($connection_email_vote,$query_email_vote_upload);
-
     if($result_email_vote_upload){
       echo "Vote from this email Successfuly uploaded<br />";
       //header("Location: question.php?voted=1&tag=". urlencode($table_tag) . "&postid=" . $post_id);
@@ -116,14 +101,12 @@
     for ($j=1; $j<5 ; $j++) { 
       $op_vote[$j] = 0;
     }
-
-    echo $table_tag."<br>";
-    echo $post_id."<br>";
-    echo $email_inserted."<br>";
-    echo $option_value."<br>";
+    // echo $table_tag."<br>";
+    // echo $post_id."<br>";
+    // echo $email_inserted."<br>";
+    // echo $option_value."<br>";
         
     $table_name = mysqli_fetch_assoc($result_read_vote);
-
     $optionNo = 1;
     while($optionNo <5){
 
@@ -133,7 +116,6 @@
         echo "op_vote is null" . "<br>";
        }
       $optionNo++;
-      
     }
 
     switch ($option_value) {
@@ -176,7 +158,6 @@
     }
 
     $success_vote_upload = mysqli_query($connection_vote,$query_vote_upload);
-
     if($success_vote_upload){
       //echo "Success2 <br />";
       //header("Location: subject.php?tag=". urlencode($table_tag));
@@ -188,14 +169,12 @@
     $op2 = voteInPercentage($op_vote[2], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
     $op3 = voteInPercentage($op_vote[3], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
     $op4 = voteInPercentage($op_vote[4], $op_vote[1], $op_vote[2], $op_vote[3], $op_vote[4]);
-
     // echo "<br>".$op1."<br>";
     // echo $op2."<br>";
     // echo $op3."<br>";
     // echo $op4."<br>";
     // echo $table_tag."<br>";
     // echo $post_id."<br>";
-
     $query_vote_percentage_upload = "UPDATE vote_in_percentage ";
     $query_vote_percentage_upload .= "SET ";
     $query_vote_percentage_upload .= "op1 = '{$op1}', ";
@@ -207,7 +186,6 @@
     $query_vote_percentage_upload .= "tag = '{$table_tag}'";
 
     $success_vote_percentage_upload = mysqli_query($connection_email_vote,$query_vote_percentage_upload);
-
     if($success_vote_upload){
       header("Location: ../../public/voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
     }else{
@@ -226,7 +204,5 @@
   if(isset($connection_vote)){
     mysqli_close($connection_vote);
   }
-
-
 
 ?>

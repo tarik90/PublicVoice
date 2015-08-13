@@ -3,7 +3,6 @@
           <h3 id="question"><?php echo $table_name["post_description"]."<br/>" ?></h3>
           <hr>
            <?php
-
               if(isset($_GET["emailsupport"]))
               {
                 echo "<div id=\"emailBox\"><p style=\"font-size:15px\"># Please insert a valid email !</p>"."</div>"."<br>";

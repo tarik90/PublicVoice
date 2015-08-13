@@ -1,7 +1,5 @@
 <?php
-  
   include("../include/layouts/database_subject.php");
-  
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +25,7 @@
 ?>
 
 <?php
-
       //printing all backward----------------------------------------new post on the top
-
   global $id;
   $counter = $id;
 
@@ -37,9 +33,7 @@
   ?>
 
 <?php
-  
-  include("../include/layouts/middle_subject.php");
-  
+  include("../include/layouts/middle_subject.php"); 
 ?>
       
 
@@ -48,16 +42,11 @@
   </div>
 
   <?php
-    
-
     $counter--;
-
   }
   ?>
         </div>
 
 <?php
-  
   include("../include/layouts/bottom_subject.php");
-  
 ?>

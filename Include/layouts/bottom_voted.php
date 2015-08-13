@@ -124,31 +124,22 @@
     </div>
 
     <?php
-
       if(isset($result_read_question)){
         mysqli_free_result($result_read_question);
       }
-
       if(isset($result_read_vote_in_percentage)){
         mysqli_free_result($result_read_vote_in_percentage);
       }
-
       if(isset($result_read_to_answer)){
         mysqli_free_result($result_read_to_answer);
       }
-
       if(isset($connection_vote)){
         mysqli_close($connection_vote);
       }
-
       if(isset($connection_read)){
         mysqli_close($connection_read);
       }
-
     ?>
 
-     
-      
   </body>
-
 </html>

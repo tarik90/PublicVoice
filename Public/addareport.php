@@ -1,7 +1,5 @@
 <?php
-  
   include("../include/layouts/top_addareport.php");
-  
 ?>
 
             <h4>Any Problem/Suggestion? Write us.</h4>
@@ -18,7 +16,5 @@
             <br>
             <h3><input id="submitButton"type="submit" name="submit" value="submit"></h3>
 <?php
-  
   include("../include/layouts/bottom_addareport.php");
-  
 ?>         

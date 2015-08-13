@@ -30,10 +30,6 @@
           head_style.style.backgroundColor = "#303030";
 
         </script>
-
-        
-
-
       </div>
     
       <div id="midpage">
@@ -260,9 +256,6 @@
             WEIRD ONE'S 
           </div>
           </a>
-
-
-
         </div>
   
         <div id="poll">

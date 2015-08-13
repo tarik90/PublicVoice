@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +12,7 @@
       <script src="../scripts/index.js"></script>
 
 <?php
-  
   include("../include/layouts/top_index.php");
-  
 ?>
         <div id="showBox">
           <script>
@@ -30,7 +26,5 @@
         
 
 <?php
-  
   include("../include/layouts/bottom_index.php");
-  
 ?>

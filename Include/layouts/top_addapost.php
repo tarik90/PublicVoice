@@ -1,9 +1,7 @@
 <?php
-  
   include("../include/function.php");
   $table_tag = $_GET["tag"];
   $pagetitle = setPageTitle($table_tag);
-
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +17,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
-
-
   </head>
   <body>
     <!--
@@ -52,12 +48,7 @@
           head_style.style.height = (screen.height - 670) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
-
         </script>
-
-        
-
-
       </div>
     
       <div id="midpage">
@@ -285,8 +276,6 @@
           </div>
           </a>
 
-
-
         </div>
   
         <div id="poll">
@@ -306,4 +295,4 @@
           var form_Box = document.getElementById("formBox");
           form_Box.style.verticalAlign = "middle"
           </script>
-            <form action="../include/processFiles/processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">
+          <form action="../include/processFiles/processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">

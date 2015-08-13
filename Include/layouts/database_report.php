@@ -1,10 +1,7 @@
 <?php
   session_start();
-
   include("../include/function.php");
 
-
-//create database connection -------------------------------------------------------
   $dbhost_report = "localhost";
   $dbuser_report = "pv_cms";
   $dbpass_report = "secret";
@@ -34,7 +31,7 @@
 	  if(!$result_read_report){
 	    die("Database query read failed" . mysqli_error($connection_report));
   }
-
+  
   //update the number of people have same problem
   $table_name = mysqli_fetch_assoc($result_read_report);
 

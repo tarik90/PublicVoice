@@ -12,8 +12,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
-
-
   </head>
   <body>
     <!--
@@ -47,8 +45,6 @@
 
         </script>
         <div><img width="320" height="135" src="../images/websiteLogo.jpg"></div>
-
-
       </div>
     
       <div id="midpage">

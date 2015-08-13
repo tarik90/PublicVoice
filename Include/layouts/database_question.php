@@ -1,5 +1,4 @@
 <?php
-
   session_start();
   include("../include/function.php");
 
@@ -7,11 +6,7 @@
   $table_tag = $_GET["tag"];
   global $id;
   global $post_id;
-
-  // echo $post_id;
-  // echo $table_tag;
   $pagetitle = setPageTitle($table_tag);
-
 
 //create database connection_read
   $dbhost_read = "localhost";
@@ -28,9 +23,6 @@
     );
   }
 
-  //perform database query1
-
-
   $query_read_to_answer = "SELECT * ";
   $query_read_to_answer .= "FROM {$table_tag} ";
   $query_read_to_answer .= "WHERE id = {$post_id}";
@@ -39,7 +31,5 @@
   if(!$result_read_to_answer){
     die("Database query_read_to_answer failed" .  mysqli_error($connection_read));
   }
-
-   
 
 ?>

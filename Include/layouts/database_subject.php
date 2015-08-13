@@ -1,10 +1,7 @@
 <?php
   session_start();
-
   include("../include/function.php");
 
-
-//create database connection -------------------------------------------------------
   $dbhost_vote = "localhost";
   $dbuser_vote = "pv_cms";
   $dbpass_vote = "secret";
@@ -19,8 +16,6 @@
       );
     }
 
-
-//create database connection -------------------------------------------------------
   $dbhost_read_post = "localhost";
   $dbuser_read_post = "pv_cms";
   $dbpass_read_post = "secret";
@@ -35,10 +30,8 @@
     );
   }
 
-
   $table_tag = mysqli_real_escape_string($connection_vote,$_GET["tag"]);
   $pagetitle = setPageTitle($table_tag);
-  //$post_id = mysqli_real_escape_string($connection_vote,$_GET["id"]);
 
   //get number of record exist in the table
   $query_total_postCount = "SELECT COUNT(*) as total FROM {$table_tag}";
@@ -52,13 +45,4 @@
     $id = 0;
     $id = $data["total"];
   }
-
-
-
-  // global $connection_read;
-  // $id = mysqli_insert_id($connection_read);
-  // echo $id;
-  //echo $id. "<br/>";
-
-
 ?>
