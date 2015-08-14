@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
   include("../../include/function.php");
 
 	$dbhost_post_upload = "localhost";
@@ -50,7 +50,7 @@ session_start();
 			//echo "Success1 <br />";
 			//header("Location: post.php");
 		}else{
-			header("Location: ../../public/post.php");
+			header("Location: ../../public/subject.php?" . urlencode($table_tag));
 			die("Database query_post_upload failedddd" . mysqli_error($connection_post_upload));
 		}
 	}
@@ -72,7 +72,6 @@ session_start();
 		);
 	}
 	for ($j=1; $j<5 ; $j++) { 
-		# code...
 		$op_vote[$j] = 0;
 	}
 
@@ -87,6 +86,7 @@ session_start();
 		//echo "Success2 <br />";
 		//header("Location: subject.php?tag=". urlencode($table_tag));
 	}else{
+		header("Location: topics.php");
 		die("Database query_vote_upload  failedddd" . mysqli_error($connection_vote_upload));
 	}
 
@@ -124,6 +124,7 @@ session_start();
 		//header("Location: subject.php?tag=". urlencode($table_tag));
 	}else{
 		die("Database query_vote_percentage_upload  failedddd" . mysqli_error($connection_email_upload));
+		header("Location: topics.php");
 	}
 
     global $email_inserted;
@@ -142,6 +143,7 @@ session_start();
       //echo "Success2 <br />";
       header("Location: ../../public/question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
     }else{
+      header("Location: topics.php");
       die("Database query_email_upload failedddd" . mysqli_error($connection_email_upload));
     }
 

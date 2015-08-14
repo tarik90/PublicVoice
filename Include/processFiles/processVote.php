@@ -1,6 +1,5 @@
 <?php
 
-  session_start();
   include("../../include/function.php");
 
   $dbhost_email_vote = "localhost";
@@ -22,7 +21,6 @@
   
   $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
   if (checkEmailValidity($email_inserted) === false) {
-        //
       header("Location: ../../public/question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
       die();
   }
@@ -37,6 +35,7 @@
 
   $result_email_vote_check = mysqli_query($connection_email_vote,$query_email_vote_check);
   if(!$result_email_vote_check){
+    header("Location: ../../public/question.php?ques=&tag=".urlencode($table_tag)."&id=".$post_id);
     die("Database_email_vote_check query failed" . mysqli_error($connection_email_vote));
     ;
   }
@@ -44,7 +43,6 @@
   $row = mysqli_fetch_array($result_email_vote_check, MYSQLI_NUM);
     $email_address_output = array();
     while($row = mysqli_fetch_assoc($result_email_vote_check)){
-    
         $email_address_output[] = $row;
     }
     foreach ($email_address_output as $row){
@@ -70,6 +68,7 @@
       echo "Vote from this email Successfuly uploaded<br />";
       //header("Location: question.php?voted=1&tag=". urlencode($table_tag) . "&postid=" . $post_id);
     }else{
+      header("Location: topics.php");
       die("Database query_email_vote_upload failedddd" . mysqli_error($connection_email_vote));
     }
 
@@ -88,13 +87,13 @@
     }
 
     global $table_tag;
-
     $query_read_vote = "SELECT * ";
     $query_read_vote .= "FROM {$table_tag} ";
     $query_read_vote .= "WHERE id = {$post_id}";
     $result_read_vote = mysqli_query($connection_vote,$query_read_vote);
 
     if(!$result_read_vote){
+      header("Location: topics.php");
       die("Database query read failed" . mysqli_error($connection_vote));
     }
 
@@ -109,7 +108,6 @@
     $table_name = mysqli_fetch_assoc($result_read_vote);
     $optionNo = 1;
     while($optionNo <5){
-
       $op_vote[$optionNo] = $table_name["op{$optionNo}_vote"];
 
        if($op_vote[$optionNo] == NULL || $op_vote[$optionNo] == "" ){
@@ -162,6 +160,7 @@
       //echo "Success2 <br />";
       //header("Location: subject.php?tag=". urlencode($table_tag));
     }else{
+      header("Location: topics.php");
       die("Database query_vote_upload  failedddd" . mysqli_error($connection_vote));
     }
 
@@ -189,6 +188,7 @@
     if($success_vote_upload){
       header("Location: ../../public/voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
     }else{
+      header("Location: topics.php");
       die("Database query_vote_percentage upload  failedddd" . mysqli_error($connection_email_vote));
     }
 

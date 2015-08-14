@@ -57,7 +57,7 @@
           head_style.style.backgroundColor = "#303030";
 
         </script>
-        <div><img width="320" height="135" src="../images/websiteLogo.jpg"></div>
+        <div><img width="320" height="135" src="../images/websiteLogo1.jpg"></div>
         <div id="navigation">
           <script>
             var naviga_tion = document.getElementById("navigation");

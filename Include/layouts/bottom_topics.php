@@ -1,4 +1,6 @@
- </div>
+ </div> 
+
+         </div>
 
         <div id="news">
           <script>
@@ -27,7 +29,7 @@
           </div>
           </a>
 
-         <a href="topics.php">
+         <a href="aboutUs.php">
           <div id="contactUsAbout">
             <script>
               var contactUs_about = document.getElementById("contactUsAbout");
@@ -36,10 +38,10 @@
               contactUs_about.style.backgroundColor = "#335C33";
               contactUs_about.style.lineHeight = contactUs_about.style.height;
             </script>
-            TOPICS
+            ABOUT US
           </div>
-		 </a>
-  
+     </a>
+
           <a href="report.php">
            <div id="report">
             <script>
@@ -51,8 +53,8 @@
             </script>
             REPORT A PROBLEM
           </div>
-     	 </a>
-<!--	
+       </a>
+<!--  
           <div id="peopleOnline">
             <script>
               var people_online = document.getElementById("peopleOnline");

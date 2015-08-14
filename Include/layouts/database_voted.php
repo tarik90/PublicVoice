@@ -1,5 +1,9 @@
 <?php 
-    session_start();
+
+  if(!isset($_GET["tag"]) || !isset($_GET["id"])){
+    header("Location: topics.php");
+    die();
+  }
     include("../include/function.php");
 
     $dbhost_vote = "localhost";
@@ -31,10 +35,11 @@
     $result_read_vote_in_percentage = mysqli_query($connection_vote,$query_read_vote_in_percentage);
 
     if(!$result_read_vote_in_percentage){
+      header("Location: ../public/index.php");
       die("Database query_read_vote_in_percentage failed" . mysqli_error($connection_vote));
     }
 
-    for ($j=1; $j<5 ; $j++) { .
+    for ($j=1; $j<5 ; $j++) {
     $op[$j] = 0;
     }
     
@@ -69,6 +74,7 @@
     $result_read_question = mysqli_query($connection_read,$query_read_question);
 
     if(!$result_read_question){
+      header("Location: ../public/index.php");
       die("Database query_read_question failed" . mysqli_error($connection_read));
     }
 

@@ -1,5 +1,10 @@
 <?php
-  session_start();
+
+  if(!isset($_GET["tag"])){
+    header("Location: topics.php");
+    die();
+  }
+
   include("../include/function.php");
 
   $dbhost_vote = "localhost";

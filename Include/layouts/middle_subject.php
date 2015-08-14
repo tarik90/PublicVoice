@@ -1,5 +1,5 @@
 <?php
-      //perform database query
+    
   $query_read_question = "SELECT * ";
   $query_read_question .= "FROM {$table_tag} ";
   $query_read_question .= "WHERE id = {$counter}";

@@ -35,10 +35,11 @@ $query_report_upload .= ")";
     $result_report_upload = mysqli_query($connection_report,$query_report_upload);
 
     if($result_report_upload){
-      echo "report from this email Successfuly uploaded<br />";
-      header("Location: ../../../public/report.php");
+      // echo "report from this email Successfuly uploaded<br />";
+      // header("Location: ../../../public/report.php");
     }else{
       die("Database query_report_upload failedddd" . mysqli_error($connection_report));
+      header("Location: ../../../public/report.php");
     }
 
     $dbhost_vote = "localhost";

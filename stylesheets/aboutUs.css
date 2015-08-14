@@ -61,3 +61,43 @@ a:hover{
 	text-align: justify;
 	margin: 15px 15px 15px 15px;
 }
+
+#topic{
+
+	height: 70px;
+	width: 120px;
+	background-color: #335C33;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid black;
+	display: table-cell;
+	transition-duration: 1s;
+}
+
+#topic:hover{
+	border: 1px solid white;
+}
+
+#topicBox{
+	word-wrap: break-word;
+	border: 0px solid white;
+	width: 650px;
+	color: black;
+	text-align: justify;
+	margin: 50px 15px 15px 15px;
+}
+
+#topicBox a{
+		color: black;
+		display: inline-block;
+		
+}
+
+#eachBox{
+		margin: 40px 50px;
+}
+
+#topic a{
+	text-decoration: none;
+	color: black;
+}

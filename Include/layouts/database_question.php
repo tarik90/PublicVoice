@@ -1,5 +1,10 @@
 <?php
-  session_start();
+  
+  if(!isset($_GET["tag"]) || !isset($_GET["id"])){
+    header("Location: topics.php");
+    die();
+  }
+
   include("../include/function.php");
 
   $post_id = $_GET["id"];

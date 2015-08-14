@@ -29,6 +29,7 @@
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
         </script>
+        <div><img width="300" height="100" src="../images/websiteLogo1.jpg"></div>
       </div>
     
       <div id="midpage">

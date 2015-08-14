@@ -39,26 +39,34 @@
         <script>
           var head_style = document.getElementById("head");
           head_style.style.width = (screen.width -18) + "px";
-          head_style.style.height = (screen.height - 560) + "px";
+          head_style.style.height = (screen.height - 594) + "px";
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
         </script>
-        <div><img width="430" height="170" src="../images/websiteLogo1.jpg"></div>
+        <div><img width="400" height="150" src="../images/websiteLogo1.jpg"></div>
       </div>
     
       <div id="midpage">
         <script>
           var mid_page = document.getElementById("midpage");
           mid_page.style.width = (screen.width -18) + "px";
-          mid_page.style.height = (screen.height - 384) + "px";
+          mid_page.style.height = (screen.height - 350) + "px";
         </script>
   
         <div id="poll">
           <script>
           var poll_box = document.getElementById("poll");
           poll_box.style.width = (screen.width -550) + "px";
-          poll_box.style.height = (screen.height - 384) + "px";
+          poll_box.style.height = (screen.height - 350) + "px";
           poll_box.style.backgroundColor = "#565656";
           poll_box.style.transition = "all 1s";
         </script>
         
+      <div id="topicBox">
+        <script>
+          var topicBox = document.getElementById("topicBox");
+          topicBox.style.width = (screen.width -605) + "px";
+          topicBox.style.height = (screen.height - 420) + "px";
+          topicBox.style.backgroundColor = "#565656";
+          topicBox.style.transition = "all 1s";
+        </script>
