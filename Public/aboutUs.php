@@ -16,11 +16,11 @@
         	<h4><u>How to use</u></h4>
         	<p>1. Go to the topic page you want.</p>
         	<p>2. Click "Add a poll" to add a question.</p>
-        	<p>3. Vote in the question.</p>
-        	<p>4. It will show on the subject page of every topic.</p>
-        	<p>5. Valid email address is required to add/vote in a question.</p>
-        	<P></P>
-          <br>
+          <p>3. You can use the NEWS BOX in the HOME page to know about recent events taking place in the world.</p>
+        	<p>4. Vote in the question.</p>
+        	<p>5. It will show on the subject page of every topic.</p>
+        	<p>6. Valid email address is required to add/vote in a question.</p>
+          <p></p>
         	<h4><b>NOTE:</b> <i>ONE EMAIL CAN <u>NOT</u> VOTE IN A SAME QUESTION TWICE.<br>YOUR EMAIL IS BEING
            <u>ENCRYPTED</u> BEFORE SAVING INTO DATABSE.
         	 AND WE DO NOT SHARE OR USE IT FOR LATER.</i><h4>

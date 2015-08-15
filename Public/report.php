@@ -37,6 +37,7 @@
 ?> 
   	<div id="eachSubject">  
       <h4><?php  echo $table_name["report"] . "<br />";  ?></a></h4>
+      <h6>Problem tag: <?php echo " " . setPageTitle($table_name["problemIn"]); ?></h6>
 
       <div><?php if($table_name["people"] === "1"){ echo 1 . " person ";}else {echo $table_name["people"] . " people ";} ?> have this problem </div>
       <div><button id="problemButton" name="problem" type="submit" value="1">I have this problem too</button></div>

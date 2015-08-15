@@ -17,8 +17,8 @@
 		    case 'politics':
 		      $title = "POLITICS";//
 		      break;  
-		    case 'auto':
-		      $title = "AUTO";//
+		    case 'warterrorism':
+		      $title = "WAR & TERROSIM";//
 		      break;  
 		    case 'religion':
 		      $title = "RELIGION";//
@@ -44,14 +44,23 @@
 		    case 'healthBeauty':
 		      $title = "HEALTH & BEAUTY";
 		      break;
-		    case 'weirdones':
-		      $title = "WEIRD ONE'S";
+		    case 'wtfs':
+		      $title = "WTF'S";
 		      break;
 		     case 'education':
 		      $title = "EDUCATION";
 		      break;
 		    case 'world':
 		      $title = "WORLD";
+		      break;
+		    case 'functionality':
+		      $title = "SITE FUNCTIONALITY";
+		      break;
+		    case 'layout':
+		      $title = "SITE LAYOUT";
+		      break;
+		    case 'other':
+		      $title = "OTHER";
 		      break;
 		    default:
 		      # code...

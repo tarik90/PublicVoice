@@ -116,7 +116,7 @@
           </div>
           </a>
 
-          <a href="subject.php?tag=auto">
+          <a href="subject.php?tag=warterrorism">
           <div id="four">
             <script>
               var thr_ee = document.getElementById("four");
@@ -126,7 +126,7 @@
               thr_ee.style.lineHeight = thr_ee.style.height;
               thr_ee.style.transition = "all 1s";
             </script>
-            AUTO
+            WAR & TERRORSIM
           </div>
           </a>
 
@@ -270,7 +270,7 @@
           </div>
           </a>
 
-          <a href="subject.php?tag=weirdones">
+          <a href="subject.php?tag=wtfs">
           <div id="fifteen">
             <script>
               var thr_ee = document.getElementById("fifteen");
@@ -280,7 +280,7 @@
               thr_ee.style.lineHeight = thr_ee.style.height;
               thr_ee.style.transition = "all 1s";
             </script>
-            WEIRD ONE'S 
+            WTF'S 
           </div>
           </a>
 

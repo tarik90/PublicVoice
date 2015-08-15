@@ -222,6 +222,14 @@ a:hover{
 	float: right;
 }
 
+#selectBox{
+	width: 160px;
+	height: 30px;
+	float: right;
+	font-size: 16px;
+	line-height: 100px;
+}
+
 -moz-appearance:none;
     -webkit-appearance:none;
     appearance:none;

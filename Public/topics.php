@@ -2,11 +2,11 @@
   include("../include/layouts/top_topics.php");
 ?>
         <div id="eachBox">
-          <a href="subject.php?tag=food"><div id="topic">Food</div></a>
-          <a href="subject.php?tag=politics"><div id="topic">Politics</div></a>
-          <a href="subject.php?tag=religion"><div id="topic">Religion</div></a>
-          <a href="subject.php?tag=auto"><div id="topic">Auto</div></a>
-          <a href="subject.php?tag=education"><div id="topic">Education</div></a>
+          <a href="subject.php?tag=food"><div id="topic">FOOD</div></a>
+          <a href="subject.php?tag=politics"><div id="topic">POLITICS</div></a>
+          <a href="subject.php?tag=religion"><div id="topic">RELIGION</div></a>
+          <a href="subject.php?tag=warterrorism"><div id="topic">WAR & TERRORISM</div></a>
+          <a href="subject.php?tag=education"><div id="topic">EDUCATION</div></a>
         </div>
 
         <div id="eachBox">
@@ -22,7 +22,7 @@
           <a href="subject.php?tag=sports"><div id="topic">Sports</div></a>
           <a href="subject.php?tag=personal"><div id="topic">Personal</div></a>
           <a href="subject.php?tag=fashion"><div id="topic">Fashion</div></a>
-          <a href="subject.php?tag=weirdones"><div id="topic">Weird One's</div></a>
+          <a href="subject.php?tag=wtfs"><div id="topic">WTF'S</div></a>
         </div>
           
 <?php
