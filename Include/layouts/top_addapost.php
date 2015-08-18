@@ -5,7 +5,7 @@
     die();
   }
 
-  include("../include/function.php");
+  include("include/function.php");
   $table_tag = $_GET["tag"];
   $pagetitle = setPageTitle($table_tag);
 ?>
@@ -13,16 +13,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
       <title>+? <?php echo $pagetitle; ?></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="images/webIcon.ico">
   </head>
   <body>
     <!--
@@ -55,7 +57,7 @@
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
         </script>
-        <span><img width="250" height="90" src="../images/websiteLogo1.jpg"></span>
+        <span><img width="250" height="90" src="images/websiteLogo1.jpg"></span>
         <span id="pagetag"><h2><?php echo $pagetitle; ?></h2></span>
       </div>
     
@@ -303,4 +305,4 @@
           var form_Box = document.getElementById("formBox");
           form_Box.style.verticalAlign = "middle"
           </script>
-          <form action="../include/processFiles/processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">
+          <form action="include/processFiles/processQuestion.php?tag=<?php echo urlencode($table_tag); ?>" method="post">

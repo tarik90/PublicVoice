@@ -5,7 +5,7 @@
     die();
   }
 
-  include("../include/function.php");
+  include("include/function.php");
 
   $post_id = $_GET["id"];
   $table_tag = $_GET["tag"];

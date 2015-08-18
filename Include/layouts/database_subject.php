@@ -5,7 +5,7 @@
     die();
   }
 
-  include("../include/function.php");
+  include("include/function.php");
 
   $dbhost_vote = "localhost";
   $dbuser_vote = "pv_cms";

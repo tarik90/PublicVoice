@@ -1,6 +1,6 @@
 <?php 
 
-  include("../../include/function.php");
+  include("../function.php");
 
 	$dbhost_post_upload = "localhost";
 	$dbuser_post_upload = "pv_cms";
@@ -22,13 +22,13 @@
 	$table_tag = mysqli_real_escape_string($connection_post_upload,htmlentities(strip_tags($_GET["tag"])));
 	
 	if (checkEmailValidity($email_inserted) === false) {
-      header("Location: ../../public/addapost.php?emailsupport=0&tag=". urlencode($table_tag));
+      header("Location: ../../addapost.php?emailsupport=0&tag=". urlencode($table_tag));
   			die();
 	}
 
 	if($question === "" || $question === NULL)
 	{
-		header("Location: ../../public/addapost.php?question=0&tag=". urlencode($table_tag));
+		header("Location: ../../addapost.php?question=0&tag=". urlencode($table_tag));
   			die();
 	}
 	else
@@ -50,7 +50,7 @@
 			//echo "Success1 <br />";
 			//header("Location: post.php");
 		}else{
-			header("Location: ../../public/subject.php?" . urlencode($table_tag));
+			header("Location: ../../subject.php?" . urlencode($table_tag));
 			die("Database query_post_upload failedddd" . mysqli_error($connection_post_upload));
 		}
 	}
@@ -141,7 +141,7 @@
 
     if($result_email_upload){
       //echo "Success2 <br />";
-      header("Location: ../../public/question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
+      header("Location: ../../question.php?tag=" . urlencode($table_tag) . "&id=" . $post_id);
     }else{
       header("Location: topics.php");
       die("Database query_email_upload failedddd" . mysqli_error($connection_email_upload));

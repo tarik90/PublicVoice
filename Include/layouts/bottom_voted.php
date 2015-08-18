@@ -72,6 +72,23 @@
 
       </div>
 
+
+      <div id="comment">
+        <script>
+          var commentBox = document.getElementById("comment");
+          commentBox.style.width = (screen.width -400) + "px";
+          //commentBox.style.height = (screen.height - 717) + "px";
+          commentBox.style.backgroundColor = "#303030";
+          commentBox.style.lineHeight = commentBox.style.height;
+        </script>
+        <form action="voted.php?tag=<?php echo urlencode($table_tag)?>&id=<?php  echo urlencode($post_id) ?>">
+            <input id="commentBox" type="text" name="comment" placeholder=" Write a comment" required>
+            <input id="commentEmailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required>
+            <h3><input id="commentSubmitButton"type="submit" name="submit" value="Comment"></h3>
+          </form>
+          <hr>
+      </div>
+
       <div id="foot">
         <script>
           var footer = document.getElementById("foot");

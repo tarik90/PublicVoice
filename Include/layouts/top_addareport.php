@@ -1,5 +1,5 @@
 <?php
-  include("../include/function.php");
+  include("include/function.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,11 +10,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="images/webIcon.ico">
   </head>
   <body>
     <!--
@@ -47,7 +48,7 @@
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
         </script>
-        <div><img width="280" height="90" src="../images/websiteLogo1.jpg"></div>
+        <div><img width="280" height="90" src="images/websiteLogo1.jpg"></div>
       </div>
     
       <div id="midpage">
@@ -293,4 +294,4 @@
           <script>
           var form_Box = document.getElementById("formBox");
           </script>
-         <form action="../include/processFiles/processReport.php" method="post">
+         <form action="include/processFiles/processReport.php" method="post">

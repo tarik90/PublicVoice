@@ -92,7 +92,7 @@ a:hover{
 }
 
 #questionBox{
-	width: 500px;
+	width: 600px;
 	font-size: 15px;
 }
 
@@ -119,6 +119,7 @@ a:hover{
 }
 
 #question{
+	width: 600px;
 	font-size: 25px;
 	font-weight: bold;
 	border: 0px solid white;
@@ -228,6 +229,52 @@ a:hover{
 	float: right;
 	font-size: 16px;
 	line-height: 100px;
+}
+
+#comment{
+
+	margin: 0 auto;
+	font-family: 'Oswald', sans-serif;
+	color: #B2C2B2;
+    font-size: 12px;
+    text-align: center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	border: 1px solid black;
+	transition-duration: 1s;
+}
+
+#comment:hover{
+	border: 1px solid white;
+}
+
+#commentBox{
+	margin-top: 20px;
+	width: 500px;
+	height: 100px;
+	font-size: 15px;
+	text-align: justify;
+	word-break: break-word;
+	overflow: scroll;
+}
+#commentEmailBox{
+	margin-top: 20px;
+	margin-right: 20px;
+	width: 225px;
+	float: right;
+	font-size: 16px;
+	line-height: 120%;
+}
+
+#commentSubmitButton{
+	width: 200px;
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-left: 200px;
+	margin-right: 200px;
+	letter-spacing: 3px;
+	background-color: #335C33;
+	color: white;
 }
 
 -moz-appearance:none;

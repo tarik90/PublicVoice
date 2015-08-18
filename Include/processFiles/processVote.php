@@ -1,6 +1,6 @@
 <?php
 
-  include("../../include/function.php");
+  include("../function.php");
 
   $dbhost_email_vote = "localhost";
   $dbuser_email_vote = "pv_cms";
@@ -21,7 +21,7 @@
   
   $email_inserted = mysqli_real_escape_string($connection_email_vote,htmlentities(strip_tags($_POST["email"])));
   if (checkEmailValidity($email_inserted) === false) {
-      header("Location: ../../public/question.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+      header("Location: ../../wanquestion.php?emailsupport=0&ques=&tag=".urlencode($table_tag)."&id=".$post_id);
       die();
   }
 
@@ -35,7 +35,7 @@
 
   $result_email_vote_check = mysqli_query($connection_email_vote,$query_email_vote_check);
   if(!$result_email_vote_check){
-    header("Location: ../../public/question.php?ques=&tag=".urlencode($table_tag)."&id=".$post_id);
+    header("Location: ../../wanquestion.php?ques=&tag=".urlencode($table_tag)."&id=".$post_id);
     die("Database_email_vote_check query failed" . mysqli_error($connection_email_vote));
     ;
   }
@@ -50,7 +50,7 @@
                 echo $existing_email."<br>";
                 $encrypted_email = crypt($email_inserted, $existing_email);
                 if($encrypted_email === $existing_email){
-                   header("Location: ../../public/voted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
+                   header("Location: ../../wanvoted.php?vote=0&tag=". urlencode($table_tag) . "&id=" . $post_id);
                    die ();
                 }
             }
@@ -186,7 +186,7 @@
 
     $success_vote_percentage_upload = mysqli_query($connection_email_vote,$query_vote_percentage_upload);
     if($success_vote_upload){
-      header("Location: ../../public/voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
+      header("Location: ../../voted.php?vote=1&tag=". urlencode($table_tag) . "&id=" . $post_id);
     }else{
       header("Location: topics.php");
       die("Database query_vote_percentage upload  failedddd" . mysqli_error($connection_email_vote));

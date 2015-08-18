@@ -1,5 +1,5 @@
 <?php 
-  include("../include/layouts/top_aboutUs.php");
+  include("include/layouts/top_aboutUs.php");
 ?>  
         <div id="aboutUsContent">
         <script>
@@ -26,5 +26,5 @@
         	 AND WE DO NOT SHARE OR USE IT FOR LATER.</i><h4>
         </div>    
 <?php
-  include("../include/layouts/bottom_aboutUs.php");
+  include("include/layouts/bottom_aboutUs.php");
 ?>  

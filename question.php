@@ -1,5 +1,5 @@
 <?php 
-  include("../include/layouts/database_question.php"); 
+  include("include/layouts/database_question.php"); 
 ?> 
 
 <!DOCTYPE html>
@@ -10,15 +10,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
-      <link rel="stylesheet" type="text/css" href="../stylesheets/subject.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/subject.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
       <script src="index.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="images/webIcon.ico">
   </head>
 
 <?php
-  include("../include/layouts/top_question.php");
+  include("include/layouts/top_question.php");
 ?> 
         <div id="formBox">
           <script>
@@ -34,7 +35,7 @@
 ?>
           
 <?php
-  include("../include/layouts/middle_question.php");
+  include("include/layouts/middle_question.php");
 ?>
           <input id="emailBox" type="email" name="email" placeholder=" Enter your email. REQUIRED" required> 
           <input id="optionB" type="radio" name="option" value="1"><?php echo str_repeat('&nbsp;', 5) . $table_name["option_1"] ."<br />"; ?>
@@ -60,5 +61,5 @@
 ?>
 
 <?php 
-  include("../include/layouts/bottom_question.php"); 
+  include("include/layouts/bottom_question.php"); 
 ?> 

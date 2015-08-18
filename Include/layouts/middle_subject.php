@@ -64,7 +64,7 @@
               $output .= "<img id=\"imageBarSubject\"";
               $output .= "width=";
               $output .= 5 * $table_name_in_percentage["op$x"];
-              $output .= " src=\"..\images\image$x.jpg\">";
+              $output .= " src=\"images\image$x.jpg\">";
               $output .= "</span>";
               $output .= " " . $table_name_in_percentage["op$x"];
               $output .= "%";

@@ -405,21 +405,21 @@ a:hover{
 }
 
 #barPercentageBox{
-	position: absolute;
-	border: 0px solid white;
+	
+	border: 1px solid white;
+	width: 700px;
 	vertical-align: bottom;
     display: table-cell;
-
     background-repeat: no-repeat;
 
-   
-    margin: 20px 120px;
-	
 }
-
 
 
 #barPercentageBox img{
 	vertical-align: bottom;
 	border:1px solid #202020;
+}
+
+#scaleImage{
+	    margin-left: 100px;
 }

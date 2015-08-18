@@ -29,7 +29,7 @@
           //head_style.style.backgroundColor = "#335C33";
           head_style.style.backgroundColor = "#303030";
         </script>
-        <span><img width="250" height="90" src="../images/websiteLogo1.jpg"></span>
+        <span><img width="250" height="90" src="images/websiteLogo1.jpg"></span>
         <span id="pagetag"><h2><?php echo $pagetitle; ?></h2></span>
       </div>
     

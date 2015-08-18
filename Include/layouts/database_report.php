@@ -1,6 +1,6 @@
 <?php
 
-  include("../include/function.php");
+  include("include/function.php");
 
   $dbhost_report = "localhost";
   $dbuser_report = "pv_cms";
@@ -29,7 +29,7 @@
 	  $result_read_report = mysqli_query($connection_report,$query_read_report);
 
 	  if(!$result_read_report){
-      header("Location: ../public/report.php");
+      header("Location: report.php");
 	    die("Database query read failed" . mysqli_error($connection_report));
   }
   
@@ -59,7 +59,7 @@
   $result_total_postCount = mysqli_query($connection_report,$query_total_postCount);
   
   if(!$result_total_postCount){
-    header("Location: ../public/report.php");
+    header("Location: report.php");
     die("Database query count failed" . mysqli_error($connection_report));
   }
   else{

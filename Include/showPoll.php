@@ -1,5 +1,5 @@
 <?php
-    include("../include/function.php");
+    include("function.php");
 
     $dbhost_vote = "localhost";
     $dbuser_vote = "pv_cms";
@@ -29,18 +29,19 @@
       );
     }
 
-	$table_tag_array = array("world","education","weirdones","healthBeauty","fashion","personal","sports","environmentNature","social",
-								"religion","auto","politics","food","techEngineering");
+	$table_tag_array = array("world","education","wtfs","healthBeauty","fashion","personal","sports","environmentNature","social",
+								"religion","warterrorism","politics","food","techEngineering");
 	  $random_keys = array_rand($table_tag_array);
     $random_table_tag = $table_tag_array[$random_keys];
 
     $pagetitle = setPageTitle($random_table_tag);
+
   //get number of record exist in the table
 	  $query_total_postCount = "SELECT COUNT(*) as total FROM {$random_table_tag}";
 	  $result_total_postCount = mysqli_query($connection_read,$query_total_postCount);
 	  
 	  if(!$result_total_postCount){
-	    die("Database query count failed" . mysqli_error($connection_read));
+	    die("Database $query_total_postCount:{$random_table_tag} failed" . mysqli_error($connection_read));
 	  }
 	  else{
 	    $data = mysqli_fetch_assoc($result_total_postCount);
@@ -115,7 +116,7 @@
               $output = "<div>";
               $output .= "<img ";
               $output .= "height=\"20\" width=\"10\"";
-              $output .= " src=\"..\images\image$x.jpg\">";
+              $output .= " src=\"images/image$x.jpg\">";
               $output .=  " " . $table_name_question["option_$x"];
               $output .= ": ";
               $output .= " " . $table_name["op$x"];
@@ -127,9 +128,9 @@
             echo $outsideDiv;
 
             $outsideDivBar = "<div id=\"barPercentageBox\">";
-            $outsideDivBar .= "<span>";
+            $outsideDivBar .= "<span id=\"scaleImage\">";
             $outsideDivBar .= "<img height=\"200\"";
-            $outsideDivBar .= "src=\"..\images\scale.jpg\" ";
+            $outsideDivBar .= "src=\"images/scale.jpg\" ";
             $outsideDivBar .= ">";
             $outsideDivBar .= "</span>";
             echo $outsideDivBar;
@@ -141,7 +142,7 @@
               $output .= "width=100 ";
               $output .= "height=";
               $output .= 1.89 * $table_name["op$x"];
-              $output .= " src=\"..\images\image$x.jpg\">";
+              $output .= " src=\"images/image$x.jpg\">";
 
               echo  $output;
             }

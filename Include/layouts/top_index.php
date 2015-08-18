@@ -17,7 +17,7 @@
                document.getElementById("showBox").innerHTML=xmlhttp.responseText; // div
              }
            }
-         xmlhttp.open("GET","../include/showPoll.php",true); //php file
+         xmlhttp.open("GET","include/showPoll.php",true); //php file
          xmlhttp.send();
          }
          window.setInterval(function(){
@@ -57,7 +57,9 @@
           head_style.style.backgroundColor = "#303030";
 
         </script>
-        <div><img width="325" height="120" src="../images/websiteLogo1.jpg"></div>
+        <span id="pagetag" style="color:red"><p><?php echo "<hr>Website is under heavy construction! <br>
+        Please report any issue you experience<hr>" ?></p></span>
+        <soan><img width="325" height="120" src="images/websiteLogo1.jpg"></span>
         <div id="navigation">
           <script>
             var naviga_tion = document.getElementById("navigation");

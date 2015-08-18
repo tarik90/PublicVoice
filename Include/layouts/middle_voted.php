@@ -16,7 +16,7 @@
               $output .= "<img id=\"imageBar\"";
               $output .= "width=";
               $output .= 5 * $table_name["op$x"];
-              $output .= " src=\"..\images\image$x.jpg\">";
+              $output .= " src=\"images\image$x.jpg\">";
               $output .= "</span>";
               $output .= " " . $table_name["op$x"];
               $output .= "%";
@@ -26,4 +26,5 @@
               echo  $output;
             }
 
-?>
+?>  
+

@@ -4,7 +4,21 @@
     header("Location: topics.php");
     die();
   }
-    include("../include/function.php");
+    include("include/function.php");
+
+    $dbhost_report = "localhost";
+    $dbuser_report = "pv_cms";
+    $dbpass_report = "secret";
+    $dbname_report = "public_voice_report";
+    $connection_report = mysqli_connect($dbhost_report, $dbuser_report, $dbpass_report,
+            $dbname_report);
+
+    if(mysqli_connect_errno()){
+      die("Database connection_report failed: " . 
+        mysqli_connect_error() . " (" .
+          mysqli_connect_errno() .")"
+      );
+    }
 
     $dbhost_vote = "localhost";
     $dbuser_vote = "pv_cms";
@@ -26,6 +40,21 @@
     $vote = mysqli_real_escape_string($connection_vote,$_GET["vote"]);
     global $vote;
 
+
+    $query_read_comment = "SELECT * ";
+    $query_read_comment .= "FROM vote_in_percentage ";
+    $query_read_comment .= "WHERE ";
+    $query_read_comment .= "post_id = {$post_id} ";
+    $query_read_comment .= "AND ";
+    $query_read_comment .= "tag = '{$table_tag}'";
+    $result_read_comment = mysqli_query($connection_report,$query_read_comment);
+
+    if(!$result_read_vote_in_percentage){
+      header("Location: index.php");
+      die("Database query_read_vote_in_percentage failed" . mysqli_error($connection_vote));
+    }
+
+
     $query_read_vote_in_percentage = "SELECT * ";
     $query_read_vote_in_percentage .= "FROM vote_in_percentage ";
     $query_read_vote_in_percentage .= "WHERE ";
@@ -35,7 +64,7 @@
     $result_read_vote_in_percentage = mysqli_query($connection_vote,$query_read_vote_in_percentage);
 
     if(!$result_read_vote_in_percentage){
-      header("Location: ../public/index.php");
+      header("Location: index.php");
       die("Database query_read_vote_in_percentage failed" . mysqli_error($connection_vote));
     }
 
@@ -74,7 +103,7 @@
     $result_read_question = mysqli_query($connection_read,$query_read_question);
 
     if(!$result_read_question){
-      header("Location: ../public/index.php");
+      header("Location: index.php");
       die("Database query_read_question failed" . mysqli_error($connection_read));
     }
 

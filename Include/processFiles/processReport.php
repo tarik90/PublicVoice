@@ -1,6 +1,6 @@
 <?php
 
- include("../../include/function.php");
+ include("../function.php");
 
   $dbhost_report = "localhost";
   $dbuser_report = "pv_cms";
@@ -22,7 +22,7 @@
   $people = 1;
   if (checkEmailValidity($email_inserted) === false) {
         // 
-      header("Location: ../../public/addareport.php?emailsupport=0");
+      header("Location: ../../addareport.php?emailsupport=0");
       die();
   }
 
@@ -37,10 +37,10 @@ $query_report_upload .= ")";
 
     if($result_report_upload){
       // echo "report from this email Successfuly uploaded<br />";
-      header("Location: ../../public/report.php");
+      header("Location: ../../report.php");
     }else{
       die("Database query_report_upload failedddd" . mysqli_error($connection_report));
-      header("Location: ../../public/report.php");
+      header("Location: ../../report.php");
     }
 
 ?>

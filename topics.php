@@ -1,5 +1,5 @@
 <?php
-  include("../include/layouts/top_topics.php");
+  include("include/layouts/top_topics.php");
 ?>
         <div id="eachBox">
           <a href="subject.php?tag=food"><div id="topic">FOOD</div></a>
@@ -26,5 +26,5 @@
         </div>
           
 <?php
-  include("../include/layouts/bottom_topics.php");
+  include("include/layouts/bottom_topics.php");
 ?>

@@ -18,7 +18,7 @@
 		      $title = "POLITICS";//
 		      break;  
 		    case 'warterrorism':
-		      $title = "WAR & TERROSIM";//
+		      $title = "WAR & TERRORISM";//
 		      break;  
 		    case 'religion':
 		      $title = "RELIGION";//
